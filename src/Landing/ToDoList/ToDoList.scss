@@ -1,0 +1,89 @@
+.card {
+    &-head {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        span {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+        }
+        .btn-wrap {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+
+            button {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                border: 0;
+                height: 29px;
+                border-radius: 5px;
+                background: rgb(240, 200, 91);
+                background: -moz-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+                background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+                background: linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c85b",endColorstr="#ff9a29",GradientType=1);
+                span {
+                    color: #fff !important;
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+                img {
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    &-tab {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .ant-tabs-tab {
+            margin: 0 !important;
+            padding: 10px 50px !important;
+            background: #fff !important;
+            border-radius: 0px 20px 20px 0px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 170px;
+            color: #ccc;
+            &-active {
+                background: rgb(115, 190, 225) !important;
+                background: -moz-linear-gradient(
+                    90deg,
+                    rgba(115, 190, 225, 1) 0%,
+                    rgba(56, 157, 230, 1) 100%
+                ) !important;
+                background: -webkit-linear-gradient(
+                    90deg,
+                    rgba(115, 190, 225, 1) 0%,
+                    rgba(56, 157, 230, 1) 100%
+                ) !important;
+                background: linear-gradient(90deg, rgba(115, 190, 225, 1) 0%, rgba(56, 157, 230, 1) 100%) !important;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#73bee1",endColorstr="#389de6",GradientType=1) !important;
+                color: #fff;
+            }
+            &:first-of-type {
+                border-radius: 20px 0px 0px 20px;
+            }
+        }
+        .ant-tabs-nav-operations {
+            display: none !important;
+        }
+    }
+}
