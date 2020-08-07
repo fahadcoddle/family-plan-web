@@ -1,14 +1,11 @@
 import React from 'react';
 import './ToDoList.scss';
 import { Card, Button, Tabs } from 'antd';
-import { StickyContainer, Sticky } from 'react-sticky';
 import add from '../../Assets/add.png';
+import check from '../../Assets/check.png';
+import more from '../../Assets/more.svg';
 
 const { TabPane } = Tabs;
-
-const renderTabBar = (props, DefaultTabBar) => (
-    <Sticky>{({ style }) => <DefaultTabBar {...props} className="site-custom-tab-bar" style={{ ...style }} />}</Sticky>
-);
 
 const ToDoList = () => {
     return (
@@ -23,16 +20,213 @@ const ToDoList = () => {
                 </div>
             </div>
             <div className="card-tab">
-                <StickyContainer>
-                    <Tabs defaultActiveKey="1" renderTabBar={renderTabBar}>
-                        <TabPane tab="Open" key="1">
-                            Content of Tab Pane 1
-                        </TabPane>
-                        <TabPane tab="Completed" key="2">
-                            Content of Tab Pane 2
-                        </TabPane>
-                    </Tabs>
-                </StickyContainer>
+                <Tabs defaultActiveKey="1">
+                    <TabPane tab="Open" key="1">
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <img src={more} alt="more-icon" />
+                                </div>
+                            </div>
+                        </Card>
+                    </TabPane>
+                    <TabPane tab="Completed" key="2">
+                        Content of Tab Pane 2
+                    </TabPane>
+                </Tabs>
             </div>
         </Card>
     );

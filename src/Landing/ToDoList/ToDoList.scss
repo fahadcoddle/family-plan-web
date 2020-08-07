@@ -1,6 +1,14 @@
 .card {
     &-head {
-        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         position: relative;
         z-index: 1;
         span {
@@ -43,12 +51,7 @@
         }
     }
     &-tab {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        margin-top: 20px;
         .ant-tabs-tab {
             margin: 0 !important;
             padding: 10px 50px !important;
@@ -76,14 +79,80 @@
                 ) !important;
                 background: linear-gradient(90deg, rgba(115, 190, 225, 1) 0%, rgba(56, 157, 230, 1) 100%) !important;
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#73bee1",endColorstr="#389de6",GradientType=1) !important;
-                color: #fff;
+                .ant-tabs-tab-btn {
+                    color: #fff !important;
+                }
             }
             &:first-of-type {
                 border-radius: 20px 0px 0px 20px;
             }
         }
+        .ant-tabs-nav {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
         .ant-tabs-nav-operations {
             display: none !important;
+        }
+    }
+}
+.list {
+    &-card {
+        .ant-card-body {
+            padding: 10px !important;
+        }
+        &:not(:first-of-type) {
+            margin-top: 10px;
+        }
+    }
+    &-inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+    }
+    &-date {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-right: 1px solid #ccc;
+        padding-right: 10px;
+    }
+    &-time {
+        padding: 0px 15px;
+    }
+    &-task {
+        padding: 0px 10px;
+    }
+    &-check {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 50px;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-more {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        img {
+            width: 100%;
         }
     }
 }
