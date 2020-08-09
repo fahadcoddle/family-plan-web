@@ -21,7 +21,7 @@ const ToDoList = () => {
             </div>
             <div className="card-tab">
                 <Tabs defaultActiveKey="1">
-                    <TabPane tab="Open" key="1">
+                    <TabPane tab="Open" key="1" style={{ outline: 'none' }}>
                         <Card bordered={false} className="list-card">
                             <div className="list-inner">
                                 <div className="list-date">
@@ -223,7 +223,7 @@ const ToDoList = () => {
                             </div>
                         </Card>
                     </TabPane>
-                    <TabPane tab="Completed" key="2">
+                    <TabPane tab="Completed" key="2" style={{ outline: 'none' }}>
                         Content of Tab Pane 2
                     </TabPane>
                 </Tabs>
