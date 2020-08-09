@@ -72,7 +72,7 @@
     height: 130px;
     flex-shrink: 0;
     border-radius: 30px;
-    border: 1px solid red;
+    border: 1px solid #ededed;
 }
 
 .daysContainer {
@@ -90,7 +90,6 @@
     width: 40px;
     height: 40px;
     background: #fafafa;
-    background: red;
     border-radius: 50%;
     margin-top: 5px;
     span {
@@ -115,17 +114,33 @@
 .notify {
     display: -webkit-box;
     display: -ms-flexbox;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 0px 2px;
     span {
         width: 10px;
         height: 10px;
         background: red;
         border-radius: 50%;
         margin: 3px;
+    }
+    .blue {
+        background-color: #38a0eb;
+    }
+    .orange {
+        background-color: #fca232;
+    }
+    .green {
+        background-color: #22b422;
+    }
+    .violet {
+        background-color: #dc2cd1;
+    }
+    .selected {
+        background-color: #fafafa;
     }
 }

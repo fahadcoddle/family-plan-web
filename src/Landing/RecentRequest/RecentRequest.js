@@ -4,8 +4,8 @@ import { Card, Button } from 'antd';
 
 const RecentRequest = () => {
     return (
-        <Card bordered={false}>
-            <div className="card-head">
+        <Card bordered={false} className="req-card">
+            <div className="card-head req-head">
                 <span>Recent Request</span>
             </div>
             <Card bordered={false} className="list-card">

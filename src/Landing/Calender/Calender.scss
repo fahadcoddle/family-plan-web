@@ -13,9 +13,11 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
     padding: 5px 15px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ededed;
+    span {
+        font-weight: 700;
+    }
     .circle {
         width: 25px;
         height: 25px;
@@ -68,13 +70,24 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 20px;
+        span {
+            font-size: 12px;
+            &:first-of-type {
+                font-weight: 700;
+                font-size: 16px;
+            }
+        }
     }
     &-item {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         padding: 10px 15px;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #ededed;
     }
     &-wrap {
         display: flex;
@@ -88,8 +101,14 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin: 0px 10px;
+        margin: 0px 15px 10px 10px;
         width: 50px;
+        span {
+            &:first-of-type {
+                margin-bottom: 5px;
+            }
+        }
+
         .stat {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -109,6 +128,12 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        span {
+            &:first-of-type {
+                color: #000;
+                font-weight: 700;
+            }
+        }
     }
     &-info {
         width: 10px;
@@ -130,5 +155,10 @@
     }
     .selected {
         background-color: #fafafa;
+        .list-day {
+            span {
+                color: #000;
+            }
+        }
     }
 }

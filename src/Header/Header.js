@@ -1,10 +1,16 @@
 import React from 'react';
 import './Header.scss';
-import { Row, Col } from 'antd';
+import { Row, Col, Select } from 'antd';
 import logo from '../Assets/full-logo.png';
 import settings from '../Assets/settings.png';
 import help from '../Assets/help.png';
 import user from '../Assets/user.png';
+
+const { Option } = Select;
+
+function handleChange(value) {
+    console.log(`selected ${value}`);
+}
 
 const Header = () => {
     return (
@@ -17,7 +23,16 @@ const Header = () => {
                         </a>
                     </div>
                 </Col>
-                <Col span={8}>col-18 col-push-6</Col>
+                <Col span={8}>
+                    <div className="drop-down">
+                        <Select defaultValue="Household" onChange={handleChange}>
+                            <Option value="jack">Jack</Option>
+                            <Option value="lucy">Lucy</Option>
+
+                            <Option value="Yiminghe">yiminghe</Option>
+                        </Select>
+                    </div>
+                </Col>
                 <Col span={8} className="icon-wrap">
                     <ul>
                         <li>

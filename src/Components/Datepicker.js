@@ -62,15 +62,15 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                         </div>
                         <div className="dayLabel">{format(addDays(month, j), dayFormat)}</div>
                         <div className="notify">
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
-                            <span className="data"></span>
+                            <span className="data blue"></span>
+                            <span className="data orange"></span>
+                            <span className="data green"></span>
+                            <span className="data violet"></span>
+                            <span className="data blue"></span>
+                            <span className="data orange"></span>
+                            <span className="data green"></span>
+                            <span className="data violet"></span>
+                            <span className="data orange"></span>
                         </div>
                     </div>,
                 );

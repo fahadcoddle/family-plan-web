@@ -35,6 +35,26 @@
             }
         }
     }
+    .drop-down {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .ant-select {
+            width: 200px;
+            &-selector {
+                background: transparent;
+                color: #fff;
+                border: 1px solid #fff;
+                border-radius: 5px;
+            }
+            &-arrow {
+                color: #fff;
+            }
+        }
+    }
     @media (max-width: 768px) {
         padding: 10px;
         .logo-wrap {

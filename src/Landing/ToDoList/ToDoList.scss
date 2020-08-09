@@ -133,12 +133,15 @@
     }
     &-task {
         padding: 0px 10px;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     }
     &-check {
         width: 20px;
         height: 20px;
-        position: absolute;
-        right: 50px;
+        margin-right: 20px;
+        // position: absolute;
+        // right: 50px;
         cursor: pointer;
         img {
             width: 100%;
@@ -148,8 +151,8 @@
     &-more {
         width: 20px;
         height: 20px;
-        position: absolute;
-        right: 10px;
+        // position: absolute;
+        // right: 10px;
         cursor: pointer;
         img {
             width: 100%;

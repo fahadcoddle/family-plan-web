@@ -5,7 +5,7 @@ import { Card } from 'antd';
 const RecentTransactions = () => {
     return (
         <Card bordered={false} className="trans-card">
-            <div className="card-head">
+            <div className="card-head req-head">
                 <span>Recent Transactions</span>
             </div>
             <Card bordered={false} className="list-card">
