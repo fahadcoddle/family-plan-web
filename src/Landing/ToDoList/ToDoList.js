@@ -1,11 +1,12 @@
 import React from 'react';
 import './ToDoList.scss';
-import { Card, Button, Tabs } from 'antd';
+import { Card, Button, Tabs, Input, Popover } from 'antd';
 import add from '../../Assets/add.png';
 import check from '../../Assets/check.png';
 import more from '../../Assets/more.svg';
 
 const { TabPane } = Tabs;
+const { TextArea } = Input;
 
 const ToDoList = () => {
     return (
@@ -38,7 +39,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -58,7 +61,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -78,7 +83,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -98,7 +105,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -118,7 +127,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -138,7 +149,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -158,7 +171,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -178,7 +193,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -198,7 +215,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -218,7 +237,9 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <img src={more} alt="more-icon" />
+                                    <Popover>
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
                                 </div>
                             </div>
                         </Card>
@@ -227,6 +248,9 @@ const ToDoList = () => {
                         Content of Tab Pane 2
                     </TabPane>
                 </Tabs>
+            </div>
+            <div className="text-wrapper">
+                <TextArea rows={2} placeholder="Write a Todo" />
             </div>
         </Card>
     );

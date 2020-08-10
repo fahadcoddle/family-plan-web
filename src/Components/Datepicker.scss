@@ -38,6 +38,7 @@
         width: 100%;
         height: 100%;
     }
+
 }
 
 .dateListScrollable {
@@ -143,5 +144,27 @@
     }
     .selected {
         background-color: #fafafa;
+    }
+}
+@media (max-width: 768px) {
+    .dateDayItem {
+        margin: 0px 5px;
+    }
+    .dateLabel {
+        width: 35px;
+        height: 35px;
+        span {
+            font-size: 14px;
+        }
+    }
+    .dayLabel {
+        font-size: 10px;
+    }
+    .notify {
+        padding: 0px 5px;
+        span {
+            width: 8px;
+            height: 8px;
+        }
     }
 }

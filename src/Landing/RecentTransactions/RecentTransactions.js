@@ -8,66 +8,68 @@ const RecentTransactions = () => {
             <div className="card-head req-head">
                 <span>Recent Transactions</span>
             </div>
-            <Card bordered={false} className="list-card">
-                <div className="req-inner">
-                    <div className="req-details">
-                        <span>Recieved from</span>
-                        <span>Mary</span>
+            <div className="trans-card-wrap">
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <span>Recieved from</span>
+                            <span>Mary</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
                     </div>
-                    <div className="req-amount">
-                        <span>$500</span>
-                        <span>20/07/20</span>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <span>Recieved from</span>
+                            <span>Mary</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
                     </div>
-                </div>
-            </Card>
-            <Card bordered={false} className="list-card">
-                <div className="req-inner">
-                    <div className="req-details">
-                        <span>Recieved from</span>
-                        <span>Mary</span>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <span>Recieved from</span>
+                            <span>Mary</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
                     </div>
-                    <div className="req-amount">
-                        <span>$500</span>
-                        <span>20/07/20</span>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <span>Recieved from</span>
+                            <span>Mary</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
                     </div>
-                </div>
-            </Card>
-            <Card bordered={false} className="list-card">
-                <div className="req-inner">
-                    <div className="req-details">
-                        <span>Recieved from</span>
-                        <span>Mary</span>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <span>Recieved from</span>
+                            <span>Mary</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
                     </div>
-                    <div className="req-amount">
-                        <span>$500</span>
-                        <span>20/07/20</span>
-                    </div>
-                </div>
-            </Card>
-            <Card bordered={false} className="list-card">
-                <div className="req-inner">
-                    <div className="req-details">
-                        <span>Recieved from</span>
-                        <span>Mary</span>
-                    </div>
-                    <div className="req-amount">
-                        <span>$500</span>
-                        <span>20/07/20</span>
-                    </div>
-                </div>
-            </Card>
-            <Card bordered={false} className="list-card">
-                <div className="req-inner">
-                    <div className="req-details">
-                        <span>Recieved from</span>
-                        <span>Mary</span>
-                    </div>
-                    <div className="req-amount">
-                        <span>$500</span>
-                        <span>20/07/20</span>
-                    </div>
-                </div>
-            </Card>
+                </Card>
+            </div>
         </Card>
     );
 };
