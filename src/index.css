@@ -4,8 +4,15 @@ body {
         'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    scrollbar-width: thin !important;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
 }

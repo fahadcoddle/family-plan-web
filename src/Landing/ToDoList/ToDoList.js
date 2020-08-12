@@ -7,10 +7,15 @@ import more from '../../Assets/more.svg';
 
 const { TabPane } = Tabs;
 const { TextArea } = Input;
+const content = (
+    <div className="pop-content">
+        <span>Share with Co-parent</span>
+    </div>
+);
 
 const ToDoList = () => {
     return (
-        <Card bordered={false}>
+        <Card bordered={false} className="td-card">
             <div className="card-head">
                 <span>To Do List</span>
                 <div className="btn-wrap">
@@ -39,7 +44,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -61,7 +66,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -83,7 +88,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -105,7 +110,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -127,7 +132,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -149,7 +154,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -171,7 +176,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -193,7 +198,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -215,7 +220,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
@@ -237,7 +242,7 @@ const ToDoList = () => {
                                     <img src={check} alt="check-icon" />
                                 </div>
                                 <div className="list-more">
-                                    <Popover>
+                                    <Popover placement="topLeft" content={content} trigger="click">
                                         <img src={more} alt="more-icon" />
                                     </Popover>
                                 </div>
