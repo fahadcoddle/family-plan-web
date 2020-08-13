@@ -53,6 +53,12 @@
             &-arrow {
                 color: #000;
             }
+            .ant-select-selection-item {
+                font-size: 16px;
+            }
+            .ant-select-item-option {
+                border-bottom: 1px solid #ccc;
+            }
         }
     }
     @media (max-width: 768px) {
