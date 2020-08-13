@@ -151,9 +151,11 @@
         -ms-flex-direction: column;
         flex-direction: column;
         span {
+            font-size: 12px;
             &:first-of-type {
                 color: #000;
                 font-weight: 700;
+                font-size: 14px;
             }
         }
         @media (max-width: 768px) {

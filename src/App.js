@@ -8,9 +8,9 @@ import Signin from './Signin/Signin';
 function App() {
     return (
         <div className="App">
-            {/* <Header />
-            <Landing /> */}
-            <Signin />
+            <Header />
+            <Landing />
+            {/* <Signin /> */}
         </div>
     );
 }

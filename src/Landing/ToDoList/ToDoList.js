@@ -4,12 +4,18 @@ import { Card, Button, Tabs, Input, Popover } from 'antd';
 import add from '../../Assets/add.png';
 import check from '../../Assets/check.png';
 import more from '../../Assets/more.svg';
+import share from '../../Assets/share.png';
 
 const { TabPane } = Tabs;
 const { TextArea } = Input;
 const content = (
     <div className="pop-content">
-        <span>Share with Co-parent</span>
+        <span>
+            Share with Co-parent
+            <span className="img-wrap">
+                <img src={share} alt="share-icon" />
+            </span>
+        </span>
     </div>
 );
 
