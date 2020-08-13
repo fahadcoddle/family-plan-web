@@ -1,6 +1,9 @@
 .trans-card {
+    height: calc(50% - 10px);
     margin-top: 10px;
     .trans-card-wrap {
+        max-height: 460px;
+        overflow: auto;
         scrollbar-color: #f5f5f5 !important;
         scrollbar-width: thin !important;
 

@@ -7,7 +7,7 @@ import RecentRequest from './RecentRequest/RecentRequest';
 import RecentTransactions from './RecentTransactions/RecentTransactions';
 const Landing = () => {
     return (
-        <Row className="row-container">
+        <Row className="row-container" gutter={'10'}>
             <Col xs={24} xl={10} className="calender-wrap">
                 <Calender />
             </Col>
@@ -15,14 +15,8 @@ const Landing = () => {
                 <ToDoList />
             </Col>
             <Col xs={24} xl={7} className="col-wrap">
-                <Row className="row-wrap">
-                    <Col xs={24}>
-                        <RecentRequest />
-                    </Col>
-                    <Col xs={24}>
-                        <RecentTransactions />
-                    </Col>
-                </Row>
+                <RecentRequest />
+                <RecentTransactions />
             </Col>
         </Row>
     );

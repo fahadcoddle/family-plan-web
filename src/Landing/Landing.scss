@@ -1,5 +1,4 @@
 .ant-card {
-    margin: 5px;
     border-radius: 10px;
     box-shadow: 0px 12px 45px #0000000f;
     .ant-card-body {
@@ -21,7 +20,8 @@
     box-shadow: 0px 6px 15px #0000000d;
 }
 .row-container {
-    padding: 10px;
+    padding: 10px 5px;
+    margin: 0;
     height: calc(100vh - 60px);
     background: #f5f4f3;
 }
@@ -48,13 +48,13 @@
             .trans-card-wrap {
                 // overflow: auto;
                 // max-height: calc(100% - 47px);
-                max-height: 330px;
+                min-height: 330px;
                 overflow: auto;
             }
         }
     }
     .trans-card {
-        // height: calc(100% - 40px);
+        height: calc(100% - 40px);
     }
 }
 .todo-wrap {
@@ -63,7 +63,8 @@
         // height: 100%;
         .ant-card-body {
             height: 100%;
-            padding: 15px 15px 5px 15px !important;
+            display: flex;
+            flex-direction: column;
             .card-tab {
                 // height: calc(100% - 110px);
                 // overflow: hidden;
@@ -71,7 +72,7 @@
                     height: 100%;
                 }
                 .ant-tabs-content-holder {
-                    max-height: 600px;
+                    min-height: 600px;
                     overflow: auto;
                 }
             }
@@ -93,9 +94,14 @@
             overflow: hidden;
             flex: 1;
             .list {
-                max-height: 575px;
+                max-height: 850px;
                 overflow: auto;
             }
         }
+    }
+}
+.trans-card {
+    .ant-card-body {
+        overflow: hidden;
     }
 }
