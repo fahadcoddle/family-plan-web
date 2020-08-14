@@ -3,6 +3,7 @@ import '../Signin/Signin.scss';
 import { Form, Input, Button } from 'antd';
 import img from '../Assets/google.png';
 import logo from '../Assets/full-logo.png';
+import { Link } from 'react-router-dom';
 
 const layout = {
     wrapperCol: {
@@ -71,9 +72,11 @@ const Signup = () => {
                                             <span>Forgot your Password?</span>
                                         </a>
                                     </div>
-                                    <Button type="primary" htmlType="submit" className="btn-sign-in">
-                                        Sign In
-                                    </Button>
+                                    <Link to="/home">
+                                        <Button type="primary" htmlType="submit" className="btn-sign-in">
+                                            Sign In
+                                        </Button>
+                                    </Link>
                                 </Form.Item>
                             </Form>
 

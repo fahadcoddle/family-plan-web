@@ -9,159 +9,161 @@ const RecentRequest = () => {
                 <span>Recent Request</span>
             </div>
             <div className="req-card-wrap">
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
+                <div className="custom-mr">
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-send">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-send">
-                                <span>Sent</span>
-                            </Button>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-send">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-send">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-send">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-send">
-                                <span>Sent</span>
-                            </Button>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-send">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-send">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-review">
+                                    <span>Review</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-send">
-                                <span>Sent</span>
-                            </Button>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-review">
+                                    <span>Review</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
+                    </Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Request from</span>
+                                <span>Mary</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn btn-review">
+                                    <span>Review</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$500</span>
+                                <span>20/07/20</span>
+                            </div>
                         </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
-                        </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-send">
-                                <span>Sent</span>
-                            </Button>
-                        </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
-                        </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
-                        </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-send">
-                                <span>Sent</span>
-                            </Button>
-                        </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
-                        </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
-                        </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-send">
-                                <span>Sent</span>
-                            </Button>
-                        </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
-                        </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
-                        </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-review">
-                                <span>Review</span>
-                            </Button>
-                        </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
-                        </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
-                        </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-review">
-                                <span>Review</span>
-                            </Button>
-                        </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
-                        </div>
-                    </div>
-                </Card>
-                <Card bordered={false} className="list-card">
-                    <div className="req-inner">
-                        <div className="req-details">
-                            <span>Request from</span>
-                            <span>Mary</span>
-                        </div>
-                        <div className="req-action">
-                            <Button type="primary" className="btn btn-review">
-                                <span>Review</span>
-                            </Button>
-                        </div>
-                        <div className="req-amount">
-                            <span>$500</span>
-                            <span>20/07/20</span>
-                        </div>
-                    </div>
-                </Card>
+                    </Card>
+                </div>
             </div>
         </Card>
     );

@@ -23,7 +23,7 @@ const Header = () => {
                         </a>
                     </div>
                 </Col>
-                <Col span={8}>
+                <Col span={8} className="drop-wrap">
                     <div className="drop-down">
                         <Select defaultValue="Household" onChange={handleChange}>
                             <Option value="jack">Jack</Option>
@@ -34,23 +34,24 @@ const Header = () => {
                     </div>
                 </Col>
                 <Col span={8} className="icon-wrap">
-                    <ul>
-                        <li>
+                    <div className="icon-inner">
+                        <span>
                             <a href="#">
                                 <img src={settings} alt="settings" />
                             </a>
-                        </li>
-                        <li>
+                        </span>
+                        <span>
                             <a href="#">
                                 <img src={help} alt="help" />
                             </a>
-                        </li>
-                        <li>
+                        </span>
+                        <span>
                             <a href="#">
                                 <img src={user} alt="user" />
                             </a>
-                        </li>
-                    </ul>
+                        </span>
+                    </div>
+
                 </Col>
             </Row>
         </div>
