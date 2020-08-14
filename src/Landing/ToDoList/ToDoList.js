@@ -256,7 +256,226 @@ const ToDoList = () => {
                         </Card>
                     </TabPane>
                     <TabPane tab="Completed" key="2" style={{ outline: 'none' }}>
-                        Content of Tab Pane 2
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card bordered={false} className="list-card">
+                            <div className="list-inner">
+                                <div className="list-date">
+                                    <span>1</span>
+                                    <span>Fri, Feb</span>
+                                </div>
+                                <div className="list-time">
+                                    <span>10:00am</span>
+                                </div>
+                                <div className="list-task">
+                                    <span>Dentist Appointment</span>
+                                </div>
+                                <div className="list-check">
+                                    <img src={check} alt="check-icon" />
+                                </div>
+                                <div className="list-more">
+                                    <Popover placement="topLeft" content={content} trigger="click">
+                                        <img src={more} alt="more-icon" />
+                                    </Popover>
+                                </div>
+                            </div>
+                        </Card>
                     </TabPane>
                 </Tabs>
             </div>

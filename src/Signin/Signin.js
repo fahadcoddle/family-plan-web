@@ -38,9 +38,7 @@ const Signup = () => {
                             <Form
                                 {...layout}
                                 name="basic"
-                                initialValues={{
-                                    remember: true,
-                                }}
+                                initialValues={{}}
                                 onFinish={onFinish}
                                 onFinishFailed={onFinishFailed}
                             >
@@ -96,9 +94,7 @@ const Signup = () => {
                             <Form
                                 {...layout}
                                 name="basic"
-                                initialValues={{
-                                    remember: true,
-                                }}
+                                initialValues={{}}
                                 onFinish={onFinish}
                                 onFinishFailed={onFinishFailed}
                             >

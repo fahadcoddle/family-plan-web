@@ -4,6 +4,9 @@ import { Card, Button } from 'antd';
 import DatePicker from '../../Components/Datepicker';
 
 const Calender = () => {
+    const selectedDay = (val) => {
+        console.log(val);
+    };
     return (
         <Card bordered={false} className="calender-card">
             <div className="card-head">
@@ -14,7 +17,7 @@ const Calender = () => {
                     </Button>
                 </div>
             </div>
-            <DatePicker labelFormat={'MMMM'} color={'#374e8c'} />
+            <DatePicker getSelectedDay={selectedDay} labelFormat={'MMMM'} color={'#374e8c'} />
             <div className="card-body-wrap">
                 <div className="name-wrap">
                     <div className="circle blue">

@@ -9,7 +9,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     const [selectedDate, setSelectedDate] = useState(new Date());
     // const firstSection = { marginLeft: '40px' };
     const startDate = new Date();
-    const lastDate = addDays(startDate, endDate || 90);
+    const lastDate = addDays(startDate, endDate || 365);
     const primaryColor = color || 'rgb(54, 105, 238)';
     const selectedStyle = {
         fontWeight: 'bold',
