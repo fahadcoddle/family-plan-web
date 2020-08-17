@@ -68,6 +68,12 @@
             .ant-select-item-option {
                 border-bottom: 1px solid #ccc;
             }
+            @media (max-width: 768px) {
+                width: 125px;
+                .ant-select-selection-item {
+                    font-size: 13px;
+                }
+            }
         }
     }
     .ant-select-focused .ant-select-selector,

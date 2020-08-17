@@ -78,6 +78,9 @@
             }
         }
     }
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 }
 .calender-wrap {
     // height: calc(100vh - 115px);
@@ -98,6 +101,9 @@
                 overflow: auto;
             }
         }
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
     }
 }
 .trans-card {

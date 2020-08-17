@@ -26,7 +26,6 @@ const ToDoList = () => {
                 <span>To Do List</span>
                 <div className="btn-wrap">
                     <Button type="primary">
-                        <img src={add} alt="add-icon" />
                         <span>Add To Do</span>
                     </Button>
                 </div>

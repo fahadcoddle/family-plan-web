@@ -53,7 +53,11 @@ const Signup = (props) => {
                                 </FloatLabel>
 
                                 <FloatLabel label="Password" name="password" value={password}>
-                                    <Input value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <Input
+                                        value={password}
+                                        type="password"
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
                                 </FloatLabel>
                                 <Form.Item {...tailLayout}>
                                     <div className="fgt-pwd">
@@ -99,7 +103,11 @@ const Signup = (props) => {
                                 </FloatLabel>
 
                                 <FloatLabel label="Password" name="password" value={password}>
-                                    <Input value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <Input
+                                        value={password}
+                                        type="password"
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
                                 </FloatLabel>
                                 <Form.Item {...tailLayout}>
                                     <div className="tnc">

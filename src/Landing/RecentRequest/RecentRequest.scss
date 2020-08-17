@@ -159,6 +159,9 @@
 }
 .req-card {
     height: 50%;
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 }
 .custom-mr {
     margin-right: 10px;
