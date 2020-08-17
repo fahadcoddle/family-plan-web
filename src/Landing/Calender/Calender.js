@@ -61,7 +61,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">School</span>
+                                    <span>School</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">Dentist</span>
+                                    <span>Dentist</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">Swimming Class</span>
+                                    <span>Swimming Class</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">School</span>
+                                    <span>School</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -120,53 +120,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">Play Game</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="list-item ">
-                        <div className="list-day">
-                            <span>19</span>
-                            <span>TUE</span>
-                        </div>
-                        <div className="list-details">
-                            <div className="list-wrap">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info blue"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Dance Lessons</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                            <div className="list-inn">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info orange"></span>
-                                        <span className="list-info green"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span className="i-task">School</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                            <div className="list-inn">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info orange"></span>
-                                        <span className="list-info orange"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span className="i-task">Dentist</span>
+                                    <span>Play Game</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -199,7 +153,53 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">Play Game</span>
+                                    <span>School</span>
+                                    <span>128 Main St</span>
+                                </div>
+                            </div>
+                            <div className="list-inn">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info orange"></span>
+                                        <span className="list-info orange"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Dentist</span>
+                                    <span>128 Main St</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="list-item ">
+                        <div className="list-day">
+                            <span>19</span>
+                            <span>TUE</span>
+                        </div>
+                        <div className="list-details">
+                            <div className="list-wrap">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info blue"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Dance Lessons</span>
+                                    <span>128 Main St</span>
+                                </div>
+                            </div>
+                            <div className="list-inn">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info orange"></span>
+                                        <span className="list-info green"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Play Game</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span className="i-task">Play Game</span>
+                                    <span>Play Game</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>

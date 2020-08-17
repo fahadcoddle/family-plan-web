@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Signin/Signin.scss';
 import { Form, Input, Button } from 'antd';
 import img from '../Assets/google.png';
 import logo from '../Assets/full-logo.png';
 import { Link } from 'react-router-dom';
+import FloatLabel from '../Components/FloatLabel/FloatLabel';
 
 const layout = {
     wrapperCol: {
@@ -16,7 +17,7 @@ const tailLayout = {
     },
 };
 
-const Signup = () => {
+const Signup = (props) => {
     const onFinish = (values) => {
         console.log('Success:', values);
     };
@@ -24,6 +25,10 @@ const Signup = () => {
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
+    const [password, setPassword] = useState('*******');
+    const [email, setEmail] = useState('joe@example.com');
+    const [name, setName] = useState('Joe Smith');
+
     return (
         <div className="sign-in-wrap">
             <div className="content-head">
@@ -43,29 +48,13 @@ const Signup = () => {
                                 onFinish={onFinish}
                                 onFinishFailed={onFinishFailed}
                             >
-                                <Form.Item
-                                    name="username"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your username!',
-                                        },
-                                    ]}
-                                >
-                                    <Input placeholder="Email" />
-                                </Form.Item>
+                                <FloatLabel label="Email" name="email" value={email}>
+                                    <Input value={email} onChange={(e) => setEmail(e.target.value)} />
+                                </FloatLabel>
 
-                                <Form.Item
-                                    name="password"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your password!',
-                                        },
-                                    ]}
-                                >
-                                    <Input.Password placeholder="Password" />
-                                </Form.Item>
+                                <FloatLabel label="Password" name="password" value={password}>
+                                    <Input value={password} onChange={(e) => setPassword(e.target.value)} />
+                                </FloatLabel>
                                 <Form.Item {...tailLayout}>
                                     <div className="fgt-pwd">
                                         <a href="#">
@@ -101,41 +90,17 @@ const Signup = () => {
                                 onFinish={onFinish}
                                 onFinishFailed={onFinishFailed}
                             >
-                                <Form.Item
-                                    name="Name"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your name!',
-                                        },
-                                    ]}
-                                >
-                                    <Input placeholder="Name" />
-                                </Form.Item>
+                                <FloatLabel label="Name" name="name" value={name}>
+                                    <Input value={name} onChange={(e) => setName(e.target.value)} />
+                                </FloatLabel>
 
-                                <Form.Item
-                                    name="email"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your username!',
-                                        },
-                                    ]}
-                                >
-                                    <Input placeholder="Email" />
-                                </Form.Item>
+                                <FloatLabel label="Email" name="email" value={email}>
+                                    <Input value={email} onChange={(e) => setEmail(e.target.value)} />
+                                </FloatLabel>
 
-                                <Form.Item
-                                    name="password"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Please input your password!',
-                                        },
-                                    ]}
-                                >
-                                    <Input.Password placeholder="Password" />
-                                </Form.Item>
+                                <FloatLabel label="Password" name="password" value={password}>
+                                    <Input value={password} onChange={(e) => setPassword(e.target.value)} />
+                                </FloatLabel>
                                 <Form.Item {...tailLayout}>
                                     <div className="tnc">
                                         <a href="#">

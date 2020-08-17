@@ -45,8 +45,6 @@
             border-color: transparent !important;
             border-radius: 5px;
             height: 38px;
-            &:hover {
-            }
         }
 
         Button {
@@ -177,10 +175,35 @@
     -ms-flex-align: stretch;
     align-items: stretch;
 }
+.ant-form-item {
+    position: relative;
+    .ant-form-item-label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        padding: 2px 0 0 10px;
+        transition: all 200ms;
+        opacity: 0.5;
+        label {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+.ant-form-item-control::focus ~ .ant-form-item-label,
+.ant-form-item-control::valid ~ .ant-form-item-label {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+}
 .ant-form-item-has-error {
     font-weight: 600;
     text-align: left;
     border-color: #fff !important;
+    color: #a82121;
     .ant-input {
         border-color: #fff !important;
     }
@@ -190,4 +213,48 @@
 }
 .ant-form-item-has-error .ant-form-item-explain {
     font-size: 12px;
+    color: #a82121;
 }
+.example {
+    margin: 12px;
+}
+/* Force update ant style */
+// .ant-input {
+//     padding: 10px;
+// }
+
+.ant-select .ant-select-selector {
+    padding: 16px 10px 4px 11px;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    padding: 16px 10px 4px 11px;
+    height: 48px;
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-search {
+    top: 16px;
+}
+
+.ant-input + .label-float,
+.ant-input + .label-float {
+    font-size: 100%;
+    transform: translate3d(0, -125%, 0);
+    opacity: 1;
+    color: #000;
+}
+
+// .ant-input:placeholder-shown {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     padding: 7px 0 0 13px;
+//     transition: all 200ms;
+//     opacity: 0.5;
+// }
+// .ant-form-item-control-input-content:focus + .ant-input:placeholder-shown,
+// .ant-form-item-control-input-content:valid + .ant-input:placeholder-shown {
+//     font-size: 75%;
+//     transform: translate3d(0, -100%, 0);
+//     opacity: 1;
+// }

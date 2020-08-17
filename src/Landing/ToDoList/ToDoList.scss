@@ -49,14 +49,14 @@
                     height: 15px;
                     margin-right: 5px;
                 }
-                &:hover {
-                    background: transparent;
-                    border: 1px solid rgb(240, 200, 91);
-                    transition: all ease-in-out 0.5s;
-                    span {
-                        color: rgb(240, 200, 91) !important;
-                    }
-                }
+                // &:hover {
+                //     background: transparent;
+                //     border: 1px solid rgb(240, 200, 91);
+                //     transition: all ease-in-out 0.5s;
+                //     span {
+                //         color: rgb(240, 200, 91) !important;
+                //     }
+                // }
             }
             @media (max-width: 768px) {
                 button {
@@ -209,8 +209,8 @@
         }
     }
     &-check {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
         margin-right: 10px;
         cursor: pointer;
         display: -webkit-box;
@@ -225,8 +225,8 @@
         }
     }
     &-more {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
         cursor: pointer;
         display: -webkit-box;
         display: -ms-flexbox;
