@@ -70,7 +70,7 @@ const Calender = () => {
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info blue"></span>
                                     </div>
                                 </div>
                                 <div className="list-activity">
@@ -116,7 +116,7 @@ const Calender = () => {
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info blue"></span>
                                     </div>
                                 </div>
                                 <div className="list-activity">
@@ -162,7 +162,7 @@ const Calender = () => {
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info blue"></span>
                                     </div>
                                 </div>
                                 <div className="list-activity">
@@ -208,7 +208,7 @@ const Calender = () => {
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info violet"></span>
                                     </div>
                                 </div>
                                 <div className="list-activity">
@@ -254,7 +254,7 @@ const Calender = () => {
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info blue"></span>
                                     </div>
                                 </div>
                                 <div className="list-activity">

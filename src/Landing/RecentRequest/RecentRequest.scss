@@ -166,3 +166,58 @@
 .custom-mr {
     margin-right: 10px;
 }
+
+@media (min-width: 1920px) {
+    .req {
+        &-details {
+            span {
+                font-size: 16px;
+                color: #333333;
+                &:first-of-type {
+                    font-size: 16px;
+                }
+            }
+        }
+        &-amount {
+            span {
+                font-size: 12px;
+                color: #333333;
+                &:first-of-type {
+                    font-size: 16px;
+                }
+            }
+        }
+        &-action {
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 1919px) {
+    .req {
+        &-details {
+            span {
+                font-size: 12px;
+                color: #333333;
+                &:first-of-type {
+                    font-size: 13px;
+                }
+            }
+        }
+        &-amount {
+            span {
+                font-size: 12px;
+                color: #333333;
+                &:first-of-type {
+                    font-size: 13px;
+                }
+            }
+        }
+        &-action {
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -49,21 +49,13 @@
                     height: 15px;
                     margin-right: 5px;
                 }
-                // &:hover {
-                //     background: transparent;
-                //     border: 1px solid rgb(240, 200, 91);
-                //     transition: all ease-in-out 0.5s;
-                //     span {
-                //         color: rgb(240, 200, 91) !important;
-                //     }
-                // }
             }
             @media (max-width: 768px) {
                 button {
                     height: 25px;
                     padding: 10px;
                     span {
-                        font-size: 10px;
+                        font-size: 10px !important;
                     }
                 }
             }
@@ -188,7 +180,7 @@
         }
     }
     &-time {
-        padding: 0px 15px;
+        padding: 0px 10px;
         span {
             font-size: 14px;
             color: #000000;
@@ -196,9 +188,6 @@
     }
     &-task {
         padding: 0px 5px;
-        // -ms-flex-preferred-size: 50%;
-        // flex-basis: 50%;
-        // max-width: 150px;
         width: 160px;
         white-space: nowrap;
         overflow: hidden;
@@ -240,11 +229,6 @@
         }
     }
     @media (max-width: 768px) {
-        &-inner {
-            span {
-                // font-size: 12px;
-            }
-        }
         &-check,
         &-more {
             width: 15px;
@@ -252,7 +236,6 @@
         }
         &-task {
             padding: 0px 5px;
-            // flex-basis: 45%;
             span {
                 font-size: 11px;
             }
@@ -296,4 +279,53 @@
 }
 .td-card {
     height: 100%;
+}
+@media (min-width: 1920px) {
+    .td-card {
+        .list {
+            &-date {
+                span {
+                    font-size: 14px;
+                    &:first-of-type {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &-time {
+                span {
+                    font-size: 16px;
+                }
+            }
+            &-task {
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1919px) {
+    .td-card {
+        .list {
+            &-date {
+                width: 65px;
+                span {
+                    font-size: 10px;
+                    &:first-of-type {
+                        font-size: 13px;
+                    }
+                }
+            }
+            &-time {
+                span {
+                    font-size: 13px;
+                }
+            }
+            &-task {
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
 }

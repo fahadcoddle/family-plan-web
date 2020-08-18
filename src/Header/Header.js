@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { Row, Col, Select } from 'antd';
-import logo from '../Assets/full-logo.png';
+import logo from '../Assets/fp-logo.png';
 import settings from '../Assets/settings.png';
 import help from '../Assets/help.png';
 import user from '../Assets/user.png';
@@ -51,7 +51,6 @@ const Header = () => {
                             </a>
                         </span>
                     </div>
-
                 </Col>
             </Row>
         </div>

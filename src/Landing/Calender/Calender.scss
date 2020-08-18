@@ -212,3 +212,79 @@
     font-style: italic;
     font-weight: 300 !important;
 }
+@media (min-width: 1920px) {
+    .calender-card {
+        .list {
+            .list-day {
+                span {
+                    font-size: 20px;
+                    &:not(:first-of-type) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .list-timer {
+                span {
+                    &:first-of-type {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .list-info {
+                width: 12px;
+                height: 12px;
+            }
+            .list-activity {
+                span {
+                    font-size: 14px;
+                    &:first-of-type {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .card-head {
+        span {
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 1920px) {
+    .calender-card {
+        .list {
+            .list-day {
+                span {
+                    font-size: 14px;
+                    &:not(:first-of-type) {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .list-timer {
+                span {
+                    &:first-of-type {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .list-info {
+                width: 9px;
+                height: 9px;
+            }
+            .list-activity {
+                span {
+                    font-size: 10px;
+                    &:first-of-type {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .card-head {
+        span {
+            font-size: 14px !important;
+        }
+    }
+}
