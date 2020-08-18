@@ -1,6 +1,6 @@
 .content {
     &-wrap {
-        margin: 80px 30px 30px 30px;
+        margin: 50px 30px 30px 30px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -159,7 +159,7 @@
         background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
         background: linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c85b",endColorstr="#ff9a29",GradientType=1);
-        padding: 20px 0px;
+        padding: 15px 0px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -173,7 +173,7 @@
             padding: 10px 0px;
         }
         .logo-wrap {
-            width: 170px;
+            width: 160px;
             height: 50px;
             img {
                 width: 100%;
@@ -221,10 +221,10 @@
         }
     }
 }
-.sign-in-wrap {
-    max-height: 100vh;
-    overflow: hidden;
-}
+// .sign-in-wrap {
+//     max-height: 100vh;
+//     overflow: hidden;
+// }
 .ant-form-item-control::focus ~ .ant-form-item-label,
 .ant-form-item-control::valid ~ .ant-form-item-label {
     font-size: 75%;
@@ -299,7 +299,7 @@
 @media (max-width: 1919px) {
     .content-card {
         h1 {
-            font-size: 28px;
+            font-size: 26px;
         }
         .fgt-pwd {
             span {
@@ -333,7 +333,7 @@
         }
     }
     .content-wrap {
-        padding: 30px 30px 40px 30px;
+        padding: 15px 30px 40px 30px;
     }
 }
 @media (max-width: 767px) {
