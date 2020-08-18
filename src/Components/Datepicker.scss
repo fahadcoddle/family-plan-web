@@ -115,7 +115,9 @@
 }
 .select {
     background-color: #38a0eb;
-    color: #fff;
+    span {
+        color: #fff;
+    }
 }
 .btn-right {
     transform: rotate(180deg);

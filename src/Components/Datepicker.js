@@ -57,7 +57,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                         key={addDays(month, j)}
                         onClick={() => onDateClick(addDays(month, j))}
                     >
-                        <div className="dateLabel">
+                        <div className="dateLabel select">
                             <span>{format(addDays(month, j), dateFormat)}</span>
                         </div>
                         <div className="dayLabel">{format(addDays(month, j), dayFormat)}</div>
