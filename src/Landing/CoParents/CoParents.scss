@@ -1,0 +1,61 @@
+.coparent {
+    &-card {
+    }
+    &-inner {
+        margin: 10px 0px;
+        box-shadow: 0px 6px 15px #0000000d;
+        .ant-card-body {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            .btn {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                border: 0;
+                width: 90px;
+                height: 30px;
+                border-radius: 5px;
+                &-accept {
+                    background: rgb(240, 200, 91);
+                    background: -moz-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+                    background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+                    background: linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c85b",endColorstr="#ff9a29",GradientType=1);
+                    margin-right: 10px;
+                }
+                &-decline {
+                    background: rgb(129, 198, 223);
+                    background: -moz-linear-gradient(90deg, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%);
+                    background: -webkit-linear-gradient(90deg, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%);
+                    background: linear-gradient(90deg, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#81c6df",endColorstr="#38a0eb",GradientType=1);
+                }
+            }
+        }
+        .name {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 50%;
+            span {
+                color: #333333;
+                font-size: 16px;
+            }
+        }
+        .actions {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            width: 50%;
+        }
+    }
+}

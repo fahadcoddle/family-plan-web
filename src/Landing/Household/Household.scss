@@ -1,0 +1,82 @@
+.head {
+    text-align: center;
+    margin-bottom: 24px;
+    span {
+        font-size: 20px;
+        color: #000000;
+        font-weight: 600;
+    }
+    &-avatar {
+        text-align: center;
+        margin-bottom: 90px;
+    }
+}
+.household-card {
+    .ant-input + .label-float,
+    .ant-input + .label-float {
+        font-size: 80%;
+        transform: translate3d(0, -160%, 0);
+        opacity: 1;
+        color: #333333;
+        font-weight: 400 !important;
+    }
+    .ant-input {
+        height: 43px;
+        border-radius: 5px;
+        color: #333333;
+        border-color: #999999 !important;
+    }
+    .float-label {
+        margin-bottom: 16px !important;
+        .ant-input,
+        .ant-select-selector {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: none !important;
+                border-color: #999999;
+            }
+        }
+        .label {
+            top: 12px !important;
+        }
+    }
+    .ant-select-selector {
+        height: 43px !important;
+        border-radius: 5px !important;
+        border-color: #999999 !important;
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    .ant-select-arrow {
+        span {
+            color: #999999;
+        }
+        top: 33% !important;
+        transition: all ease-in 0.2s;
+    }
+    .ant-select-open {
+        .ant-select-arrow {
+            transform: rotate(180deg);
+        }
+    }
+    .bottom-btn {
+        margin: 36px 0px;
+        text-align: center;
+        .btn-save {
+            width: 200px;
+            height: 44px;
+            border: none;
+            border-radius: 8px;
+            background: rgb(240, 200, 91);
+            background: -moz-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+            background: linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c85b",endColorstr="#ff9a29",GradientType=1);
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
