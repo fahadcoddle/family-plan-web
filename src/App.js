@@ -1,29 +1,27 @@
 import React from 'react';
-import './App.css';
-import 'antd/dist/antd.css';
-import Header from './Header/Header';
-import Landing from './Landing/Landing';
-import Signin from './Signin/Signin';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createBrowserHistory } from "history";
+import configureStore from './store/configureStore';
+
+import Container from './container/App';
+import { addLocationQuery } from "./helpers/routeParams";
+
+const history = createBrowserHistory();
+
+addLocationQuery(history);
+
+history.listen(location => {
+  addLocationQuery(history);
+});
+
+
+const store = configureStore();
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <Switch>
-                    <Route
-                        path="/home"
-                        render={(props) => (
-                            <div>
-                                <Header />
-                                <Landing />
-                            </div>
-                        )}
-                    />
-                    <Signin />
-                </Switch>
-            </div>
-        </Router>
+        <Provider store={store}>
+            <Container />
+        </Provider>
     );
 }
 
