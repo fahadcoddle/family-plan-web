@@ -56,7 +56,7 @@ const Signup = (props) => {
                             </FloatLabel>
                             <Form.Item {...tailLayout}>
                                 <div className="fgt-pwd">
-                                    <a href="#">
+                                    <a href="/#">
                                         <span>Forgot your Password?</span>
                                     </a>
                                 </div>
@@ -99,7 +99,7 @@ const Signup = (props) => {
                             </FloatLabel>
                             <Form.Item {...tailLayout}>
                                 <div className="tnc">
-                                    <a href="#">
+                                    <a href="/#">
                                         <span>By Signing in you will be agreed with our </span>
                                         <span>Terms & Conditions</span>
                                     </a>

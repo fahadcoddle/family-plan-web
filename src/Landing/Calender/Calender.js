@@ -4,9 +4,6 @@ import { Card, Button } from 'antd';
 import DatePicker from '../../Components/Datepicker';
 
 const Calender = () => {
-    const selectedDay = (val) => {
-        console.log(val);
-    };
     return (
         <Card bordered={false} className="calender-card">
             <div className="card-head">
@@ -17,7 +14,7 @@ const Calender = () => {
                     </Button>
                 </div>
             </div>
-            <DatePicker getSelectedDay={selectedDay} labelFormat={'MMMM'} color={'#374e8c'} />
+            <DatePicker labelFormat={'MMMM'} color={'#374e8c'} />
             <div className="card-body-wrap">
                 <div className="name-wrap">
                     <div className="circle blue">
@@ -52,7 +49,7 @@ const Calender = () => {
                                     <span>128 Main St</span>
                                 </div>
                             </div>
-                            <div className="list-inn">
+                            <div className="list-inner">
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
@@ -62,35 +59,15 @@ const Calender = () => {
                                 </div>
                                 <div className="list-activity">
                                     <span>School</span>
-                                    <span>128 Main St</span>
+                                    <span>Bothwell Middle School</span>
                                 </div>
                             </div>
-                            <div className="list-inn">
+                            <div className="list-inner">
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
-                                        <span className="list-info blue"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Dentist</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="list-item ">
-                        <div className="list-day">
-                            <span>19</span>
-                            <span>TUE</span>
-                        </div>
-                        <div className="list-details">
-                            <div className="list-wrap">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info blue"></span>
+                                        <span className="list-info green"></span>
                                     </div>
                                 </div>
                                 <div className="list-activity">
@@ -98,7 +75,27 @@ const Calender = () => {
                                     <span>128 Main St</span>
                                 </div>
                             </div>
-                            <div className="list-inn">
+                        </div>
+                    </div>
+                    <div className="list-item ">
+                        <div className="list-day">
+                            <span>19</span>
+                            <span>TUE</span>
+                        </div>
+                        <div className="list-details">
+                            <div className="list-wrap">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info blue"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>School</span>
+                                    <span>Bothwell Middle School</span>
+                                </div>
+                            </div>
+                            <div className="list-inner">
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
@@ -107,11 +104,11 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span>School</span>
-                                    <span>128 Main St</span>
+                                    <span>Play game</span>
+                                    <span>433 Washington St</span>
                                 </div>
                             </div>
-                            <div className="list-inn">
+                            <div className="list-inner">
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
@@ -120,7 +117,7 @@ const Calender = () => {
                                     </div>
                                 </div>
                                 <div className="list-activity">
-                                    <span>Play Game</span>
+                                    <span>Dance Lessons</span>
                                     <span>128 Main St</span>
                                 </div>
                             </div>
@@ -144,7 +141,7 @@ const Calender = () => {
                                     <span>128 Main St</span>
                                 </div>
                             </div>
-                            <div className="list-inn">
+                            <div className="list-inner">
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
@@ -154,10 +151,10 @@ const Calender = () => {
                                 </div>
                                 <div className="list-activity">
                                     <span>School</span>
-                                    <span>128 Main St</span>
+                                    <span>Bothwell Middle School</span>
                                 </div>
                             </div>
-                            <div className="list-inn">
+                            <div className="list-inner">
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
@@ -167,99 +164,7 @@ const Calender = () => {
                                 </div>
                                 <div className="list-activity">
                                     <span>Dentist</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="list-item ">
-                        <div className="list-day">
-                            <span>19</span>
-                            <span>TUE</span>
-                        </div>
-                        <div className="list-details">
-                            <div className="list-wrap">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info blue"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Dance Lessons</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                            <div className="list-inn">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info orange"></span>
-                                        <span className="list-info green"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Play Game</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                            <div className="list-inn">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info orange"></span>
-                                        <span className="list-info violet"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Dance Lessons</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="list-item ">
-                        <div className="list-day">
-                            <span>19</span>
-                            <span>TUE</span>
-                        </div>
-                        <div className="list-details">
-                            <div className="list-wrap">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info blue"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Dance Lessons</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                            <div className="list-inn">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info orange"></span>
-                                        <span className="list-info green"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Play Game</span>
-                                    <span>128 Main St</span>
-                                </div>
-                            </div>
-                            <div className="list-inn">
-                                <div className="list-timer">
-                                    <span>7:10am</span>
-                                    <div className="stat">
-                                        <span className="list-info orange"></span>
-                                        <span className="list-info blue"></span>
-                                    </div>
-                                </div>
-                                <div className="list-activity">
-                                    <span>Dance Lessons</span>
-                                    <span>128 Main St</span>
+                                    <span>433 Washington St</span>
                                 </div>
                             </div>
                         </div>

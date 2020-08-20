@@ -18,7 +18,7 @@ const Header = () => {
             <Row>
                 <Col span={8}>
                     <div className="logo-wrap">
-                        <a href="#">
+                        <a href="/#">
                             <img src={logo} alt="sop-logo" />
                         </a>
                     </div>
@@ -36,17 +36,17 @@ const Header = () => {
                 <Col span={8} className="icon-wrap">
                     <div className="icon-inner">
                         <span>
-                            <a href="#">
+                            <a href="/#">
                                 <img src={settings} alt="settings" />
                             </a>
                         </span>
                         <span>
-                            <a href="#">
+                            <a href="/#">
                                 <img src={help} alt="help" />
                             </a>
                         </span>
                         <span>
-                            <a href="#">
+                            <a href="/#">
                                 <img src={user} alt="user" />
                             </a>
                         </span>
