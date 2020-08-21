@@ -1,172 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './RecentRequest.scss';
-import { Card, Button } from 'antd';
+import { Card } from 'antd';
+import RequestCard from './RecentRequestCard';
 
-const RecentRequest = () => {
-    return (
-        <Card bordered={false} className="req-card">
-            <div className="card-head req-head">
-                <span>Recent Request</span>
-            </div>
-            <div className="req-card-wrap">
-                <div className="custom-mr">
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-send">
-                                    <span>Sent</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-send">
-                                    <span>Sent</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-send">
-                                    <span>Sent</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-send">
-                                    <span>Sent</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-send">
-                                    <span>Sent</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-send">
-                                    <span>Sent</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-review">
-                                    <span>Review</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-review">
-                                    <span>Review</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
-                    <Card bordered={false} className="list-card">
-                        <div className="req-inner">
-                            <div className="req-details">
-                                <span>Request from</span>
-                                <span>Mary</span>
-                            </div>
-                            <div className="req-action">
-                                <Button type="primary" className="btn btn-review">
-                                    <span>Review</span>
-                                </Button>
-                            </div>
-                            <div className="req-amount">
-                                <span>$500</span>
-                                <span>20/07/20</span>
-                            </div>
-                        </div>
-                    </Card>
+class RecentRequest extends Component {
+    state = {
+        content: [
+            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+        ],
+    };
+    render() {
+        return (
+            <Card bordered={false} className="req-card">
+                <div className="card-head req-head">
+                    <span>Recent Request</span>
                 </div>
-            </div>
-        </Card>
-    );
-};
+                <div className="req-card-wrap">
+                    <div className="custom-mr">
+                        {this.state.content.map((ReqCard, i) => {
+                            return (
+                                <RequestCard
+                                    status={ReqCard.status}
+                                    name={ReqCard.name}
+                                    amount={ReqCard.amount}
+                                    date={ReqCard.date}
+                                    key={i}
+                                />
+                            );
+                        })}
+                    </div>
+                </div>
+            </Card>
+        );
+    }
+}
 
 export default RecentRequest;
