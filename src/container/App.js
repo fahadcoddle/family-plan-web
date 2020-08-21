@@ -15,6 +15,7 @@ import 'antd/dist/antd.css';
 import Header from '../Header/Header';
 import Landing from '../Landing/Landing';
 import Signin from '../Signin/Signin';
+import Routes from "../routes";
 
 class Container extends Component {
   render() {
@@ -24,7 +25,7 @@ class Container extends Component {
           <Switch>
             <Route path='/' exact={true} component={Signin} />
             <Route path='/login' component={Signin} />
-            <PrivateRoute path='/home' component={Landing} />
+            <Routes />
           </Switch>
         </div>
       </BrowserRouter>
