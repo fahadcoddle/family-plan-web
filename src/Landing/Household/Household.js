@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Household.scss';
 import { Card, Avatar, Row, Col, Form, Input, Select, Button } from 'antd';
 import FloatLabel from '../../Components/FloatLabel/FloatLabel';
+import user from '../../Assets/avatar.png';
 
 const layout = {
     wrapperCol: {
@@ -26,7 +27,6 @@ const Household = () => {
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
-    // const [password, setPassword] = useState('*******');
     const [name, setName] = useState('Jims Household');
     const [fisrtName, setfirstName] = useState('Joe');
     const [lastName, setlastName] = useState('Smith');
@@ -45,7 +45,7 @@ const Household = () => {
                 <span>Jim's Household</span>
             </div>
             <div className="head-avatar">
-                <Avatar size={85} />
+                <Avatar src={user} alt="user-avatar" />
             </div>
             <div className="content">
                 <Form
@@ -56,7 +56,7 @@ const Household = () => {
                     onFinishFailed={onFinishFailed}
                 >
                     <Row gutter={'65'}>
-                        <Col span={12}>
+                        <Col span={12} className="col-wrap">
                             <FloatLabel label="Name" name="name" value={name}>
                                 <Input value={name} onChange={(e) => setName(e.target.value)} />
                             </FloatLabel>
@@ -82,7 +82,7 @@ const Household = () => {
                                 <Input value={password} type="password" onChange={(e) => setPassword(e.target.value)} />
                             </FloatLabel>
                         </Col>
-                        <Col span={12}>
+                        <Col span={12} className="col-wrap">
                             <Select defaultValue="United States" style={{ width: '100%' }} onChange={handleChange}>
                                 <Option value="Germeny">Germeny</Option>
                                 <Option value="United Kingdom">United Kingdom</Option>

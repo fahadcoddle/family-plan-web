@@ -1,12 +1,16 @@
 import React from 'react';
 import './Children.scss';
-import { Card } from 'antd';
+import { Card, Button } from 'antd';
+import add from '../../Assets/add.png';
 
 const Children = () => {
     return (
-        <Card className="chid-card">
+        <Card className="child-card">
             <div className="head">
                 <span>Children</span>
+                <div className="btn add-item">
+                    <span>+</span>
+                </div>
             </div>
             <div className="child-content">
                 <div className="child-element cyan">
