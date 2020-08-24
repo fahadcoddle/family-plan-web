@@ -66,7 +66,6 @@ class Signup extends Component {
     }
 
     render() {
-        console.log('render', this.props.response)
         let isSuccess = false;
         const {
             response
