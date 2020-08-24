@@ -126,14 +126,12 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     const nextWeek = () => {
         const e = document.getElementById('container');
         const width = e ? e.getBoundingClientRect().width : null;
-        console.log('nextWeek', width);
         e.scrollLeft += width - 60;
     };
 
     const prevWeek = () => {
         const e = document.getElementById('container');
         const width = e ? e.getBoundingClientRect().width : null;
-        console.log('prevWeek', width);
         e.scrollLeft -= width - 60;
     };
 

@@ -14,7 +14,7 @@ const Calender = () => {
                     </Button>
                 </div>
             </div>
-            <DatePicker labelFormat={'MMMM'} color={'#374e8c'} selectDate={new Date("2020-08-21")} getSelectedDay={(val) =>{console.log('val', val)}}/>
+            <DatePicker labelFormat={'MMMM'} color={'#374e8c'} selectDate={new Date()} getSelectedDay={(val) =>{console.log('val', val)}}/>
             <div className="card-body-wrap">
                 <div className="name-wrap">
                     <div className="circle blue">
