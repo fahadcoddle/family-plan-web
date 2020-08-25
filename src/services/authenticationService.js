@@ -1,37 +1,37 @@
-const API_BASE_URL = 'http://localhost:9000';
+const API_BASE_URL = 'https://e5a10f9d8ec0.ngrok.io';
 
 export const registerUserService = (request) => {
-  const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';
-  
-  const parameters = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(request.user)
-  };
+    const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';
 
-  return fetch(REGISTER_API_ENDPOINT, parameters)
-    .then(response => {
-      return response.json();
-    })
-    .then(json => {
-      return json;
-    });
+    const parameters = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(request.user),
+    };
+
+    return fetch(REGISTER_API_ENDPOINT, parameters)
+        .then((response) => {
+            return response.json();
+        })
+        .then((json) => {
+            return json;
+        });
 };
 
 export const loginUserService = (request) => {
-  const LOGIN_API_ENDPOINT = 'http://localhost:3000/api/v1/login';
+    const LOGIN_API_ENDPOINT = 'http://localhost:3000/api/v1/login';
 
-  const parameters = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(request.user)
-  };
+    const parameters = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(request.user),
+    };
 
-  /*return fetch(LOGIN_API_ENDPOINT, parameters)
+    /*return fetch(LOGIN_API_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })
@@ -39,21 +39,19 @@ export const loginUserService = (request) => {
       return json;
     });*/
 
-    const credentials ={
-          email: 'credit@test.com',
-          pwd: 'Qwerty123',
-        };
+    const credentials = {
+        email: 'credit@test.com',
+        pwd: 'Qwerty123',
+    };
 
     return makeRequest('POST', '/auth/login', credentials)
-          .then(response => {
+        .then((response) => {
             return response;
-          })
-          .then(json => {
+        })
+        .then((json) => {
             return json;
-          });
+        });
 };
-
-
 
 export const makeRequest = (method, url, body, withoutAuthorization) => {
     const request_ulr = API_BASE_URL + url;

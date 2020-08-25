@@ -1,9 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import './Datepicker.scss';
-import btn from '../Assets/back.png';
+import 'Components/Datepicker.scss';
+import btn from 'Assets/back.png';
 import { Button } from 'antd';
-import { addDays, addMonths, differenceInMonths, format, isSameDay, lastDayOfMonth, startOfMonth, subDays, isAfter } from 'date-fns';
+import {
+    addDays,
+    addMonths,
+    differenceInMonths,
+    format,
+    isSameDay,
+    lastDayOfMonth,
+    startOfMonth,
+    subDays,
+    isAfter,
+} from 'date-fns';
 
 export default function DatePicker({ endDate, selectDate, getSelectedDay, color, labelFormat }) {
     const [selectedDate, setSelectedDate] = useState(subDays(new Date(), 3));
@@ -50,13 +60,13 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                 let selected = getId(addDays(month, j));
                 days.push(
                     <div
-                        id={selected? 'selected' : ''}
+                        id={selected ? 'selected' : ''}
                         className="dateDayItem"
                         style={getStyles(addDays(month, j))}
                         key={addDays(month, j)}
                         onClick={() => onDateClick(addDays(month, j))}
                     >
-                        <div className={selected? 'dateLabel select' : 'dateLabel'}>
+                        <div className={selected ? 'dateLabel select' : 'dateLabel'}>
                             <span>{format(addDays(month, j), dateFormat)}</span>
                         </div>
                         <div className="dayLabel">{format(addDays(month, j), dayFormat)}</div>

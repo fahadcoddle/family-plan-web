@@ -1,10 +1,10 @@
 import React from 'react';
-import 'Landing/Landing.scss';
+import 'pages/Landing/Landing.scss';
 import { Row, Col } from 'antd';
-import Calender from 'Landing/Calender/Calender';
-import ToDoList from 'Landing/ToDoList/ToDoList';
-import RecentRequest from 'Landing/RecentRequest/RecentRequest';
-import RecentTransactions from 'Landing/RecentTransactions/RecentTransactions';
+import Calender from 'pages/Landing/Calender/Calender';
+import ToDoList from 'pages/Landing/ToDoList/ToDoList';
+import RecentRequest from 'pages/Landing/RecentRequest/RecentRequest';
+import RecentTransactions from 'pages/Landing/RecentTransactions/RecentTransactions';
 const Landing = () => {
     return (
         <Row className="row-container" gutter={'10'}>

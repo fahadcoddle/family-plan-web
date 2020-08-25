@@ -1,5 +1,5 @@
 import React from 'react';
-import 'Landing/Calender/Calender.scss';
+import 'pages/Landing/Calender/Calender.scss';
 import { Card, Button } from 'antd';
 import DatePicker from 'Components/Datepicker';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import 'Landing/RecentRequest/RecentRequest.scss';
+import 'pages/Landing/RecentRequest/RecentRequest.scss';
 import { Card } from 'antd';
-import RequestCard from 'Landing/RecentRequest/RecentRequestCard';
+import RequestCard from 'pages/Landing/RecentRequest/RecentRequestCard';
 
 class RecentRequest extends Component {
     state = {

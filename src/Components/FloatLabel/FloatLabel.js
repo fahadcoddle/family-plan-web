@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FloatLabel.scss';
+import 'Components/FloatLabel/FloatLabel.scss';
 
 const FloatLabel = (props) => {
     const [focus, setFocus] = useState(false);
