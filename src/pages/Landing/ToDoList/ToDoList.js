@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import 'Landing/ToDoList/ToDoList.scss';
+import 'pages/Landing/ToDoList/ToDoList.scss';
 import { Card, Button, Tabs, Input } from 'antd';
-import ListCard from 'Landing/ToDoList/ToDoListCard';
+import ListCard from 'pages/Landing/ToDoList/ToDoListCard';
 
 const { TabPane } = Tabs;
 const { TextArea } = Input;

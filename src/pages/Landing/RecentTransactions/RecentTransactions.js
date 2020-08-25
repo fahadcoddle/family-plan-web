@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import 'Landing/RecentTransactions/RecentTransactions.scss';
+import 'pages/Landing/RecentTransactions/RecentTransactions.scss';
 import { Card } from 'antd';
-import TransactionCard from 'Landing/RecentTransactions/RecentTransactionsCard';
+import TransactionCard from 'pages/Landing/RecentTransactions/RecentTransactionsCard';
 
 class RecentTransactions extends Component {
     state = {
