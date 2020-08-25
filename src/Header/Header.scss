@@ -94,6 +94,9 @@
         -ms-flex-align: center;
         align-items: center;
     }
+    .ant-select-arrow {
+        transition: all ease-in 0.2s;
+    }
     .ant-select-open {
         .ant-select-arrow {
             transform: rotate(180deg);

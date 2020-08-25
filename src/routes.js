@@ -8,6 +8,7 @@ import MainLayout from 'pages/MainLayout';
 
 import Signin from 'pages/Signin/Signin';
 import LandingPage from 'pages/Landing/Landing';
+import Household from 'pages/Household/Household'
 
 /*import ProfilePage from "pages/ProfilePage";
 import HomePage from "pages/HomePage";
@@ -36,6 +37,12 @@ const ROUTES_OPTIONS = [
     {
         path: ROUTES.HOME,
         component: LandingPage,
+        exact: true,
+        private: true,
+    },
+    {
+        path: ROUTES.HOUSEHOLD,
+        component: Household,
         exact: true,
         private: true,
     },

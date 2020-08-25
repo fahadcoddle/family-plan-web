@@ -28,7 +28,6 @@ const Header = () => {
                         <Select defaultValue="Household" onChange={handleChange}>
                             <Option value="jack">Jack</Option>
                             <Option value="lucy">Lucy</Option>
-
                             <Option value="Yiminghe">yiminghe</Option>
                         </Select>
                     </div>
@@ -36,7 +35,7 @@ const Header = () => {
                 <Col span={8} className="icon-wrap">
                     <div className="icon-inner">
                         <span>
-                            <a href="/#">
+                            <a href="/household">
                                 <img src={settings} alt="settings" />
                             </a>
                         </span>
