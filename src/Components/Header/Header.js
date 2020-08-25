@@ -1,5 +1,5 @@
 import React from 'react';
-import 'Header/Header.scss';
+import 'Components/Header/Header.scss';
 import { Row, Col, Select } from 'antd';
 import logo from 'Assets/fp-logo.png';
 import settings from 'Assets/settings.png';
@@ -36,9 +36,8 @@ const Header = () => {
                 <Col span={8} className="icon-wrap">
                     <div className="icon-inner">
                         <span>
-                            <Link 
-                              to='/household' > 
-                              <img src={settings} alt="settings" /> 
+                            <Link to="/household">
+                                <img src={settings} alt="settings" />
                             </Link>
                         </span>
                         <span>
@@ -47,9 +46,8 @@ const Header = () => {
                             </a>
                         </span>
                         <span>
-                            <Link 
-                              to='/household' > 
-                              <img src={user} alt="user" />
+                            <Link to="/household">
+                                <img src={user} alt="user" />
                             </Link>
                         </span>
                     </div>
