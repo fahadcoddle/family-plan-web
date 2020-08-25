@@ -1,4 +1,5 @@
 .nt-card {
+    height: 100%;
     &-head {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -11,6 +12,7 @@
             font-size: 20px;
             color: #000000;
             margin: 0;
+            font-weight: 700;
         }
         .btn-add-req {
             border: none;
@@ -55,6 +57,8 @@
                     -webkit-box-direction: normal;
                     -ms-flex-direction: column;
                     flex-direction: column;
+                    -ms-flex-preferred-size: 33.3%;
+                    flex-basis: 33.3%;
                     span {
                         color: #999999;
                         font-size: 16px;
@@ -72,6 +76,8 @@
                     -ms-flex-direction: column;
                     flex-direction: column;
                     text-align: right;
+                    -ms-flex-preferred-size: 33.3%;
+                    flex-basis: 33.3%;
                     span {
                         font-size: 16px;
                         color: #000000;
@@ -86,12 +92,15 @@
                     -ms-flex-direction: column;
                     flex-direction: column;
                     text-align: right;
+                    -ms-flex-preferred-size: 33.3%;
+                    flex-basis: 33.3%;
                     span {
                         color: #999999;
                         font-size: 12px;
                         &:first-of-type {
                             font-weight: 700;
                             color: #333333;
+                            font-size: 16px;
                         }
                     }
                 }

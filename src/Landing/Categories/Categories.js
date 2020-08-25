@@ -82,11 +82,81 @@ const data = [
         coParent: '34%',
         status: <img src={info} alt="info-icon" />,
     },
+    {
+        key: '9',
+        Category: 'Healthcare',
+        You: '28%',
+        coParent: '67%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '10',
+        Category: 'Vehicle Expenses',
+        You: '28%',
+        coParent: '67%',
+        // status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '11',
+        Category: 'Expenses',
+        You: '45%',
+        coParent: '30%',
+        // status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '12',
+        Category: 'Education',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '13',
+        Category: 'Extracurricular',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '14',
+        Category: 'Extracurricular',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '15',
+        Category: 'Extracurricular',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '16',
+        Category: 'Extracurricular',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '17',
+        Category: 'Extracurricular',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
+    {
+        key: '18    ',
+        Category: 'Extracurricular',
+        You: '26%',
+        coParent: '34%',
+        status: <img src={info} alt="info-icon" />,
+    },
 ];
 
 const Categories = () => {
     return (
-        <Card>
+        <Card bordered={false} className="ct-card">
             <div className="ct-card-head">
                 <h1>Categories</h1>
                 <div className="add-item">
@@ -94,7 +164,7 @@ const Categories = () => {
                 </div>
             </div>
             <div className="ct-card-top">
-                <Card>
+                <Card >
                     <div className="card-row">
                         <h2>Child Support</h2>
                         <div className="card-inner">
