@@ -9,8 +9,8 @@ import PrivateRoute from './privateRoute';
 import 'App.css';
 import 'antd/dist/antd.css';
 import Header from 'Header/Header';
-import Landing from 'Landing/Landing';
-import Signin from 'Signin/Signin';
+import Landing from 'pages/Landing/Landing';
+import Signin from 'pages/Signin/Signin';
 import Routes from 'routes';
 
 class Container extends Component {
