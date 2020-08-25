@@ -1,9 +1,7 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import { MainLayout } from "./MainLayout";
+import { MainLayout } from 'pages/MainLayout/MainLayout';
 
-const mapStateToProps = ({ login }) => (
-  ({login})
-);
+const mapStateToProps = ({ login }) => ({ login });
 
 export default connect(mapStateToProps)(MainLayout);
