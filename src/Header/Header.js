@@ -5,6 +5,7 @@ import logo from 'Assets/fp-logo.png';
 import settings from 'Assets/settings.png';
 import help from 'Assets/help.png';
 import user from 'Assets/user.png';
+import { Link, Redirect } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -35,9 +36,10 @@ const Header = () => {
                 <Col span={8} className="icon-wrap">
                     <div className="icon-inner">
                         <span>
-                            <a href="/household">
-                                <img src={settings} alt="settings" />
-                            </a>
+                            <Link 
+                              to='/household' > 
+                              <img src={settings} alt="settings" /> 
+                            </Link>
                         </span>
                         <span>
                             <a href="/#">
@@ -45,9 +47,10 @@ const Header = () => {
                             </a>
                         </span>
                         <span>
-                            <a href="/#">
-                                <img src={user} alt="user" />
-                            </a>
+                            <Link 
+                              to='/household' > 
+                              <img src={user} alt="user" />
+                            </Link>
                         </span>
                     </div>
                 </Col>
