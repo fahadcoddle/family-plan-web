@@ -2,7 +2,7 @@ import { Layout, Spin } from 'antd';
 import React, { Component } from 'react';
 import Icon from '@ant-design/icons';
 
-import Header from 'Header/Header';
+import Header from 'Components/Header/Header';
 const { Content } = Layout;
 
 export class MainLayout extends Component {
