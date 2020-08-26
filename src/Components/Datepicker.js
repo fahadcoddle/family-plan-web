@@ -1,14 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import './Datepicker.scss';
-import btn from '../Assets/back.png';
+import 'Components/Datepicker.scss';
+import btn from 'Assets/back.png';
 import { Button } from 'antd';
-import { addDays, addMonths, differenceInMonths, format, isSameDay, lastDayOfMonth, startOfMonth } from 'date-fns';
+import {
+    addDays,
+    addMonths,
+    differenceInMonths,
+    format,
+    isSameDay,
+    lastDayOfMonth,
+    startOfMonth,
+    subDays,
+    isAfter,
+} from 'date-fns';
 
 export default function DatePicker({ endDate, selectDate, getSelectedDay, color, labelFormat }) {
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState(subDays(new Date(), 3));
     // const firstSection = { marginLeft: '40px' };
-    const startDate = new Date();
+    const startDate = subDays(new Date(), 90);
+    const currentDate = new Date();
     const lastDate = addDays(startDate, endDate || 365);
     const primaryColor = color || 'rgb(54, 105, 238)';
     const selectedStyle = {
@@ -28,11 +39,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     };
 
     const getId = (day) => {
-        if (isSameDay(day, selectedDate)) {
-            return 'selected';
-        } else {
-            return '';
-        }
+        return isSameDay(day, selectedDate);
     };
 
     function renderDays() {
@@ -43,21 +50,23 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
         for (let i = 0; i <= differenceInMonths(lastDate, startDate); i++) {
             let start, end;
             const month = startOfMonth(addMonths(startDate, i));
+
             start = i === 0 ? Number(format(startDate, dateFormat)) - 1 : 0;
             end =
                 i === differenceInMonths(lastDate, startDate)
                     ? Number(format(lastDate, 'd'))
                     : Number(format(lastDayOfMonth(month), 'd'));
             for (let j = start; j < end; j++) {
+                let selected = getId(addDays(month, j));
                 days.push(
                     <div
-                        id={`${getId(addDays(startDate, j))}`}
+                        id={selected ? 'selected' : ''}
                         className="dateDayItem"
                         style={getStyles(addDays(month, j))}
                         key={addDays(month, j)}
                         onClick={() => onDateClick(addDays(month, j))}
                     >
-                        <div className="dateLabel select">
+                        <div className={selected ? 'dateLabel select' : 'dateLabel'}>
                             <span>{format(addDays(month, j), dateFormat)}</span>
                         </div>
                         <div className="dayLabel">{format(addDays(month, j), dayFormat)}</div>
@@ -85,6 +94,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
             );
             days = [];
         }
+
         return (
             <div id={'container'} className="dateListScrollable">
                 {months}
