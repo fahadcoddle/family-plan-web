@@ -1,7 +1,7 @@
 import React from 'react';
-import './Categories.scss';
+import 'pages/Payment/Categories/Categories.scss';
 import { Card, Button, Table } from 'antd';
-import info from '../../Assets/info.png';
+import info from 'Assets/info.png';
 
 const columns = [
     {
@@ -164,7 +164,7 @@ const Categories = () => {
                 </div>
             </div>
             <div className="ct-card-top">
-                <Card >
+                <Card>
                     <div className="card-row">
                         <h2>Child Support</h2>
                         <div className="card-inner">

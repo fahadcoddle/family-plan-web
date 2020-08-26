@@ -1,5 +1,5 @@
 import React from 'react';
-import './NewTransactions.scss';
+import 'pages/Payment/NewTransactions/NewTransactions.scss';
 import { Card, Button, Divider } from 'antd';
 
 const NewTransactions = () => {

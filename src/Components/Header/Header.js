@@ -41,9 +41,9 @@ const Header = () => {
                             </Link>
                         </span>
                         <span>
-                            <a href="/#">
+                            <Link to="/payment">
                                 <img src={help} alt="help" />
-                            </a>
+                            </Link>
                         </span>
                         <span>
                             <Link to="/household">

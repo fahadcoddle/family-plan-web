@@ -1,8 +1,8 @@
 import React from 'react';
-import './ScheduledPayments.scss';
+import 'pages/Payment/ScheduledPayments/ScheduledPayments.scss';
 import { Card } from 'antd';
-import img from '../../Assets/next.png';
-import cycle from '../../Assets/cycle.png';
+import img from 'Assets/next.png';
+import cycle from 'Assets/cycle.png';
 
 const ScheduledPayments = () => {
     return (

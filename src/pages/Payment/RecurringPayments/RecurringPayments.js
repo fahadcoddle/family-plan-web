@@ -1,8 +1,8 @@
 import React from 'react';
-import './RecurringPayments.scss';
+import 'pages/Payment/RecurringPayments/RecurringPayments.scss';
 import { Card, Button } from 'antd';
-import img from '../../Assets/next.png';
-import cycle from '../../Assets/cycle.png';
+import img from 'Assets/next.png';
+import cycle from 'Assets/cycle.png';
 
 const RecurringPayments = () => {
     return (
