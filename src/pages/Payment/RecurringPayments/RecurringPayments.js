@@ -134,6 +134,126 @@ const RecurringPayments = () => {
                         </div>
                     </div>
                 </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <div className="detail-wrap">
+                                <span>Ben</span>
+                                <span>
+                                    <img src={img} alt="arrow-icon" />
+                                </span>
+                                <span>Sarah</span>
+                            </div>
+                            <span className="type">Expenses</span>
+                        </div>
+                        <div className="req-action">
+                            <span className="img-wrap">
+                                <img src={cycle} alt="cycle-icon" />
+                            </span>
+                            <span>Monthly</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
+                    </div>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <div className="detail-wrap">
+                                <span>Ben</span>
+                                <span>
+                                    <img src={img} alt="arrow-icon" />
+                                </span>
+                                <span>Sarah</span>
+                            </div>
+                            <span className="type">Expenses</span>
+                        </div>
+                        <div className="req-action">
+                            <span className="img-wrap">
+                                <img src={cycle} alt="cycle-icon" />
+                            </span>
+                            <span>Monthly</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
+                    </div>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <div className="detail-wrap">
+                                <span>Ben</span>
+                                <span>
+                                    <img src={img} alt="arrow-icon" />
+                                </span>
+                                <span>Sarah</span>
+                            </div>
+                            <span className="type">Expenses</span>
+                        </div>
+                        <div className="req-action">
+                            <span className="img-wrap">
+                                <img src={cycle} alt="cycle-icon" />
+                            </span>
+                            <span>Monthly</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
+                    </div>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <div className="detail-wrap">
+                                <span>Ben</span>
+                                <span>
+                                    <img src={img} alt="arrow-icon" />
+                                </span>
+                                <span>Sarah</span>
+                            </div>
+                            <span className="type">Expenses</span>
+                        </div>
+                        <div className="req-action">
+                            <span className="img-wrap">
+                                <img src={cycle} alt="cycle-icon" />
+                            </span>
+                            <span>Monthly</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
+                    </div>
+                </Card>
+                <Card bordered={false} className="list-card">
+                    <div className="req-inner">
+                        <div className="req-details">
+                            <div className="detail-wrap">
+                                <span>Ben</span>
+                                <span>
+                                    <img src={img} alt="arrow-icon" />
+                                </span>
+                                <span>Sarah</span>
+                            </div>
+                            <span className="type">Expenses</span>
+                        </div>
+                        <div className="req-action">
+                            <span className="img-wrap">
+                                <img src={cycle} alt="cycle-icon" />
+                            </span>
+                            <span>Monthly</span>
+                        </div>
+                        <div className="req-amount">
+                            <span>$500</span>
+                            <span>20/07/20</span>
+                        </div>
+                    </div>
+                </Card>
             </div>
         </Card>
     );

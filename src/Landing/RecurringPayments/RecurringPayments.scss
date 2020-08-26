@@ -1,7 +1,6 @@
 .rp-card {
     height: 50%;
     &-head {
-        margin: 20px 0px;
         h1 {
             font-size: 20px;
             font-weight: 700;
@@ -13,19 +12,7 @@
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
         .btn-add-rec {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
             border: none;
             border-radius: 8px;
             width: 188px;
@@ -55,6 +42,7 @@
             background-color: #ccc;
         }
         .list-card {
+            margin-top: 16px;
             box-shadow: 0px 6px 15px #0000000d;
             padding: 0px;
             .req {
@@ -124,8 +112,8 @@
                         color: #999999;
                     }
                     .img-wrap {
-                        width: 13px;
-                        height: 17px;
+                        width: 20px;
+                        height: 20px;
                         img {
                             width: 100%;
                             height: 100%;
@@ -152,72 +140,6 @@
                             font-size: 16px;
                         }
                     }
-                }
-            }
-            &:not(:first-of-type) {
-                margin-top: 16px;
-            }
-        }
-    }
-    @media (max-width: 1919px) {
-        &-head {
-            h1 {
-                font-size: 14px;
-            }
-            .btn-add-rec {
-                border-radius: 6px;
-                width: 143px;
-                height: 32px;
-                span {
-                    font-size: 10px;
-                }
-            }
-        }
-        &-body {
-            .list-card {
-                .req {
-                    &-details {
-                        .detail-wrap {
-                            span {
-                                font-size: 12px;
-                                &:nth-of-type(2) {
-                                    width: 15px;
-                                    height: 15px;
-                                    img {
-                                        width: 100%;
-                                        height: 100%;
-                                    }
-                                }
-                            }
-                        }
-                        .type {
-                            font-size: 11px;
-                        }
-                    }
-                    &-action {
-                        span {
-                            font-size: 9px;
-                        }
-                        .img-wrap {
-                            width: 13px;
-                            height: 17px;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                    }
-                    &-amount {
-                        span {
-                            font-size: 11px;
-                            &:first-of-type {
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                }
-                &:not(:first-of-type) {
-                    margin-top: 16px;
                 }
             }
         }

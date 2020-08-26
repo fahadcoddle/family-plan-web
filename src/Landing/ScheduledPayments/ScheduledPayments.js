@@ -1,14 +1,14 @@
 import React from 'react';
-import 'pages/Payment/ScheduledPayments/ScheduledPayments.scss';
+import './ScheduledPayments.scss';
 import { Card } from 'antd';
-import img from 'Assets/next.png';
-import cycle from 'Assets/cycle.png';
+import img from '../../Assets/next.png';
+import cycle from '../../Assets/cycle.png';
 
 const ScheduledPayments = () => {
     return (
         <Card bordered={false} className="sp-card">
             <div className="sp-card-head">
-                <h1>Scheduled Payments</h1>
+                <h1>Recurring Payments</h1>
             </div>
             <div className="sp-card-body">
                 <Card bordered={false} className="list-card">
