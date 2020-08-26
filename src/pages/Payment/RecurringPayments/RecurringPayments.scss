@@ -223,3 +223,16 @@
         }
     }
 }
+.ant-modal {
+    &-content {
+        border-radius: 20px;
+        .modal {
+            &-head {
+                font-size: 20px;
+                font-weight: 700;
+                color: #000000;
+                text-align: center;
+            }
+        }
+    }
+}
