@@ -50,8 +50,8 @@ const ROUTES_OPTIONS = [
     {
         path: ROUTES.PAYMENT,
         component: Payment,
-        exact: false,
-        private: false,
+        exact: true,
+        private: true,
     },
 ];
 
