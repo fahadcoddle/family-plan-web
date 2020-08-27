@@ -405,8 +405,15 @@
     &-footer {
         display: none;
     }
-    &-close-x {
-        display: none;
+    &-close {
+        top: 15px;
+        &-x {
+            svg {
+                width: 24px;
+                height: 24px;
+                color: #333333;
+            }
+        }
     }
     .ant-select-arrow {
         color: #333333;
