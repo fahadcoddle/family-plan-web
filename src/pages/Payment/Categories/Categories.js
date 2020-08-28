@@ -163,62 +163,60 @@ const Categories = () => {
                     <span>+</span>
                 </div>
             </div>
-            <div className="ct-card-main">
-                <div className="ct-card-top">
-                    <Card>
-                        <div className="card-row">
-                            <h2>Child Support</h2>
-                            <div className="card-inner">
-                                <span>Who is payer?</span>
-                                <span>
-                                    <Button type="primary" className="btn btn-orange">
-                                        You
-                                    </Button>
-                                </span>
-                                <span>
-                                    <Button type="primary" className="btn btn-blue">
-                                        Co-Parent
-                                    </Button>
-                                </span>
-                                <span>
-                                    <Button type="primary" className="btn btn-grey">
-                                        N/A
-                                    </Button>
-                                </span>
-                                <span>
-                                    <img src={info} alt="info-icon" />
-                                </span>
-                            </div>
+            <div className="ct-card-top">
+                <Card>
+                    <div className="card-row">
+                        <h2>Child Support</h2>
+                        <div className="card-inner">
+                            <span>Who is payer?</span>
+                            <span>
+                                <Button type="primary" className="btn btn-orange">
+                                    You
+                                </Button>
+                            </span>
+                            <span>
+                                <Button type="primary" className="btn btn-blue">
+                                    Co-Parent
+                                </Button>
+                            </span>
+                            <span>
+                                <Button type="primary" className="btn btn-grey">
+                                    N/A
+                                </Button>
+                            </span>
+                            <span>
+                                <img src={info} alt="info-icon" />
+                            </span>
                         </div>
-                        <div className="card-row">
-                            <h2>Spousal Support</h2>
-                            <div className="card-inner">
-                                <span>Who is payer?</span>
-                                <span>
-                                    <Button type="primary" className="btn btn-orange">
-                                        You
-                                    </Button>
-                                </span>
-                                <span>
-                                    <Button type="primary" className="btn btn-blue">
-                                        Co-Parent
-                                    </Button>
-                                </span>
-                                <span>
-                                    <Button type="primary" className="btn btn-grey">
-                                        N/A
-                                    </Button>
-                                </span>
-                                <span>
-                                    <img src={info} alt="info-icon" />
-                                </span>
-                            </div>
+                    </div>
+                    <div className="card-row">
+                        <h2>Spousal Support</h2>
+                        <div className="card-inner">
+                            <span>Who is payer?</span>
+                            <span>
+                                <Button type="primary" className="btn btn-orange">
+                                    You
+                                </Button>
+                            </span>
+                            <span>
+                                <Button type="primary" className="btn btn-blue">
+                                    Co-Parent
+                                </Button>
+                            </span>
+                            <span>
+                                <Button type="primary" className="btn btn-grey">
+                                    N/A
+                                </Button>
+                            </span>
+                            <span>
+                                <img src={info} alt="info-icon" />
+                            </span>
                         </div>
-                    </Card>
-                </div>
-                <div className="ct-card-bottom">
-                    <Table columns={columns} dataSource={data} />
-                </div>
+                    </div>
+                </Card>
+            </div>
+            <div className="ct-card-bottom">
+                <Table columns={columns} dataSource={data} />
             </div>
         </Card>
     );

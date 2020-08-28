@@ -26,12 +26,7 @@ class RecurringPayments extends Component {
                     <Button type="primary" onClick={() => this.setModalVisible(true)} className="btn-add-rec">
                         Add recurring request
                     </Button>
-                    <Modal
-                        centered
-                        visible={this.state.modalVisible}
-                        onCancel={() => this.setModalVisible(false)}
-                        backdrop="static"
-                    >
+                    <Modal centered visible={this.state.modalVisible} backdrop="static">
                         <div className="modal-head">
                             <span>Recurring Payment Setup</span>
                         </div>
