@@ -1,6 +1,11 @@
 .sp-card {
-    height: 50%;
+    height: calc(50% - 5px);
     margin-top: 10px;
+    .ant-card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     &-head {
         margin: 20px 0px;
         text-align: center;
