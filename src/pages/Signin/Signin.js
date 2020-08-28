@@ -28,10 +28,10 @@ class Signup extends Component {
         this.state = {
             password: '*******',
             setPassword: '*******',
-            email: 'joe@example.com',
-            name: 'Joe Smith',
-            setName: 'Joe Smith',
-            setEmail: 'joe@example.com',
+            email: 'credit@test.com',
+            name: 'Credit Test',
+            setName: 'Credit Test',
+            setEmail: 'credit@test.com',
         };
         this.onHandleLogin = this.onHandleLogin.bind(this);
     }

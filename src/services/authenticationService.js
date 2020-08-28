@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://f55db3a4d365.ngrok.io';
+const API_BASE_URL = 'http://localhost:9000';
 
 export const registerUserService = (request) => {
     const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';

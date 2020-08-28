@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 
 import PrivateRoute from './privateRoute';
 //import LoginPage from '../components/loginPage';
@@ -12,19 +12,20 @@ import Header from 'Components/Header/Header';
 import Landing from 'pages/Landing/Landing';
 import Signin from 'pages/Signin/Signin';
 import Routes from 'routes';
+import history from "utils/history";
 
 class Container extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <Router history={history}>
                 <div>
                     <Switch>
                         <Route path="/" exact={true} component={Signin} />
                         <Route path="/login" component={Signin} />
-                        <Routes />
+                        <Routes history={history} />
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </Router>
         );
     }
 }

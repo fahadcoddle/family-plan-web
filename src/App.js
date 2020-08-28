@@ -19,7 +19,7 @@ const store = configureStore();
 function App() {
     return (
         <Provider store={store}>
-            <Container />
+            <Container history={history} />
         </Provider>
     );
 }
