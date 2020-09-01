@@ -20,7 +20,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     // const firstSection = { marginLeft: '40px' };
     const startDate = subDays(new Date(), 90);
     const currentDate = new Date();
-    const lastDate = addDays(startDate, endDate || 90);
+    const lastDate = addDays(startDate, endDate || 365);
     const primaryColor = color || 'rgb(54, 105, 238)';
     const selectedStyle = {
         fontWeight: 'bold',

@@ -190,13 +190,37 @@
         margin: 0 auto;
     }
 }
-@media (min-width: 1700px) {
+
+@media (min-width: 1200px) {
     .dateDayItem {
-        margin: 0px 13px !important;
-        width: 52px !important;
+        margin: 0px 3px;
+        width: 49px;
         .dateLabel {
-            width: 45px;
-            height: 45px;
+            width: 35px;
+            height: 35px;
+            span {
+                font-size: 11px;
+            }
+        }
+        .dayLabel {
+            font-size: 9px;
+        }
+        .notify {
+            padding: 0px 5px;
+            span {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .dateDayItem {
+        margin: 0px 5px;
+        width: 52px;
+        .dateLabel {
+            width: 40px;
+            height: 40px;
             span {
                 font-size: 12px;
             }
@@ -230,13 +254,13 @@
         }
     }
 }
-@media (min-width: 1366px) {
+@media (min-width: 1700px) {
     .dateDayItem {
-        margin: 0px 5px;
-        width: 52px;
+        margin: 0px 13px !important;
+        width: 52px !important;
         .dateLabel {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             span {
                 font-size: 12px;
             }
