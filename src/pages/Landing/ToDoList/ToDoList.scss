@@ -76,6 +76,10 @@
             justify-content: center;
             width: 170px;
             color: #999999;
+            font-size: 12px;
+            @media (min-width: 1990px) {
+                font-size: 14px;
+            }
             &-active {
                 background: rgb(115, 190, 225) !important;
                 background: -moz-linear-gradient(
@@ -318,12 +322,12 @@
             }
             &-time {
                 span {
-                    font-size: 13px;
+                    font-size: 12px;
                 }
             }
             &-task {
                 span {
-                    font-size: 13px;
+                    font-size: 12px;
                 }
             }
         }

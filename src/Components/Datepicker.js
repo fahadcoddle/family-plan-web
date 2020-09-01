@@ -20,7 +20,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     // const firstSection = { marginLeft: '40px' };
     const startDate = subDays(new Date(), 90);
     const currentDate = new Date();
-    const lastDate = addDays(startDate, endDate || 365);
+    const lastDate = addDays(startDate, endDate || 90);
     const primaryColor = color || 'rgb(54, 105, 238)';
     const selectedStyle = {
         fontWeight: 'bold',
@@ -136,13 +136,13 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     const nextWeek = () => {
         const e = document.getElementById('container');
         const width = e ? e.getBoundingClientRect().width : null;
-        e.scrollLeft += width - 60;
+        e.scrollLeft += width - 5;
     };
 
     const prevWeek = () => {
         const e = document.getElementById('container');
         const width = e ? e.getBoundingClientRect().width : null;
-        e.scrollLeft -= width - 60;
+        e.scrollLeft -= width - 5;
     };
 
     return (

@@ -198,25 +198,30 @@
     .req {
         &-details {
             span {
-                font-size: 12px;
+                font-size: 11px !important;
                 color: #333333;
                 &:first-of-type {
-                    font-size: 13px;
+                    font-size: 12px;
                 }
             }
         }
         &-amount {
             span {
-                font-size: 12px;
+                font-size: 11px !important;
                 color: #333333;
                 &:first-of-type {
-                    font-size: 13px;
+                    font-size: 12px;
                 }
             }
         }
         &-action {
             span {
-                font-size: 12px;
+                font-size: 10px !important;
+            }
+            .btn {
+                height: 20px;
+                width: 60px;
+                border-radius: 6px;
             }
         }
     }

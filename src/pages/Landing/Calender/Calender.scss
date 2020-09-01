@@ -8,7 +8,7 @@
         padding: 0px !important;
     }
     .card-head {
-        margin: 20px;
+        margin: 0px 20px 20px 20px;
     }
 }
 .name-wrap {
@@ -263,7 +263,7 @@
         }
     }
 }
-@media (max-width: 1920px) {
+@media (max-width: 1919px) {
     .calender-card {
         .list {
             .list-day {
@@ -298,6 +298,11 @@
     .card-head {
         span {
             font-size: 14px !important;
+        }
+        .ant-btn {
+            span {
+                font-size: 11px !important;
+            }
         }
     }
 }

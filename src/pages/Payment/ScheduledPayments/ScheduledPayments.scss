@@ -1,8 +1,8 @@
 .sp-card {
-    height: 50%;
+    height: calc(50% - 5px);
     margin-top: 10px;
     &-head {
-        margin: 20px 0px;
+        margin: 10px 0px 20px 0px;
         text-align: center;
         h1 {
             font-size: 20px;
