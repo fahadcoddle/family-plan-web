@@ -1,0 +1,23 @@
+$primary-color: #38a0eb;
+$secondary-color: #fca232;
+$success-color: #22b422;
+$danger-color: #b42261;
+$disabled-color: #c7c7cc;
+$dark-blue: #4632fc;
+$violet-color: #513bc5;
+$rose-color: #dc2cd1;
+$text-color: #333333;
+$text-light-color: #dc2cd1;
+$black-color: #000000;
+$white-color: #ffffff;
+
+$primary-gradient: #ecd66b, #ff9a29;
+$secondary-gradient: #81c6df, #38a0eb;
+
+/***** mixins ******/
+@mixin gradient($direction, $gcolor) {
+    background-image: linear-gradient($direction, $gcolor);
+    background-image: -moz-linear-gradient($direction, $gcolor);
+    background-image: -o-linear-gradient($direction, $gcolor);
+    background-image: -webkit-linear-gradient($direction, $gcolor);
+}

@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/Light/OpenSans-Light.eot');
+    src: url('../fonts/Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Light/OpenSans-Light.woff2') format('woff2'),
+        url('../fonts/Light/OpenSans-Light.woff') format('woff'),
+        url('../fonts/Light/OpenSans-Light.ttf') format('truetype'),
+        url('../fonts/Light/OpenSans-Light.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Regular/OpenSans-Regular.eot');
+    src: url('../fonts/Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Regular/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/Regular/OpenSans-Regular.woff') format('woff'),
+        url('../fonts/Regular/OpenSans-Regular.ttf') format('truetype'),
+        url('../fonts/Regular/OpenSans-Regular.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/SemiBold/OpenSans-SemiBold.eot');
+    src: url('../fonts/SemiBold/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SemiBold/OpenSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/SemiBold/OpenSans-SemiBold.woff') format('woff'),
+        url('../fonts/SemiBold/OpenSans-SemiBold.ttf') format('truetype'),
+        url('../fonts/SemiBold/OpenSans-SemiBold.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/Bold/OpenSans-Bold.eot');
+    src: url('../fonts/Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bold/OpenSans-Bold.woff2') format('woff2'), url('../fonts/Bold/OpenSans-Bold.woff') format('woff'),
+        url('../fonts/Bold/OpenSans-Bold.ttf') format('truetype'),
+        url('../fonts/Bold/OpenSans-Bold.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/ExtraBold/OpenSans-ExtraBold.eot');
+    src: url('../fonts/ExtraBold/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ExtraBold/OpenSans-ExtraBold.woff2') format('woff2'),
+        url('../fonts/ExtraBold/OpenSans-ExtraBold.woff') format('woff'),
+        url('../fonts/ExtraBold/OpenSans-ExtraBold.ttf') format('truetype'),
+        url('../fonts/ExtraBold/OpenSans-ExtraBold.svg#svgFontName') format('svg');
+}
+
+:root {
+    h1,
+    h1.ant-typography,
+    .ant-typography h1 {
+        margin-bottom: 16px;
+        color: $black-color;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 1.2;
+    }
+    h2,
+    h2.ant-typography,
+    .ant-typography h2 {
+        margin-bottom: 16px;
+        color: $black-color;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    h3,
+    h3.ant-typography,
+    .ant-typography h3 {
+        margin-bottom: 16px;
+        color: $black-color;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    h4,
+    h4.ant-typography,
+    .ant-typography h4 {
+        margin-bottom: 12px;
+        color: $black-color;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    h5,
+    h5.ant-typography,
+    .ant-typography h5 {
+        margin-bottom: 0px;
+        color: $black-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    p {
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    a.ant-typography {
+        color: $black-color;
+    }
+}
