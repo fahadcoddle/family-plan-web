@@ -4,12 +4,12 @@ import { Card, Button } from 'antd';
 
 const ThirdParty = () => {
     return (
-        <Card bordered={false} className="party-card">
+        <Card bordered={false} className="household-card party-card">
             <div className="head">
                 <span>3rd Party</span>
-                <div className="btn add-item">
-                    <span>+</span>
-                </div>
+                <Button type="primary" className="add-item" shape="circle" size="small">
+                    +
+                </Button>
             </div>
             <div className="party-list">
                 <Card bordered={false} className="party-inner">

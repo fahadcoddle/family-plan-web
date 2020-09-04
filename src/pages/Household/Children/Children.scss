@@ -1,87 +1,93 @@
-.child {
-    &-card {
-        height: 100% !important;
-    }
-    &-content {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        // margin: 0px 24px;
-        .cyan {
-            span:first-of-type {
-                border-color: #369ae2;
-                color: #369ae2;
+@import '../../../Assets/styles/global.scss';
+.household-card {
+    .child {
+        &-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+            &-wrap {
+                padding-top: 10px;
+            }
+            .cyan {
+                span:first-of-type {
+                    border-color: $primary-color;
+                    color: $primary-color;
+                }
+            }
+            .orange {
+                span:first-of-type {
+                    border-color: $secondary-color;
+                    color: $secondary-color;
+                }
+            }
+            .green {
+                span:first-of-type {
+                    border-color: $success-color;
+                    color: $success-color;
+                }
+            }
+            .violet {
+                span:first-of-type {
+                    border-color: $danger-color;
+                    color: $danger-color;
+                }
+            }
+            .blue {
+                span:first-of-type {
+                    border-color: $dark-blue;
+                    color: $dark-blue;
+                }
             }
         }
-        .orange {
-            span:first-of-type {
-                border-color: #fca232;
-                color: #fca232;
+        &-element {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-preferred-size: 20%;
+            flex-basis: 20%;
+            margin-bottom: 20px;
+            @media (min-width: 1440px) {
+                margin-bottom: 46px;
             }
-        }
-        .green {
-            span:first-of-type {
-                border-color: #22b422;
-                color: #22b422;
-            }
-        }
-        .violet {
-            span:first-of-type {
-                border-color: #b42261;
-                color: #b42261;
-            }
-        }
-        .blue {
-            span:first-of-type {
-                border-color: #38a0eb;
-                color: #38a0eb;
-            }
-        }
-    }
-    &-element {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-        margin-bottom: 46px;
-        span {
-            color: #333333;
-            &:first-of-type {
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-                margin-bottom: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-transform: uppercase;
-                font-size: 24px;
-                font-weight: 600;
-                border: 2px solid #369ae2;
-                color: #369ae2;
-            }
-        }
 
-        @media (max-width: 1919px) {
             span {
-                font-size: 9px;
+                font-size: 10px;
+                font-weight: 500;
+                @media (min-width: 1920px) {
+                    font-size: 14px;
+                }
                 &:first-of-type {
                     width: 32px;
                     height: 32px;
-                    font-size: 18px;
+                    border-radius: 50%;
+                    margin-bottom: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 700;
+                    border: 2px solid #369ae2;
+                    color: #369ae2;
+                    @media (min-width: 1920px) {
+                        font-size: 20px;
+                        width: 48px;
+                        height: 48px;
+                    }
                 }
             }
         }
