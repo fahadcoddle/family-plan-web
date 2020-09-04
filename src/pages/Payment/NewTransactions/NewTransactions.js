@@ -1,13 +1,13 @@
 import React from 'react';
 import 'pages/Payment/NewTransactions/NewTransactions.scss';
-import { Card, Button, Divider } from 'antd';
+import { Card, Button } from 'antd';
 
 const NewTransactions = () => {
     return (
         <Card bordered={false} className="nt-card">
             <div className="nt-card-head">
                 <h1>Recent Transactions</h1>
-                <Button type="primary" className="btn-add-req">
+                <Button type="primary" className="fp-button fp-button-primary btn-add-req">
                     Add a new request
                 </Button>
             </div>

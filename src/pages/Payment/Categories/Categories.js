@@ -159,7 +159,7 @@ const Categories = () => {
         <Card bordered={false} className="ct-card">
             <div className="ct-card-head">
                 <h1>Categories</h1>
-                <div className="add-item">
+                <div className="fp-button fp-button-secondary add-item">
                     <span>+</span>
                 </div>
             </div>
@@ -170,12 +170,12 @@ const Categories = () => {
                         <div className="card-inner">
                             <span>Who is payer?</span>
                             <span>
-                                <Button type="primary" className="btn btn-orange">
+                                <Button type="primary" className="btn btn-orange fp-button-primary">
                                     You
                                 </Button>
                             </span>
                             <span>
-                                <Button type="primary" className="btn btn-blue">
+                                <Button type="primary" className="btn fp-button-secondary">
                                     Co-Parent
                                 </Button>
                             </span>
@@ -184,7 +184,7 @@ const Categories = () => {
                                     N/A
                                 </Button>
                             </span>
-                            <span>
+                            <span className="img-info">
                                 <img src={info} alt="info-icon" />
                             </span>
                         </div>
@@ -194,12 +194,12 @@ const Categories = () => {
                         <div className="card-inner">
                             <span>Who is payer?</span>
                             <span>
-                                <Button type="primary" className="btn btn-orange">
+                                <Button type="primary" className="btn btn-orange fp-button-primary">
                                     You
                                 </Button>
                             </span>
                             <span>
-                                <Button type="primary" className="btn btn-blue">
+                                <Button type="primary" className="btn fp-button-secondary">
                                     Co-Parent
                                 </Button>
                             </span>
@@ -208,7 +208,7 @@ const Categories = () => {
                                     N/A
                                 </Button>
                             </span>
-                            <span>
+                            <span className="img-info">
                                 <img src={info} alt="info-icon" />
                             </span>
                         </div>

@@ -190,101 +190,40 @@
         margin: 0 auto;
     }
 }
-
-@media (min-width: 1200px) {
-    .dateDayItem {
-        margin: 0px 3px;
-        width: 49px;
-        .dateLabel {
-            width: 35px;
-            height: 35px;
-            span {
-                font-size: 11px;
-            }
-        }
-        .dayLabel {
-            font-size: 9px;
-        }
-        .notify {
-            padding: 0px 5px;
-            span {
-                width: 5px;
-                height: 5px;
-            }
-        }
-    }
-}
-@media (min-width: 1366px) {
-    .dateDayItem {
-        margin: 0px 5px;
-        width: 52px;
-        .dateLabel {
-            width: 40px;
-            height: 40px;
-            span {
-                font-size: 12px;
-            }
-        }
-        .notify {
-            padding: 0px 6px;
-            span {
-                width: 6px;
-                height: 6px;
-            }
-        }
-    }
-}
-@media (min-width: 1500px) {
-    .dateDayItem {
-        margin: 0px 9px !important;
-        width: 52px !important;
-        .dateLabel {
-            width: 45px !important;
-            height: 45px !important;
-            span {
-                font-size: 12px !important;
-            }
-        }
-        .notify {
-            padding: 0px 6px !important;
-            span {
-                width: 6px !important;
-                height: 6px !important;
-            }
-        }
-    }
-}
-@media (min-width: 1700px) {
-    .dateDayItem {
-        margin: 0px 13px !important;
-        width: 52px !important;
-        .dateLabel {
-            width: 45px;
-            height: 45px;
-            span {
-                font-size: 12px;
-            }
-        }
-        .notify {
-            padding: 0px 6px;
-            span {
-                width: 6px;
-                height: 6px;
-            }
-        }
-    }
-}
-
 @media (max-width: 1919px) {
+    .dateDayItem {
+        margin: 0px 8px;
+    }
     .dateLabel {
-        width: 45px;
-        height: 45px;
+        width: 44px;
+        height: 44px;
         span {
             font-size: 14px;
         }
     }
     .dayLabel {
         font-size: 10px;
+    }
+}
+@media (max-width: 1366px) {
+    .dateDayItem {
+        margin: 0px 8px !important;
+        width: 44px;
+        height: 110px;
+        .dateLabel {
+            width: 34px;
+            height: 34px;
+            span {
+                font-size: 12px;
+            }
+        }
+        .notify {
+            padding: 0px 3px;
+            span {
+                width: 6px;
+                height: 6px;
+            }
+        }
     }
 }
 @media (max-width: 768px) {
@@ -304,8 +243,8 @@
     .notify {
         padding: 0px 5px;
         span {
-            width: 8px;
-            height: 8px;
+            width: 9px;
+            height: 9px;
         }
     }
 }
