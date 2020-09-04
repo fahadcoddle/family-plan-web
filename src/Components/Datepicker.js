@@ -128,7 +128,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                     if (view) {
                         view.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                     }
-                }, 20);
+                }, 10);
             }
         }
     }, [selectDate]);
