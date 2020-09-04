@@ -6,13 +6,13 @@ import PrivateRoute from './privateRoute';
 //import RegisterPage from '../components/registerPage';
 //import DashboardPage from '../components/dashboardPage';
 
-import 'App.css';
+import 'App.scss';
 import 'antd/dist/antd.css';
 import Header from 'Components/Header/Header';
 import Landing from 'pages/Landing/Landing';
 import Signin from 'pages/Signin/Signin';
 import Routes from 'routes';
-import history from "utils/history";
+import history from 'utils/history';
 
 class Container extends Component {
     render() {

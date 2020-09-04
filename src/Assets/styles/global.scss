@@ -1,0 +1,31 @@
+@import './colors.scss';
+@import './typography.scss';
+@import './media.scss';
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fp {
+    &-button {
+        font-size: 1rem;
+        padding: 8px 24px;
+        color: $white-color;
+        &-sm {
+            font-size: 1rem;
+            padding: 4px 16px;
+            color: $white-color;
+        }
+    }
+    &-button-primary {
+        @include gradient(left, $primary-gradient);
+    }
+    &-button-secondary {
+        @include gradient(left, $secondary-gradient);
+    }
+}
