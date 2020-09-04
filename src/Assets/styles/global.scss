@@ -7,7 +7,7 @@
         margin: 0;
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
         color: $text-color;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -25,10 +25,17 @@
             }
         }
         &-button-primary {
-            @include gradient(left, $primary-gradient);
+            @include primary-gradient();
         }
         &-button-secondary {
-            @include gradient(left, $secondary-gradient);
+            @include secondary-gradient();
+        }
+    }
+    .ant-select {
+        &-item {
+            &-option {
+                font-size: 12px;
+            }
         }
     }
 }

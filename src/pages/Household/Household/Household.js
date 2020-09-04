@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'pages/Household/Household/Household.scss';
 import { Card, Avatar, Row, Col, Form, Input, Select, Button } from 'antd';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
-import user from 'Assets/avatar.png';
+import user from 'Assets/avatar.jpg';
 
 const layout = {
     wrapperCol: {
@@ -55,7 +55,7 @@ const Household = () => {
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
                 >
-                    <Row gutter={'65'}>
+                    <Row gutter={48}>
                         <Col span={12} className="col-wrap">
                             <FloatLabel label="Name" name="name" value={name}>
                                 <Input value={name} onChange={(e) => setName(e.target.value)} />
