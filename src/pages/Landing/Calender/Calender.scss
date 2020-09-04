@@ -1,0 +1,308 @@
+.calender-card {
+    .list-inn {
+        display: flex;
+        justify-content: flex-start;
+    }
+    height: 100%;
+    .ant-card-body {
+        padding: 0px !important;
+    }
+    .card-head {
+        margin: 0px 20px 20px 20px;
+    }
+}
+.name-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 5px 15px;
+    border-top: 1px solid #ededed;
+    span {
+        font-weight: 700;
+    }
+    .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+    .blue {
+        border-color: #38a0eb;
+        span {
+            color: #38a0eb;
+        }
+    }
+    .orange {
+        border-color: #fca232;
+        span {
+            color: #fca232;
+        }
+    }
+    .green {
+        border-color: #22b422;
+        span {
+            color: #22b422;
+        }
+    }
+    .violet {
+        border-color: #dc2cd1;
+        span {
+            color: #dc2cd1;
+        }
+    }
+}
+
+.list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    scrollbar-color: #f5f5f5 !important;
+    scrollbar-width: thin !important;
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 6px rgba(116, 116, 116, 0.3);
+        background-color: #ccc;
+    }
+
+    &-day {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 20px;
+        width: 23px;
+        span {
+            font-size: 14px;
+            color: #999999;
+            &:first-of-type {
+                font-weight: 700;
+                font-size: 20px;
+                color: #000;
+            }
+            @media (max-width: 768px) {
+                font-size: 10px;
+                &:first-of-type {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 10px 15px;
+        border-top: 1px solid #ededed;
+    }
+    &-wrap {
+        display: flex;
+        align-items: flex-start;
+    }
+    &-timer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0px 15px 10px 10px;
+        width: 50px;
+        span {
+            &:first-of-type {
+                margin-bottom: 5px;
+                color: #333333;
+                font-size: 13px;
+            }
+        }
+        .stat {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            span {
+                margin-right: 5px;
+            }
+        }
+        @media (max-width: 768px) {
+            span {
+                font-size: 11px;
+            }
+        }
+    }
+    &-activity {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        span {
+            font-size: 13px;
+            color: #333333;
+            &:first-of-type {
+                color: #000;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 768px) {
+            span {
+                font-size: 11px;
+                &:first-of-type {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    &-info {
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+        @media (max-width: 768px) {
+            width: 8px;
+            height: 8px;
+        }
+    }
+    .blue {
+        background-color: #38a0eb;
+    }
+    .orange {
+        background-color: #fca232;
+    }
+    .green {
+        background-color: #22b422;
+    }
+    .violet {
+        background-color: #dc2cd1;
+    }
+    .selected {
+        background-color: #fafafa;
+        .list-day {
+            span {
+                color: #000;
+            }
+        }
+    }
+    &-details {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+.i-task {
+    font-style: italic;
+    font-weight: 300 !important;
+}
+@media (min-width: 1920px) {
+    .calender-card {
+        .list {
+            .list-day {
+                span {
+                    font-size: 20px;
+                    &:not(:first-of-type) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .list-timer {
+                span {
+                    &:first-of-type {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .list-info {
+                width: 12px;
+                height: 12px;
+            }
+            .list-activity {
+                span {
+                    font-size: 14px;
+                    &:first-of-type {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .card-head {
+        span {
+            font-size: 20px !important;
+        }
+    }
+}
+@media (max-width: 1919px) {
+    .calender-card {
+        .list {
+            .list-day {
+                span {
+                    font-size: 14px;
+                    &:not(:first-of-type) {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .list-timer {
+                span {
+                    &:first-of-type {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .list-info {
+                width: 9px;
+                height: 9px;
+            }
+            .list-activity {
+                span {
+                    font-size: 10px;
+                    &:first-of-type {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .card-head {
+        span {
+            font-size: 14px !important;
+        }
+        .ant-btn {
+            span {
+                font-size: 11px !important;
+            }
+        }
+    }
+}

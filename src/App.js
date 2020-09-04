@@ -1,15 +1,26 @@
 import React from 'react';
-import './App.css';
-import 'antd/dist/antd.css';
-import Header from './Header/Header';
-import Landing from './Landing/Landing';
+import { Provider } from 'react-redux';
+import { createBrowserHistory } from 'history';
+import configureStore from 'store/configureStore';
+
+import Container from 'container/App';
+import { addLocationQuery } from 'helpers/routeParams';
+
+const history = createBrowserHistory();
+
+addLocationQuery(history);
+
+history.listen((location) => {
+    addLocationQuery(history);
+});
+
+const store = configureStore();
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <Landing />
-        </div>
+        <Provider store={store}>
+            <Container history={history} />
+        </Provider>
     );
 }
 
