@@ -21,6 +21,9 @@ const Calender = () => {
                 getSelectedDay={(val) => {
                     console.log('val', val);
                 }}
+                onScrolled={(val) => {
+                    console.log('val', val);
+                }}
             />
             <div className="card-body-wrap">
                 <div className="name-wrap">
