@@ -433,7 +433,7 @@
     @media (max-width: 1366px) {
         &-content {
             .modal-head {
-                font-size: 12px !important;
+                font-size: 14px !important;
             }
             .ant-radio-wrapper {
                 span {
@@ -499,6 +499,8 @@
                 height: 40px;
                 span {
                     font-size: 12px;
+                    font-weight: 600;
+                    text-shadow: none;
                 }
             }
         }
@@ -508,6 +510,8 @@
                 width: 85px;
                 span {
                     font-size: 12px;
+                    font-weight: 600;
+                    text-shadow: none;
                 }
             }
             span {
