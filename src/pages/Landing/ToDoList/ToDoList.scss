@@ -12,6 +12,10 @@
         justify-content: center;
         position: relative;
         z-index: 1;
+        margin: 15px 5px 20px 5px;
+        @media (min-width: 1920px) {
+            margin: 15px 5px 30px 5px;
+        }
         span {
             font-size: 20px;
             font-weight: 700;
@@ -33,8 +37,8 @@
                 -ms-flex-align: center;
                 align-items: center;
                 border: 0;
-                height: 29px;
-                border-radius: 5px;
+                height: 30px;
+                border-radius: 6px;
                 background: rgb(240, 200, 91);
                 background: -moz-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
                 background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
@@ -43,7 +47,9 @@
                 span {
                     color: #fff !important;
                     font-size: 12px;
-                    font-weight: 300;
+                    font-weight: 600;
+                    text-shadow: none;
+                    line-height: 0;
                 }
                 img {
                     width: 15px;
@@ -63,7 +69,6 @@
         }
     }
     &-tab {
-        margin-top: 20px;
         .ant-tabs-tab {
             margin: 0 !important;
             padding: 10px 50px !important;
@@ -75,11 +80,13 @@
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
-            width: 170px;
             color: $text-sec-color;
             font-size: 12px;
             @media (min-width: 1990px) {
                 font-size: 14px;
+            }
+            .ant-tabs-tab-btn {
+                font-weight: 500;
             }
             &-active {
                 background: rgb(115, 190, 225) !important;
@@ -97,6 +104,7 @@
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#73bee1",endColorstr="#389de6",GradientType=1) !important;
                 .ant-tabs-tab-btn {
                     color: #fff !important;
+                    font-weight: 600;
                 }
             }
             &:first-of-type {
@@ -131,7 +139,6 @@
 
         @media (max-width: 768px) {
             .ant-tabs-tab {
-                width: 120px;
                 padding: 5px 20px !important;
                 &-btn {
                     font-size: 11px;
@@ -171,7 +178,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        border-right: 1px solid #ccc;
+        border-right: 1px solid #eaeaea;
         padding-right: 10px;
         width: 55px;
         span {
@@ -213,6 +220,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        flex-shrink: 0;
         img {
             width: 100%;
             height: 100%;
@@ -255,13 +263,14 @@
 }
 .text-wrapper {
     margin-top: auto !important;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -15px;
+    margin-right: -15px;
     padding: 10px 20px;
     margin-top: 5px;
-    border-top: 1px solid #ededed;
+    border-top: 1px solid rgba(112, 112, 112, 0.1);
     .ant-input {
         border-radius: 5px !important;
+        font-size: 12px;
     }
 }
 .ant-popover-inner {

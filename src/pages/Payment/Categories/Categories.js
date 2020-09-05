@@ -159,9 +159,9 @@ const Categories = () => {
         <Card bordered={false} className="ct-card">
             <div className="ct-card-head">
                 <h1>Categories</h1>
-                <div className="fp-button fp-button-secondary add-item">
-                    <span>+</span>
-                </div>
+                <Button type="primary" className="add-item" shape="circle" size="small">
+                    +
+                </Button>
             </div>
             <div className="ct-card-top">
                 <Card>
@@ -208,9 +208,7 @@ const Categories = () => {
                                     N/A
                                 </Button>
                             </span>
-                            <span className="img-info">
-                                <img src={info} alt="info-icon" />
-                            </span>
+                            <span className="img-info"></span>
                         </div>
                     </div>
                 </Card>

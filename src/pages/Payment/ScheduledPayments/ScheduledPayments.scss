@@ -1,8 +1,9 @@
+@import 'Assets/styles/global.scss';
 .sp-card {
     height: calc(50% - 5px);
     margin-top: 10px;
     &-head {
-        margin: 10px 0px 20px 0px;
+        margin: 15px 0px 20px 0px;
         text-align: center;
         h1 {
             font-size: 20px;
@@ -92,11 +93,10 @@
                         color: #999999;
                     }
                     .img-wrap {
-                        width: 20px;
-                        height: 20px;
-                        img {
-                            width: 100%;
-                            height: 100%;
+                        .anticon {
+                            font-size: 16px !important;
+                            color: $primary-color;
+                            fill: $primary-color;
                         }
                     }
                 }
@@ -157,14 +157,6 @@
                     &-action {
                         span {
                             font-size: 9px;
-                        }
-                        .img-wrap {
-                            width: 13px;
-                            height: 17px;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
                         }
                     }
                     &-amount {

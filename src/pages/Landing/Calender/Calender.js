@@ -1,6 +1,7 @@
 import React from 'react';
 import 'pages/Landing/Calender/Calender.scss';
 import { Card, Button } from 'antd';
+import Icon, { CalendarOutlined } from '@ant-design/icons';
 import DatePicker from 'Components/Datepicker';
 
 const Calender = () => {
@@ -9,7 +10,7 @@ const Calender = () => {
             <div className="card-head">
                 <span>July 2020</span>
                 <div className="btn-wrap">
-                    <Button type="primary">
+                    <Button type="primary" icon={<CalendarOutlined />}>
                         <span>Go to Calender</span>
                     </Button>
                 </div>
@@ -63,7 +64,7 @@ const Calender = () => {
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info dark-blue"></span>
                                         <span className="list-info green"></span>
                                     </div>
                                 </div>
@@ -110,6 +111,7 @@ const Calender = () => {
                                     <span>7:10am</span>
                                     <div className="stat">
                                         <span className="list-info orange"></span>
+                                        <span className="list-info dark-blue"></span>
                                         <span className="list-info green"></span>
                                     </div>
                                 </div>
@@ -122,7 +124,7 @@ const Calender = () => {
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info violet"></span>
                                         <span className="list-info blue"></span>
                                     </div>
                                 </div>
@@ -168,7 +170,7 @@ const Calender = () => {
                                 <div className="list-timer">
                                     <span>7:10am</span>
                                     <div className="stat">
-                                        <span className="list-info orange"></span>
+                                        <span className="list-info violet"></span>
                                         <span className="list-info blue"></span>
                                     </div>
                                 </div>

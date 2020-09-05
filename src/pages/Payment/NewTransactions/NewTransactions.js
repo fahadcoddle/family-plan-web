@@ -11,7 +11,7 @@ const NewTransactions = () => {
                     Add a new request
                 </Button>
             </div>
-            <span className="divider"> </span>
+            {/* <span className="divider"> </span> */}
             <div className="nt-card-body">
                 <Card bordered={false} className="list-card">
                     <div className="req-inner">

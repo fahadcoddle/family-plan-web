@@ -11,41 +11,28 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        margin: 10px 5px 30px 5px;
+        margin: 15px 10px 30px 10px;
+        padding: 6px 0;
         position: relative;
         h1 {
             font-size: 20px !important;
             color: $black-color;
             margin: 0 !important;
-            font-weight: 700;
+            font-weight: 700 !important;
         }
         .add-item {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
             position: absolute;
             right: 10px;
-            top: -5px;
+            top: 0px;
             z-index: 2;
-            cursor: pointer;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            padding: 0 !important;
-            transition: all ease-in 0.2s;
+            transition: all ease-in-out 0.2s;
+            border: 0;
+            @include secondary-gradient();
             span {
-                color: #fff;
+                color: $white-color;
                 font-size: 20px;
-                font-weight: 200;
-            }
-            &:hover {
-                transform: scale(0.9);
+                font-weight: 500;
+                line-height: 1.2;
             }
         }
     }
@@ -106,6 +93,9 @@
                     span {
                         font-size: 14px;
                         color: #fff;
+                        font-weight: 600;
+                        line-height: 0;
+                        text-shadow: none;
                     }
                     &-orange {
                         width: 70px;
@@ -122,19 +112,17 @@
         }
     }
     &-bottom {
-        border-top: 1px solid rgba(153, 153, 153, 0.2);
-        margin-left: -15px;
-        margin-right: -15px;
         .ant-table-wrapper {
-            margin: 15px 15px;
+            margin: 0px 10px;
         }
         .ant-pagination {
             display: none;
         }
         .ant-table {
             &-thead > tr > th {
+                padding-left: 0px;
                 background: #fff !important;
-                font-weight: 700;
+                font-weight: 600;
                 font-size: 16px;
                 color: $black-color;
                 &:nth-of-type(2),
@@ -143,6 +131,7 @@
                 }
             }
             &-tbody > tr > td {
+                padding-left: 0px;
                 font-size: 16px;
                 color: $text-sec-color;
                 &:nth-of-type(1) {
@@ -193,7 +182,7 @@
                         border-radius: 6px;
                         height: 25px;
                         span {
-                            font-size: 9px;
+                            font-size: 10px;
                         }
                         &-orange {
                             width: 60px;
@@ -210,12 +199,6 @@
             }
         }
         &-bottom {
-            border-top: 1px solid rgba(153, 153, 153, 0.2);
-            margin-left: -15px;
-            margin-right: -15px;
-            .ant-table-wrapper {
-                margin: 15px 10px;
-            }
             .ant-table {
                 &-thead > tr > th {
                     font-size: 13px;

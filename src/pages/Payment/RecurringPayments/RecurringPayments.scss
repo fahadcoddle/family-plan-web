@@ -2,10 +2,10 @@
 .rp-card {
     height: calc(50% - 5px);
     &-head {
-        margin: 0px 0px 20px 0px;
+        margin: 15px 10px 30px 10px;
         h1 {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 20px !important;
+            font-weight: 700 !important;
             color: $black-color;
             margin: 0 !important;
         }
@@ -39,6 +39,9 @@
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ecd66b",endColorstr="#ff9a29",GradientType=1);
             span {
                 font-size: 14px;
+                font-weight: 600;
+                line-height: 0;
+                text-shadow: none;
             }
         }
     }
@@ -126,11 +129,10 @@
                         color: $text-sec-color;
                     }
                     .img-wrap {
-                        width: 13px;
-                        height: 17px;
-                        img {
-                            width: 100%;
-                            height: 100%;
+                        .anticon {
+                            font-size: 16px !important;
+                            color: $primary-color;
+                            fill: $primary-color;
                         }
                     }
                 }
@@ -164,7 +166,7 @@
     @media (max-width: 1919px) {
         &-head {
             h1 {
-                font-size: 14px;
+                font-size: 14px !important;
             }
             .btn-add-rec {
                 border-radius: 6px;
@@ -200,14 +202,6 @@
                         span {
                             font-size: 10px !important;
                         }
-                        .img-wrap {
-                            width: 13px;
-                            height: 17px;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
                     }
                     &-amount {
                         span {
@@ -227,7 +221,7 @@
     @media (max-width: 1366px) {
         &-head {
             h1 {
-                font-size: 13px;
+                font-size: 13px !important;
             }
         }
     }
