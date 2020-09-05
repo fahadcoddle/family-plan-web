@@ -158,6 +158,7 @@
             @include primary-gradient();
             span {
                 font-size: 12px;
+                font-weight: 600;
             }
         }
         @media (min-width: 1440px) {
