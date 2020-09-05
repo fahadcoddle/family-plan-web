@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'pages/Signin/Signin.scss';
 import { Form, Input, Button } from 'antd';
 import img from 'Assets/google.png';
-import logo from 'Assets/fp-logo.png';
+import logo from 'Assets/logo.svg';
 import { Link, Redirect } from 'react-router-dom';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
 
