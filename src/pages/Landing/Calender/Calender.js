@@ -10,7 +10,7 @@ const Calender = () => {
             <div className="card-head">
                 <span>July 2020</span>
                 <div className="btn-wrap">
-                    <Button type="primary" icon={<CalendarOutlined />}>
+                    <Button className="fp-button-primary" type="primary" icon={<CalendarOutlined />}>
                         <span>Go to Calender</span>
                     </Button>
                 </div>

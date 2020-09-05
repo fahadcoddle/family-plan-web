@@ -1,4 +1,4 @@
-@import '../../../Assets/styles/global.scss';
+@import 'Assets/styles/global.scss';
 .head {
     text-align: center;
     margin-bottom: 24px;
@@ -67,7 +67,7 @@
             padding: 12px;
             border-radius: 5px;
             color: $text-color;
-            border-color: $text-sec-color;
+            border-color: text-sec-color;
             font-size: 10px;
             @media (min-width: 1440px) {
                 font-size: 12px;
@@ -107,7 +107,7 @@
             font-size: 8px;
             transform: translate3d(0, -80%, 0);
             opacity: 1;
-            color: $text-sec-color;
+            color: text-sec-color;
             @media (min-width: 1440px) {
                 font-size: 10px;
             }
@@ -121,7 +121,7 @@
         padding: 4px 12px;
         border-radius: 5px;
         color: $text-color;
-        border-color: $text-sec-color;
+        border-color: text-sec-color;
         font-size: 10px;
         margin-bottom: 12px;
         @media (min-width: 1440px) {
@@ -134,7 +134,7 @@
     }
     .ant-select-arrow {
         span {
-            color: $text-sec-color;
+            color: text-sec-color;
         }
         font-size: 10px;
         top: 40%;
