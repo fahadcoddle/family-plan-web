@@ -29,17 +29,21 @@ $white-color: #ffffff;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecd66b', endColorstr='#ff9a29',GradientType=1 ); /* IE6-9 */
 }
 @mixin secondary-gradient {
-    background: rgb(129, 198, 223); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%); /* FF3.6-15 */
+    background: rgb(129, 198, 223) !important; /* Old browsers */
+    background: -moz-linear-gradient(
+        left,
+        rgba(129, 198, 223, 1) 0%,
+        rgba(56, 160, 235, 1) 100%
+    ) !important; /* FF3.6-15 */
     background: -webkit-linear-gradient(
         left,
         rgba(129, 198, 223, 1) 0%,
         rgba(56, 160, 235, 1) 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    ) !important; /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
         to right,
         rgba(129, 198, 223, 1) 0%,
         rgba(56, 160, 235, 1) 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81c6df', endColorstr='#38a0eb',GradientType=1 ); /* IE6-9 */
+    ) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81c6df', endColorstr='#38a0eb',GradientType=1 ) !important; /* IE6-9 */
 }

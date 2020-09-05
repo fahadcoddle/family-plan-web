@@ -36,7 +36,7 @@ class ToDoList extends Component {
                 <div className="card-head">
                     <span>To Do List</span>
                     <div className="btn-wrap">
-                        <Button type="primary">
+                        <Button type="primary" className="fp-button-primary">
                             <span>Add To Do</span>
                         </Button>
                     </div>

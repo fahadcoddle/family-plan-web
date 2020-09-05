@@ -35,11 +35,6 @@
                 border: 0;
                 height: 29px;
                 border-radius: 5px;
-                background: rgb(240, 200, 91);
-                background: -moz-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
-                background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
-                background: linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c85b",endColorstr="#ff9a29",GradientType=1);
                 span {
                     color: #fff !important;
                     font-size: 12px;
@@ -82,19 +77,7 @@
                 font-size: 14px;
             }
             &-active {
-                background: rgb(115, 190, 225) !important;
-                background: -moz-linear-gradient(
-                    90deg,
-                    rgba(115, 190, 225, 1) 0%,
-                    rgba(56, 157, 230, 1) 100%
-                ) !important;
-                background: -webkit-linear-gradient(
-                    90deg,
-                    rgba(115, 190, 225, 1) 0%,
-                    rgba(56, 157, 230, 1) 100%
-                ) !important;
-                background: linear-gradient(90deg, rgba(115, 190, 225, 1) 0%, rgba(56, 157, 230, 1) 100%) !important;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#73bee1",endColorstr="#389de6",GradientType=1) !important;
+                @include secondary-gradient;
                 .ant-tabs-tab-btn {
                     color: #fff !important;
                 }
