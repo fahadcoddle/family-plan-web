@@ -39,6 +39,7 @@ class RecurringPayments extends Component {
                         centered
                         visible={this.state.modalVisible}
                         backdrop="static"
+                        className="modal-container"
                         onCancel={() => this.setModalVisible(false)}
                     >
                         <div className="modal-head">
