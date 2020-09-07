@@ -1,6 +1,7 @@
 import React from 'react';
 import 'pages/Household/ThirdParty/ThirdParty.scss';
 import { Card, Button } from 'antd';
+import ScrollArea from 'react-scrollbar';
 
 const ThirdParty = () => {
     return (
@@ -11,7 +12,7 @@ const ThirdParty = () => {
                     +
                 </Button>
             </div>
-            <div className="party-list">
+            <ScrollArea speed={0.8} className="party-lis" horizontal={false}>
                 <Card bordered={false} className="party-inner">
                     <div className="relation">
                         <span>Grandma</span>
@@ -36,7 +37,7 @@ const ThirdParty = () => {
                         <span>John</span>
                     </div>
                 </Card>
-            </div>
+            </ScrollArea>
         </Card>
     );
 };
