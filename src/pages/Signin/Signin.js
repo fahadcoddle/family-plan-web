@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'pages/Signin/Signin.scss';
 import { Form, Input, Button } from 'antd';
 import img from 'Assets/google.png';
-import logo from 'Assets/fp-logo.png';
+import logo from 'Assets/logo.svg';
 import { Link, Redirect } from 'react-router-dom';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
 
@@ -115,7 +115,7 @@ class Signup extends Component {
                                     <Button
                                         type="primary"
                                         htmlType="submit"
-                                        className="btn-sign-in"
+                                        className="btn-sign-in fp-button-primary"
                                         onClick={this.onHandleLogin}
                                     >
                                         Sign In
@@ -164,7 +164,7 @@ class Signup extends Component {
                                             <span>Terms & Conditions</span>
                                         </a>
                                     </div>
-                                    <Button type="primary" htmlType="submit" className="btn-sign-in">
+                                    <Button type="primary" htmlType="submit" className="btn-sign-in fp-button-primary">
                                         Create Account
                                     </Button>
                                 </Form.Item>
@@ -172,7 +172,7 @@ class Signup extends Component {
                             <div className="g-link">
                                 <span>Sign in With</span>
                             </div>
-                            <Button className="g-btn-wrap">
+                            <Button className="g-btn-wrap ">
                                 <img src={img} alt="google-logo" />
                                 <span>Sign in with Google</span>
                             </Button>

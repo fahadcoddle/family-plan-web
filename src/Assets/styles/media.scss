@@ -1,0 +1,53 @@
+/* Min values */
+@media (min-width: 576px) {
+    .hiddenXsUp {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .hiddenSmUp {
+        display: none !important;
+    }
+}
+@media (min-width: 1368px) {
+    .hiddenLgUp {
+        display: none !important;
+    }
+}
+@media (min-width: 1440px) {
+    .hiddenXlUp {
+        display: none !important;
+    }
+}
+@media (min-width: 1920px) {
+    .hiddenXXlUp {
+        display: none !important;
+    }
+}
+
+/* Max values */
+@media (max-width: 1919px) {
+    .hiddenXXlDown {
+        display: none !important;
+    }
+}
+@media (max-width: 1439px) {
+    .hiddenXlDown {
+        display: none !important;
+    }
+}
+@media (max-width: 1367px) {
+    .hiddenMdDown {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    .hiddenSmDown {
+        display: none !important;
+    }
+}
+@media (max-width: 575px) {
+    .hiddenXsDown {
+        display: none !important;
+    }
+}

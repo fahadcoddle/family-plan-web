@@ -1,11 +1,13 @@
+@import 'Assets/styles/global.scss';
 .rp-card {
-    height: 50%;
+    height: calc(50% - 5px);
     &-head {
-        margin: 20px 0px;
+        margin: 15px 10px 30px 10px;
         h1 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #000000;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            color: $black-color;
+            margin: 0 !important;
         }
         display: -webkit-box;
         display: -ms-flexbox;
@@ -37,6 +39,9 @@
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ecd66b",endColorstr="#ff9a29",GradientType=1);
             span {
                 font-size: 14px;
+                font-weight: 600;
+                line-height: 0;
+                text-shadow: none;
             }
         }
     }
@@ -86,7 +91,7 @@
                         display: -ms-flexbox;
                         display: flex;
                         span {
-                            color: #333333;
+                            color: $text-color;
                             font-size: 16px;
                             &:not(:last-of-type) {
                                 margin-right: 5px;
@@ -102,7 +107,7 @@
                         }
                     }
                     .type {
-                        color: #999999;
+                        color: $text-sec-color;
                         font-size: 16px;
                     }
                 }
@@ -121,14 +126,13 @@
                     flex-basis: 33.3%;
                     span {
                         font-size: 12px;
-                        color: #999999;
+                        color: $text-sec-color;
                     }
                     .img-wrap {
-                        width: 13px;
-                        height: 17px;
-                        img {
-                            width: 100%;
-                            height: 100%;
+                        .anticon {
+                            font-size: 16px !important;
+                            color: $primary-color;
+                            fill: $primary-color;
                         }
                     }
                 }
@@ -144,11 +148,11 @@
                     -ms-flex-preferred-size: 33.3%;
                     flex-basis: 33.3%;
                     span {
-                        color: #999999;
+                        color: $text-sec-color;
                         font-size: 12px;
                         &:first-of-type {
                             font-weight: 700;
-                            color: #333333;
+                            color: $text-color;
                             font-size: 16px;
                         }
                     }
@@ -162,7 +166,7 @@
     @media (max-width: 1919px) {
         &-head {
             h1 {
-                font-size: 14px;
+                font-size: 14px !important;
             }
             .btn-add-rec {
                 border-radius: 6px;
@@ -179,7 +183,7 @@
                     &-details {
                         .detail-wrap {
                             span {
-                                font-size: 12px;
+                                font-size: 12px !important;
                                 &:nth-of-type(2) {
                                     width: 15px;
                                     height: 15px;
@@ -191,27 +195,19 @@
                             }
                         }
                         .type {
-                            font-size: 11px;
+                            font-size: 11px !important;
                         }
                     }
                     &-action {
                         span {
-                            font-size: 9px;
-                        }
-                        .img-wrap {
-                            width: 13px;
-                            height: 17px;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
+                            font-size: 10px !important;
                         }
                     }
                     &-amount {
                         span {
-                            font-size: 11px;
+                            font-size: 11px !important;
                             &:first-of-type {
-                                font-size: 12px;
+                                font-size: 12px !important;
                             }
                         }
                     }
@@ -219,6 +215,13 @@
                 &:not(:first-of-type) {
                     margin-top: 16px;
                 }
+            }
+        }
+    }
+    @media (max-width: 1366px) {
+        &-head {
+            h1 {
+                font-size: 13px !important;
             }
         }
     }
@@ -230,7 +233,7 @@
             &-head {
                 font-size: 20px;
                 font-weight: 700;
-                color: #000000;
+                color: $black-color;
                 text-align: center;
                 margin-bottom: 15px;
             }
@@ -254,7 +257,7 @@
             margin-bottom: 20px;
             span {
                 font-size: 12px;
-                color: #333333;
+                color: $text-color;
                 &:first-of-type {
                     font-weight: 700;
                     font-size: 14px;
@@ -287,7 +290,7 @@
                 border-radius: 5px;
             }
             &-selection-item {
-                color: #999999;
+                color: $text-sec-color;
                 font-size: 12px;
             }
         }
@@ -309,7 +312,7 @@
             height: 40px;
             border-radius: 5px;
             &::placeholder {
-                color: #999999;
+                color: $text-sec-color;
                 font-size: 12px;
             }
         }
@@ -337,7 +340,7 @@
                 margin-left: 10px;
             }
             &::placeholder {
-                color: #999999;
+                color: $text-sec-color;
                 font-size: 12px;
             }
         }
@@ -379,7 +382,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 4px;
         border-bottom: 1px solid rgba(153, 153, 153, 0.2);
         padding-bottom: 2px;
         .btn-add {
@@ -398,7 +401,7 @@
             }
         }
         span {
-            color: #333333;
+            color: $text-color;
             font-size: 12px;
         }
     }
@@ -411,12 +414,12 @@
             svg {
                 width: 24px;
                 height: 24px;
-                color: #333333;
+                color: $text-color;
             }
         }
     }
     .ant-select-arrow {
-        color: #333333;
+        color: $text-color;
         width: 14px;
         height: 7px;
         transition: all ease-in-out 0.2s;
@@ -426,5 +429,110 @@
             transform: rotate(180deg);
             top: 60%;
         }
+    }
+    @media (max-width: 1366px) {
+        &-content {
+            .modal-head {
+                font-size: 14px !important;
+            }
+            .ant-radio-wrapper {
+                span {
+                    font-size: 11px;
+                    &:first-of-type {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .select-wrap {
+            .ant-select {
+                width: 50%;
+                &:nth-of-type(1) {
+                    margin-right: 10px;
+                }
+                &:nth-of-type(2) {
+                    margin-left: 10px;
+                }
+                &-selector {
+                    height: 33px;
+                }
+                &-selection-item {
+                    color: $text-sec-color;
+                    font-size: 10px;
+                }
+            }
+        }
+        .input-full {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            .ant-select {
+                width: 100%;
+                margin-right: 0 !important;
+            }
+            input {
+                height: 33px;
+                &::placeholder {
+                    color: $text-sec-color;
+                    font-size: 10px;
+                }
+            }
+        }
+        .input-wrap {
+            input {
+                height: 33px;
+                &:nth-of-type(1) {
+                    margin-right: 10px;
+                }
+                &:nth-of-type(2) {
+                    margin-left: 10px;
+                }
+                &::placeholder {
+                    color: $text-sec-color;
+                    font-size: 12px;
+                }
+            }
+        }
+        .full-btn {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            .btn-modal {
+                height: 40px;
+                span {
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-shadow: none;
+                }
+            }
+        }
+        .modal-bottom {
+            .btn-add {
+                height: 28px;
+                width: 85px;
+                span {
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-shadow: none;
+                }
+            }
+            span {
+                color: $text-color;
+                font-size: 10px;
+            }
+        }
+        &-close {
+            top: 5px;
+            &-x {
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
+.modal-container {
+    width: 420px !important;
+    @media (max-width: 1366px) {
+        width: 346px !important;
     }
 }

@@ -1,106 +1,143 @@
+@import 'Assets/styles/global.scss';
 .head {
     text-align: center;
     margin-bottom: 24px;
     position: relative;
     z-index: 1;
     span {
-        font-size: 20px;
-        color: #000000;
-        font-weight: 600;
-    }
-    .add-item {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        position: absolute;
-        right: 10px;
-        top: 0px;
-        z-index: 2;
-        cursor: pointer;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        transition: all ease-in-out 0.2s;
-        background: rgb(129, 198, 223);
-        background: -moz-linear-gradient(90deg, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%);
-        background: -webkit-linear-gradient(90deg, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%);
-        background: linear-gradient(90deg, rgba(129, 198, 223, 1) 0%, rgba(56, 160, 235, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#81c6df",endColorstr="#38a0eb",GradientType=1);
-        span {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 200;
+        font-size: 13px;
+        color: $black-color;
+        font-weight: 700;
+        @media (min-width: 1440px) {
+            font-size: 14px;
         }
-        &:hover {
-            transform: scale(0.9);
+        @media (min-width: 1920px) {
+            font-size: 20px;
         }
     }
     &-avatar {
         text-align: center;
-        margin-bottom: 90px;
+        margin-bottom: 30px;
         .ant-avatar {
-            width: 100px;
-            height: 100px;
-            border: 1px solid #707070;
+            width: 80px;
+            height: 80px;
+        }
+        @media (min-width: 1440px) {
+            margin-bottom: 74px;
+            .ant-avatar {
+                width: 85px;
+                height: 85px;
+            }
+        }
+        @media (min-width: 1920px) {
+            margin-bottom: 96px;
+            .ant-avatar {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .add-item {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        z-index: 2;
+        transition: all ease-in-out 0.2s;
+        border: 0;
+        @include secondary-gradient();
+        span {
+            color: $white-color;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
         }
     }
 }
-.household-card {
+.ant-card.household-card {
     height: 100%;
-    .ant-card-body {
-        padding: 15px 40px !important;
+    & > .ant-card-body {
+        padding: 30px 16px !important;
+        @media (min-width: 1440px) {
+            padding: 30px 40px !important;
+        }
     }
-    .ant-input + .label-float,
-    .ant-input + .label-float {
-        font-size: 80%;
-        transform: translate3d(0, -160%, 0);
-        opacity: 1;
-        color: #333333;
-        font-weight: 400 !important;
-    }
-    .ant-input {
-        height: 51px;
-        // width: 300px;
-        border-radius: 5px;
-        color: #333333;
-        border-color: #999999 !important;
-    }
-    .float-label {
-        margin-bottom: 16px !important;
-        .ant-input,
-        .ant-select-selector {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: none !important;
-                border-color: #999999;
+    .ant-form {
+        .ant-input {
+            min-height: 40px;
+            padding: 12px;
+            border-radius: 5px;
+            color: $text-color;
+            border-color: $text-sec-color;
+            font-size: 10px;
+            @media (min-width: 1440px) {
+                font-size: 12px;
+            }
+            @media (min-width: 1920px) {
+                font-size: 14px;
             }
         }
-        .label {
-            top: 12px !important;
+        .float-label {
+            margin-bottom: 12px;
+            .ant-input,
+            .ant-select-selector {
+                &:hover,
+                &:focus,
+                &:active {
+                    box-shadow: none !important;
+                    border-color: #999999;
+                }
+            }
+            .label {
+                top: 13px;
+                left: 12px;
+                font-size: 10px;
+                @media (min-width: 1440px) {
+                    font-size: 12px;
+                }
+                @media (min-width: 1920px) {
+                    font-size: 14px;
+                }
+            }
+            @media (min-width: 1920px) {
+                margin-bottom: 20px;
+            }
+        }
+        .ant-input + .label-float,
+        .ant-input + .label-float {
+            font-size: 8px;
+            transform: translate3d(0, -80%, 0);
+            opacity: 1;
+            color: $text-sec-color;
+            @media (min-width: 1440px) {
+                font-size: 10px;
+            }
+            @media (min-width: 1920px) {
+                font-size: 12px;
+            }
         }
     }
     .ant-select-selector {
-        height: 51px !important;
-        // width: 300px !important;
-        border-radius: 5px !important;
-        border-color: #999999 !important;
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
+        min-height: 40px;
+        padding: 4px 12px;
+        border-radius: 5px;
+        color: $text-color;
+        border-color: $text-sec-color;
+        font-size: 10px;
+        margin-bottom: 12px;
+        @media (min-width: 1440px) {
+            font-size: 12px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
     }
     .ant-select-arrow {
         span {
-            color: #999999;
+            color: $text-sec-color;
         }
-        top: 36% !important;
-        right: -10px !important;
+        font-size: 10px;
+        top: 40%;
         transition: all ease-in 0.2s;
     }
     .ant-select-open {
@@ -109,106 +146,35 @@
         }
     }
     .bottom-btn {
-        margin: 36px 0px;
+        margin: 20px 0 0;
         text-align: center;
         .btn-save {
-            width: 200px;
-            height: 44px;
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            padding: 8px 24px;
             border: none;
-            border-radius: 8px;
-            background: rgb(240, 200, 91);
-            background: -moz-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
-            background: -webkit-linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
-            background: linear-gradient(90deg, rgba(240, 200, 91, 1) 0%, rgba(255, 154, 41, 1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0c85b",endColorstr="#ff9a29",GradientType=1);
+            border-radius: 6px;
+            @include primary-gradient();
             span {
-                font-size: 16px;
+                font-size: 12px;
+                font-weight: 600;
             }
         }
-    }
-}
-@media (max-width: 1919px) {
-    .head {
-        span {
-            font-size: 15px;
-        }
-        &-avatar {
-            margin-bottom: 70px;
-            .ant-avatar {
-                width: 85px;
-                height: 85px;
-            }
-        }
-    }
-    .content {
-        margin: 0px 25px;
-    }
-    .household-card {
-        .ant-card-body {
-            padding: 15px !important;
-        }
-        // .ant-input + .label-float,
-        // .ant-input + .label-float {
-        //     font-size: 80%;
-        //     transform: translate3d(0, -160%, 0);
-        //     opacity: 1;
-        //     color: #333333;
-        //     font-weight: 400 !important;
-        // }
-        .ant-input {
-            // width: 253px;
-            height: 43px;
-            font-size: 13px;
-        }
-        .float-label {
-            margin-bottom: 13px !important;
-            .label {
-                top: 12px !important;
-            }
-        }
-        .ant-select-selector {
-            // width: 253px !important;
-            height: 43px !important;
-            margin-bottom: 13px;
-            font-size: 13px;
-        }
-        .ant-select-arrow {
-            span {
-                color: #999999;
-            }
-            top: 36% !important;
-            right: 10px !important;
-        }
-        .ant-select-open {
-            .ant-select-arrow {
-                transform: rotate(180deg);
-            }
-        }
-        .bottom-btn {
-            margin: 36px 0px;
-            text-align: center;
+        @media (min-width: 1440px) {
+            margin: 50px 0 0;
             .btn-save {
-                width: 169px;
-                height: 36px;
+                padding: 10px 24px;
+            }
+        }
+        @media (min-width: 1920px) {
+            margin: 60px 0 0;
+            .btn-save {
+                padding: 12px 24px;
                 span {
-                    font-size: 12px;
+                    font-size: 16px;
                 }
             }
-        }
-    }
-}
-@media (max-width: 768px) {
-    .household-card {
-        .col-wrap {
-            padding-left: 3px !important;
-            padding-right: 3px !important;
-        }
-        .ant-input {
-            height: 35px;
-            font-size: 11px;
-        }
-        .ant-select-selector {
-            height: 35px !important;
         }
     }
 }

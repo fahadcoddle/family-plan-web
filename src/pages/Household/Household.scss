@@ -1,18 +1,10 @@
 .ant-card {
     border-radius: 10px;
     box-shadow: 0px 12px 45px #0000000f;
-    .ant-card-body {
-        padding: 15px !important;
-    }
     .ant-tabs-nav-wrap {
         border-radius: 30px;
         box-shadow: 0px 5px 20px #0000000d;
         margin-top: 10px;
-    }
-    @media (max-width: 768px) {
-        .ant-card-body {
-            padding: 10px !important;
-        }
     }
 }
 .list-card {
@@ -20,9 +12,10 @@
     box-shadow: 0px 6px 15px #0000000d;
 }
 .row-container {
-    padding: 10px 5px;
+    padding: 15px;
     margin: 0;
-    height: calc(100vh - 60px);
+    // height: calc(100vh - 60px);
+    height: 100%;
     background: #f5f4f3;
 }
 .ant-tabs-ink-bar {

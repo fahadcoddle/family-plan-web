@@ -6,16 +6,16 @@ import RequestCard from 'pages/Landing/RecentRequest/RecentRequestCard';
 class RecentRequest extends Component {
     state = {
         content: [
-            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Dave', amount: '$200', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
-            { status: 'Recieved from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Request from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Request from', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Request from', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Request sent to', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Request sent to', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Request sent to', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Request from', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Request sent to', name: 'Dave', amount: '$200', date: '20/07/2020' },
+            { status: 'Request sent to', name: 'Mary', amount: '$500', date: '20/07/2020' },
+            { status: 'Request sent to', name: 'Mary', amount: '$500', date: '20/07/2020' },
         ],
     };
     render() {

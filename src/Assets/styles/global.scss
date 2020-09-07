@@ -1,0 +1,44 @@
+@import 'Assets/styles/colors.scss';
+@import 'Assets/styles/typography.scss';
+@import 'Assets/styles/media.scss';
+
+:root {
+    body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-color;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    .fp {
+        &-button {
+            font-size: 1rem;
+            padding: 8px 24px;
+            color: $white-color;
+            line-height: 0;
+            font-weight: 600;
+            text-shadow: none;
+            &-sm {
+                font-size: 1rem;
+                padding: 4px 16px;
+                color: $white-color;
+            }
+        }
+        &-button-primary {
+            @include primary-gradient();
+        }
+        &-button-secondary {
+            @include secondary-gradient();
+        }
+    }
+    .ant-select {
+        &-item {
+            &-option {
+                font-size: 12px;
+            }
+        }
+    }
+}

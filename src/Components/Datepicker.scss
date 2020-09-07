@@ -48,6 +48,11 @@
     margin: 2px 0px 15px 0px;
     // -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    // justify-content: center;
+}
+.container {
+    max-width: 620px;
+    margin: 0 auto;
 }
 
 .dateListScrollable::-webkit-scrollbar {
@@ -74,6 +79,8 @@
     height: 130px;
     flex-shrink: 0;
     border-radius: 30px;
+}
+#selected {
     border: 1px solid #ededed;
 }
 
@@ -84,8 +91,7 @@
 
 .dayLabel {
     font-size: 12px;
-    font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
     margin: 4px 0px;
     text-transform: uppercase;
 }
@@ -178,17 +184,45 @@
             margin: 2px;
         }
     }
+    .container {
+        max-width: 670px;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 1919px) {
+    .dateDayItem {
+        margin: 0px 8px;
+    }
     .dateLabel {
-        width: 45px;
-        height: 45px;
+        width: 44px;
+        height: 44px;
         span {
             font-size: 14px;
         }
     }
     .dayLabel {
         font-size: 10px;
+    }
+}
+@media (max-width: 1366px) {
+    .dateDayItem {
+        margin: 0px 8px !important;
+        width: 44px;
+        height: 110px;
+        .dateLabel {
+            width: 34px;
+            height: 34px;
+            span {
+                font-size: 12px;
+            }
+        }
+        .notify {
+            padding: 0px 3px;
+            span {
+                width: 6px;
+                height: 6px;
+            }
+        }
     }
 }
 @media (max-width: 768px) {
@@ -208,8 +242,8 @@
     .notify {
         padding: 0px 5px;
         span {
-            width: 8px;
-            height: 8px;
+            width: 9px;
+            height: 9px;
         }
     }
 }

@@ -10,7 +10,7 @@ const RequestCard = (props) => {
                     <span>{props.name}</span>
                 </div>
                 <div className="req-action">
-                    <Button type="primary" className="btn btn-send">
+                    <Button type="primary" className="btn fp-button-primary">
                         <span>Sent</span>
                     </Button>
                 </div>

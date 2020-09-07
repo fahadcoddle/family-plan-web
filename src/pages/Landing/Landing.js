@@ -8,13 +8,13 @@ import RecentTransactions from 'pages/Landing/RecentTransactions/RecentTransacti
 const Landing = () => {
     return (
         <Row className="row-container" gutter={'10'}>
-            <Col xs={24} xl={10} className="calender-wrap">
+            <Col xs={24} lg={10} className="calender-wrap">
                 <Calender />
             </Col>
-            <Col xs={24} xl={7} className="todo-wrap">
+            <Col xs={24} lg={7} className="todo-wrap">
                 <ToDoList />
             </Col>
-            <Col xs={24} xl={7} className="col-wrap">
+            <Col xs={24} lg={7} className="col-wrap">
                 <RecentRequest />
                 <RecentTransactions />
             </Col>

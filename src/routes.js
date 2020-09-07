@@ -38,20 +38,20 @@ const ROUTES_OPTIONS = [
     {
         path: ROUTES.HOME,
         component: LandingPage,
-        exact: true,
-        private: true,
+        exact: false,
+        private: false,
     },
     {
         path: ROUTES.HOUSEHOLD,
         component: Household,
-        exact: true,
-        private: true,
+        exact: false,
+        private: false,
     },
     {
         path: ROUTES.PAYMENT,
         component: Payment,
-        exact: true,
-        private: true,
+        exact: false,
+        private: false,
     },
 ];
 
