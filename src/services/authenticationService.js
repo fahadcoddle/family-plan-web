@@ -40,8 +40,8 @@ export const loginUserService = (request) => {
     });*/
 
     const credentials = {
-        email: 'credit@test.com',
-        pwd: 'Qwerty123',
+        email: request.user.email,
+        pwd: request.user.password,
     };
 
     return makeRequest('POST', '/auth/login', credentials)
