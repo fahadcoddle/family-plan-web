@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'pages/Landing/RecentTransactions/RecentTransactions.scss';
 import { Card } from 'antd';
 import TransactionCard from 'pages/Landing/RecentTransactions/RecentTransactionsCard';
-import ScrollArea from 'react-scrollbar';
 
 class RecentTransactions extends Component {
     state = {
@@ -23,7 +22,7 @@ class RecentTransactions extends Component {
                 <div className="card-head req-head">
                     <span>Recent Transactions</span>
                 </div>
-                <ScrollArea speed={0.8} className="trans-card-wrap" contentClassName="content" horizontal={false}>
+                <div className="trans-card-wrap">
                     <div className="custom-mr">
                         {this.state.content.map((TransCard, i) => {
                             return (
@@ -37,7 +36,7 @@ class RecentTransactions extends Component {
                             );
                         })}
                     </div>
-                </ScrollArea>
+                </div>
             </Card>
         );
     }
