@@ -31,7 +31,23 @@ class Payments extends Component {
                 </div>
 
                 <ScrollArea speed={0.8} className="area" contentClassName="content" horizontal={false}>
-                    <Card bordered={false}>djk</Card>
+                    <Card bordered={false} className="list-card">
+                        <div className="req-inner">
+                            <div className="req-details">
+                                <span>Dave</span>
+                                <span>Travel</span>
+                            </div>
+                            <div className="req-action">
+                                <Button type="primary" className="btn fp-button-primary">
+                                    <span>Sent</span>
+                                </Button>
+                            </div>
+                            <div className="req-amount">
+                                <span>$150.00</span>
+                                <span>8/01/2018</span>
+                            </div>
+                        </div>
+                    </Card>
                 </ScrollArea>
             </Card>
         );
