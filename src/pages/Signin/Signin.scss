@@ -256,10 +256,10 @@
 
 .ant-input + .label-float,
 .ant-input + .label-float {
-    font-size: 8px;
     transform: translate3d(0, -50%, 0);
     opacity: 1;
     color: $text-sec-color;
+    font-size: 8px;
 }
 .float-wrap {
     position: relative;
