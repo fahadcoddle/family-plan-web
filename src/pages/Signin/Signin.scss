@@ -261,10 +261,15 @@
     opacity: 1;
     color: $text-sec-color;
 }
+.float-wrap {
+    position: relative;
+}
 .form-err {
     color: $danger-color;
     position: absolute;
     left: 0;
+    top: 37px;
+    z-index: 2;
 }
 
 @media (min-width: 1920px) {

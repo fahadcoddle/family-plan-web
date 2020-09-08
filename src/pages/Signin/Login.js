@@ -87,30 +87,34 @@ export class Login extends Component {
                     <Formik initialValues={initialValues} validate={this.validate} onSubmit={this.onSubmit}>
                         {({ touched, values, handleChange, handleSubmit, handleBlur, errors, isSubmitting }) => (
                             <form onSubmit={handleSubmit}>
-                                <FloatLabel label="Email" name="email" value={values.email}>
-                                    <Input
-                                        name="email"
-                                        value={values.email}
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                    />
+                                <div className="float-wrap">
+                                    <FloatLabel label="Email" name="email" value={values.email}>
+                                        <Input
+                                            name="email"
+                                            value={values.email}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                        />
+                                    </FloatLabel>
+
                                     {touched.email && errors.email ? (
                                         <div className="form-err">{errors.email}</div>
                                     ) : null}
-                                </FloatLabel>
-
-                                <FloatLabel label="Password" name="password" value={values.password}>
-                                    <Input
-                                        name="password"
-                                        value={values.password}
-                                        type="password"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                    />
+                                </div>
+                                <div className="float-wrap">
+                                    <FloatLabel label="Password" name="password" value={values.password}>
+                                        <Input
+                                            name="password"
+                                            value={values.password}
+                                            type="password"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                        />
+                                    </FloatLabel>
                                     {touched.password && errors.password ? (
                                         <div className="form-err">{errors.password}</div>
                                     ) : null}
-                                </FloatLabel>
+                                </div>
 
                                 {response.login.hasOwnProperty('response') ? (
                                     response.login.response.message ? (
