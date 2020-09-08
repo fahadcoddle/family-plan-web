@@ -11,9 +11,25 @@ export const registerUserService = (request) => {
         body: JSON.stringify(request.user),
     };
 
-    return fetch(REGISTER_API_ENDPOINT, parameters)
+    // return fetch(REGISTER_API_ENDPOINT, parameters)
+    //     .then((response) => {
+    //         return response.json();
+    //     })
+    //     .then((json) => {
+    //         return json;
+    //     });
+
+    const credentials = {
+        first_name: request.user.name,
+        email: request.user.signup_email,
+        pwd: request.user.signup_password,
+        terms_condition: true,
+    };
+
+    return makeRequest('POST', '/api/users', credentials)
         .then((response) => {
-            return response.json();
+            console.log('Resp', response);
+            return response;
         })
         .then((json) => {
             return json;
@@ -40,8 +56,8 @@ export const loginUserService = (request) => {
     });*/
 
     const credentials = {
-        email: 'credit@test.com',
-        pwd: 'Qwerty123',
+        email: request.user.email,
+        pwd: request.user.password,
     };
 
     return makeRequest('POST', '/auth/login', credentials)
