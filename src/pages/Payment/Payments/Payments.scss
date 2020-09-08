@@ -1,0 +1,88 @@
+@import 'Assets/styles/global.scss';
+
+.payments {
+    &-head {
+        text-align: center;
+        h1 {
+            font-size: 20px;
+            font-weight: 700 !important;
+            @media (max-width: 1919px) {
+                font-size: 14px;
+            }
+            @media (max-width: 1366px) {
+                font-size: 13px;
+            }
+        }
+    }
+    &-modal {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        .ant-btn {
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+            border-radius: 8px;
+            border: 0;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            span {
+                font-size: 14px;
+            }
+            @media (max-width: 1919px) {
+                span {
+                    font-size: 10px;
+                }
+            }
+            @media (max-width: 1366px) {
+                span {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    &-btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 10px 15px 10px 15px;
+        border-bottom: 1px solid $text-sec-color;
+        margin: 0px -15px 0px -15px;
+        .ant-btn {
+            -ms-flex-preferred-size: 33.3%;
+            flex-basis: 33.3%;
+            background: $white-color;
+            border-radius: 8px;
+            border: 0;
+            border: 1px solid $text-sec-color;
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+            span {
+                color: $text-sec-color;
+                font-size: 12px;
+            }
+            @media (max-width: 1919px) {
+                span {
+                    font-size: 8px;
+                }
+            }
+            @media (max-width: 1366px) {
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+        .active {
+            span {
+                color: $black-color !important;
+            }
+        }
+    }
+}

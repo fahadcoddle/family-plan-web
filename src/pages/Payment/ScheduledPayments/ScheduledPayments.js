@@ -3,7 +3,6 @@ import 'pages/Payment/ScheduledPayments/ScheduledPayments.scss';
 import { Card } from 'antd';
 import Icon from '@ant-design/icons';
 import img from 'Assets/next.png';
-import cycle from 'Assets/cycle.png';
 import ScrollArea from 'react-scrollbar';
 
 const refreshSvg = () => (

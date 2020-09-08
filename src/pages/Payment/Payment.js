@@ -4,7 +4,8 @@ import { Row, Col } from 'antd';
 import NewTransactions from 'pages/Payment/NewTransactions/NewTransactions';
 import Categories from 'pages/Payment/Categories/Categories';
 import RecurringPayments from 'pages/Payment/RecurringPayments/RecurringPayments';
-import ScheduledPayments from 'pages/Payment/ScheduledPayments/ScheduledPayments';
+// import ScheduledPayments from 'pages/Payment/ScheduledPayments/ScheduledPayments';
+import Payments from 'pages/Payment/Payments/Payments';
 const Landing = () => {
     return (
         <Row className="row-container" gutter={'10'}>
@@ -16,7 +17,8 @@ const Landing = () => {
             </Col>
             <Col xs={24} lg={7} className="col-wrap">
                 <RecurringPayments />
-                <ScheduledPayments />
+                {/* <ScheduledPayments /> */}
+                <Payments />
             </Col>
         </Row>
     );
