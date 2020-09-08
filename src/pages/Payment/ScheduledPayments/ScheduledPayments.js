@@ -4,7 +4,6 @@ import { Card } from 'antd';
 import Icon from '@ant-design/icons';
 import img from 'Assets/next.png';
 import cycle from 'Assets/cycle.png';
-import ScrollArea from 'react-scrollbar';
 
 const refreshSvg = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 13.237 17.024">
@@ -21,7 +20,7 @@ const ScheduledPayments = () => {
             <div className="sp-card-head">
                 <h1>Scheduled Payments</h1>
             </div>
-            <ScrollArea speed={0.8} className="sp-card-body" contentClassName="content" horizontal={false}>
+            <div className="sp-card-body">
                 <Card bordered={false} className="list-card">
                     <div className="req-inner">
                         <div className="req-details">
@@ -166,7 +165,7 @@ const ScheduledPayments = () => {
                         </div>
                     </div>
                 </Card>
-            </ScrollArea>
+            </div>
         </Card>
     );
 };

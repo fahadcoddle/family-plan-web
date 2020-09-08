@@ -3,9 +3,8 @@ import 'pages/Payment/RecurringPayments/RecurringPayments.scss';
 import { Card, Button, Modal, Form, Radio, Select, Input } from 'antd';
 import Icon from '@ant-design/icons';
 import img from 'Assets/next.png';
-// import cycle from 'Assets/cycle.png';
+import cycle from 'Assets/cycle.png';
 import { CaretDownOutlined } from '@ant-design/icons';
-import ScrollArea from 'react-scrollbar';
 
 const { Option } = Select;
 const refreshSvg = () => (
@@ -113,7 +112,7 @@ class RecurringPayments extends Component {
                         </Form>
                     </Modal>
                 </div>
-                <ScrollArea speed={0.8} className="rp-card-body" contentClassName="content" horizontal={false}>
+                <div className="rp-card-body">
                     <Card bordered={false} className="list-card">
                         <div className="req-inner">
                             <div className="req-details">
@@ -354,7 +353,7 @@ class RecurringPayments extends Component {
                             </div>
                         </div>
                     </Card>
-                </ScrollArea>
+                </div>
             </Card>
         );
     }

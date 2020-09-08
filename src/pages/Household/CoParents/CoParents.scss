@@ -2,13 +2,7 @@
 .coparent {
     &-card {
         height: calc(50% - 5px) !important;
-        .ant-card-body {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
     }
-
     &-inner {
         margin: 10px 0px 0;
         box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05) !important;
@@ -18,7 +12,6 @@
             display: flex;
             -ms-flex-align: center;
             align-items: center;
-            flex-direction: row !important;
             .btn {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -77,10 +70,21 @@
         }
     }
     &-list {
-        // max-height: 300px;
+        max-height: 300px;
         overflow: auto;
         padding: 0 10px 10px;
         margin-left: -10px;
         margin-right: -10px;
+        scrollbar-color: #f5f5f5 !important;
+        scrollbar-width: thin !important;
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #f5f5f5;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 6px rgba(116, 116, 116, 0.3);
+            background-color: #ccc;
+        }
     }
 }

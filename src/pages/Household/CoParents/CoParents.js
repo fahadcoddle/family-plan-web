@@ -1,7 +1,6 @@
 import React from 'react';
 import 'pages/Household/CoParents/CoParents.scss';
 import { Card, Button } from 'antd';
-import ScrollArea from 'react-scrollbar';
 
 const CoParents = () => {
     return (
@@ -12,7 +11,7 @@ const CoParents = () => {
                     +
                 </Button>
             </div>
-            <ScrollArea speed={0.8} className="coparent-list" contentClassName="content" horizontal={false}>
+            <div className="coparent-list">
                 <Card bordered={false} className="coparent-inner">
                     <div className="name">
                         <span>Sarah</span>
@@ -65,7 +64,7 @@ const CoParents = () => {
                         </Button>
                     </div>
                 </Card>
-            </ScrollArea>
+            </div>
         </Card>
     );
 };

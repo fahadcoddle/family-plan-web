@@ -3,7 +3,6 @@ import 'pages/Landing/Calender/Calender.scss';
 import { Card, Button } from 'antd';
 import Icon, { CalendarOutlined } from '@ant-design/icons';
 import DatePicker from 'Components/Datepicker';
-import ScrollArea from 'react-scrollbar';
 
 const Calender = () => {
     return (
@@ -42,149 +41,147 @@ const Calender = () => {
                         <span>S</span>
                     </div>
                 </div>
-                <ScrollArea speed={0.8} className="list-wrapper" contentClassName="content" horizontal={false}>
-                    <div className="list">
-                        <div className="list-item selected">
-                            <div className="list-day">
-                                <span>19</span>
-                                <span>TUE</span>
-                            </div>
-                            <div className="list-details">
-                                <div className="list-wrap">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dance Lessons</span>
-                                        <span>128 Main St</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info dark-blue"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>School</span>
-                                        <span>Bothwell Middle School</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info orange"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Swimming Class</span>
-                                        <span>128 Main St</span>
-                                    </div>
-                                </div>
-                            </div>
+                <div className="list">
+                    <div className="list-item selected">
+                        <div className="list-day">
+                            <span>19</span>
+                            <span>TUE</span>
                         </div>
-                        <div className="list-item ">
-                            <div className="list-day">
-                                <span>20</span>
-                                <span>WED</span>
-                            </div>
-                            <div className="list-details">
-                                <div className="list-wrap">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>School</span>
-                                        <span>Bothwell Middle School</span>
+                        <div className="list-details">
+                            <div className="list-wrap">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info blue"></span>
                                     </div>
                                 </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info orange"></span>
-                                            <span className="list-info dark-blue"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Play game</span>
-                                        <span>433 Washington St</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info violet"></span>
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dance Lessons</span>
-                                        <span>128 Main St</span>
-                                    </div>
+                                <div className="list-activity">
+                                    <span>Dance Lessons</span>
+                                    <span>128 Main St</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="list-item ">
-                            <div className="list-day">
-                                <span>21</span>
-                                <span>THU</span>
+                            <div className="list-inner">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info dark-blue"></span>
+                                        <span className="list-info green"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>School</span>
+                                    <span>Bothwell Middle School</span>
+                                </div>
                             </div>
-                            <div className="list-details">
-                                <div className="list-wrap">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dance Lessons</span>
-                                        <span>128 Main St</span>
+                            <div className="list-inner">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info orange"></span>
+                                        <span className="list-info green"></span>
                                     </div>
                                 </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info orange"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>School</span>
-                                        <span>Bothwell Middle School</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info violet"></span>
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dentist</span>
-                                        <span>433 Washington St</span>
-                                    </div>
+                                <div className="list-activity">
+                                    <span>Swimming Class</span>
+                                    <span>128 Main St</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </ScrollArea>
+                    <div className="list-item ">
+                        <div className="list-day">
+                            <span>19</span>
+                            <span>TUE</span>
+                        </div>
+                        <div className="list-details">
+                            <div className="list-wrap">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info blue"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>School</span>
+                                    <span>Bothwell Middle School</span>
+                                </div>
+                            </div>
+                            <div className="list-inner">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info orange"></span>
+                                        <span className="list-info dark-blue"></span>
+                                        <span className="list-info green"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Play game</span>
+                                    <span>433 Washington St</span>
+                                </div>
+                            </div>
+                            <div className="list-inner">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info violet"></span>
+                                        <span className="list-info blue"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Dance Lessons</span>
+                                    <span>128 Main St</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="list-item ">
+                        <div className="list-day">
+                            <span>19</span>
+                            <span>TUE</span>
+                        </div>
+                        <div className="list-details">
+                            <div className="list-wrap">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info blue"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Dance Lessons</span>
+                                    <span>128 Main St</span>
+                                </div>
+                            </div>
+                            <div className="list-inner">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info orange"></span>
+                                        <span className="list-info green"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>School</span>
+                                    <span>Bothwell Middle School</span>
+                                </div>
+                            </div>
+                            <div className="list-inner">
+                                <div className="list-timer">
+                                    <span>7:10am</span>
+                                    <div className="stat">
+                                        <span className="list-info violet"></span>
+                                        <span className="list-info blue"></span>
+                                    </div>
+                                </div>
+                                <div className="list-activity">
+                                    <span>Dentist</span>
+                                    <span>433 Washington St</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Card>
     );

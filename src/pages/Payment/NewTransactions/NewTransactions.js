@@ -1,7 +1,7 @@
 import React from 'react';
 import 'pages/Payment/NewTransactions/NewTransactions.scss';
 import { Card, Button } from 'antd';
-import ScrollArea from 'react-scrollbar';
+
 const NewTransactions = () => {
     return (
         <Card bordered={false} className="nt-card">
@@ -12,7 +12,7 @@ const NewTransactions = () => {
                 </Button>
             </div>
             {/* <span className="divider"> </span> */}
-            <ScrollArea speed={0.8} className="nt-card-body" contentClassName="content" horizontal={false}>
+            <div className="nt-card-body">
                 <Card bordered={false} className="list-card">
                     <div className="req-inner">
                         <div className="req-details">
@@ -133,7 +133,7 @@ const NewTransactions = () => {
                         </div>
                     </div>
                 </Card>
-            </ScrollArea>
+            </div>
         </Card>
     );
 };
