@@ -1,6 +1,13 @@
 @import 'Assets/styles/global.scss';
 
 .payments {
+    height: calc(50% - 5px);
+    margin-top: 10px;
+    .ant-card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     &-head {
         text-align: center;
         h1 {
@@ -82,6 +89,33 @@
         .active {
             span {
                 color: $black-color !important;
+            }
+        }
+    }
+    &-modal {
+        .ant-modal-header {
+            border-radius: 20px;
+            text-align: center;
+        }
+        .ant-modal-title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .modal-top {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            .detail-wrap {
+                span {
+                    font-size: 16px;
+                    color: $black-color;
+                    &:nth-of-type(2) {
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
