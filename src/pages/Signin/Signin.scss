@@ -227,10 +227,7 @@
         }
     }
 }
-// .sign-in-wrap {
-//     max-height: 100vh;
-//     overflow: hidden;
-// }
+
 .ant-form-item-control::focus ~ .ant-form-item-label,
 .ant-form-item-control::valid ~ .ant-form-item-label {
     font-size: 75%;
@@ -263,6 +260,11 @@
     transform: translate3d(0, -50%, 0);
     opacity: 1;
     color: $text-sec-color;
+}
+.form-err {
+    color: $danger-color;
+    position: absolute;
+    left: 0;
 }
 
 @media (min-width: 1920px) {
