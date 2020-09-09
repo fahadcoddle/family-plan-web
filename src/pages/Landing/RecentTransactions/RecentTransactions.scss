@@ -1,6 +1,11 @@
 .trans-card {
     height: calc(50% - 10px);
     margin-top: 10px;
+    .ant-card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     .trans-card-wrap {
         max-height: 460px;
         overflow: auto;
