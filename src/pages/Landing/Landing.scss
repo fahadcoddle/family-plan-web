@@ -23,8 +23,8 @@
 .row-container {
     padding: 15px;
     margin: 0;
-    // height: calc(100vh - 60px);
-    height: 100%;
+    height: calc(1000px - 60px);
+    // height: 100%;
     background: #f5f4f3;
 }
 .ant-tabs-ink-bar {
@@ -32,6 +32,7 @@
 }
 .col-wrap {
     // height: calc(100vh - 80px);
+    max-height: 100%;
 }
 .row-wrap {
     // height: 100%;
@@ -61,6 +62,7 @@
 }
 .todo-wrap {
     // height: calc(100vh - 115px);
+    max-height: 100%;
     .td-card {
         // height: 100%;
         .ant-card-body {
@@ -74,8 +76,8 @@
                     height: 100%;
                 }
                 .ant-tabs-content-holder {
-                    max-height: 850px;
-                    overflow: auto;
+                    // max-height: 850px;
+                    // overflow: auto;
                 }
             }
         }
@@ -85,6 +87,7 @@
     }
 }
 .calender-wrap {
+    max-height: 100%;
     // height: calc(100vh - 115px);
     .ant-card {
         // height: 100%;
@@ -101,8 +104,8 @@
             margin-left: -15px;
             margin-right: -15px;
             .list {
-                max-height: 850px;
-                overflow: auto;
+                // max-height: 850px;
+                // overflow: auto;
             }
         }
     }

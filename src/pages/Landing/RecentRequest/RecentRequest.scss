@@ -161,6 +161,11 @@
 }
 .req-card {
     height: 50%;
+    .ant-card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     @media (max-width: 768px) {
         margin-bottom: 20px;
     }
