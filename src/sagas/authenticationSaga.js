@@ -1,6 +1,7 @@
 import { put, call } from 'redux-saga/effects';
 import { registerUserService, loginUserService } from 'services/authenticationService';
 
+
 import * as types from 'actions';
 
 export function* registerSaga(payload) {
@@ -27,3 +28,4 @@ export function* loginSaga(payload) {
         yield put({ type: types.LOGIN_USER_ERROR, error });
     }
 }
+
