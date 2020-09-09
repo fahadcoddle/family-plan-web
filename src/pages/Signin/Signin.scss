@@ -259,10 +259,29 @@
 
 .ant-input + .label-float,
 .ant-input + .label-float {
-    font-size: 90%;
-    transform: translate3d(0, -125%, 0);
+    transform: translate3d(0, -80%, 0);
     opacity: 1;
-    color: #fff;
+    color: $text-sec-color;
+    font-size: 8px;
+}
+.float-wrap {
+    position: relative;
+    .float-label {
+        .ant-input {
+            height: 40px;
+        }
+        .label {
+            top: 12px !important;
+        }
+    }
+}
+.form-err {
+    color: $danger-color;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 2;
+    font-size: 12px;
 }
 
 @media (min-width: 1920px) {
