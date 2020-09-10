@@ -13,8 +13,18 @@ import Landing from 'pages/Landing/Landing';
 import Signin from 'pages/Signin/Signin';
 import Routes from 'routes';
 import history from 'utils/history';
+import { store } from '../App';
+import { getMeUserAction } from 'actions/userActions';
+import { checkCookie } from 'utils/cookies';
 
 class Container extends Component {
+    componentDidMount(){
+        if(checkCookie() !== null){
+           let token = checkCookie();
+           store.dispatch(getMeUserAction({token: token})); 
+        }  
+    }
+
     render() {
         return (
             <Router history={history}>

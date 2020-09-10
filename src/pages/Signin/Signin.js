@@ -32,7 +32,6 @@ class Signin extends Component {
                           <img src={logo} alt="family-plan-logo" />
                       </div>
                   </div>
-                
                   <div className="inner-signup">
                     <Login response={response} dispatch={this.props.dispatch}  />  
                     <Signup response={response} dispatch={this.props.dispatch} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createBrowserHistory } from 'history';
 import configureStore from 'store/configureStore';
@@ -14,7 +14,7 @@ history.listen((location) => {
     addLocationQuery(history);
 });
 
-const store = configureStore();
+export const store = configureStore();
 
 function App() {
     return (

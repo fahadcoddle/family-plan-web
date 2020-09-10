@@ -9,6 +9,7 @@ import FloatLabel from 'Components/FloatLabel/FloatLabel';
 import { connect } from 'react-redux';
 
 import { loginUserAction } from 'actions/authenticationActions';
+import { getMeUserAction } from 'actions/userActions';
 import { setCookie, checkCookie } from 'utils/cookies';
 import { Formik } from 'formik';
 
@@ -72,6 +73,10 @@ export class Login extends Component {
             console.log('isSuccess', isSuccess);
             if (isSuccess) {
                 setCookie('token', response.login.response.token, 1);
+
+                setTimeout(() => {
+                    this.props.dispatch(getMeUserAction({token: response.login.response.token}));
+                }, 500);
             }
         }
 
