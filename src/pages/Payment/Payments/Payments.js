@@ -109,7 +109,7 @@ class Payments extends Component {
                                     </div>
                                 </div>
                             </Card>
-                            <Card bordered={false} className="list-card">
+                            <Card bordered={false} className="list-card icon-card">
                                 <div className="req-inner">
                                     <div className="cb-wrap">
                                         <Checkbox onChange={onChange}></Checkbox>
