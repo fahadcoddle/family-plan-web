@@ -88,46 +88,80 @@ export class Signup extends Component {
 
                     <Formik initialValues={initialValues} validate={this.validate} onSubmit={this.onSubmit}>
                         {({ touched, values, handleChange, handleSubmit, handleBlur, errors, isSubmitting }) => (
-                            <form onSubmit={handleSubmit}>
-                                <div className="float-wrap">
-                                    <FloatLabel label="Name" name="name" value={values.name}>
-                                        <Input
-                                            name="name"
-                                            value={values.name}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </FloatLabel>
-                                    {touched.name && errors.name ? <div className="form-err">{errors.name}</div> : null}
-                                </div>
-                                <div className="float-wrap">
-                                    <FloatLabel label="Email" name="signup_email" value={values.signup_email}>
-                                        <Input
-                                            name="signup_email"
-                                            type="email"
-                                            value={values.signup_email}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </FloatLabel>
-                                    {touched.signup_email && errors.signup_email ? (
-                                        <div className="form-err">{errors.signup_email}</div>
-                                    ) : null}
-                                </div>
-                                <div className="float-wrap">
-                                    <FloatLabel label="Password" name="signup_password" value={values.signup_password}>
-                                        <Input
+                            <Form onSubmit={handleSubmit} className="form-item">
+                                <Form.Item name="name" rules={[{ required: true, message: 'Please input your Name!' }]}>
+                                    <div className="float-wrap">
+                                        <FloatLabel label="Name" name="name" value={values.name}>
+                                            <Input
+                                                name="name"
+                                                value={values.name}
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                            />
+                                        </FloatLabel>
+                                        {/* {touched.name && errors.name ? (
+                                            <div className="form-err">{errors.name}</div>
+                                        ) : null} */}
+                                    </div>
+                                </Form.Item>
+
+                                <Form.Item
+                                    name="email"
+                                    rules={[
+                                        {
+                                            type: 'email',
+                                            message: 'The is not a valid E-mail!',
+                                        },
+                                        {
+                                            required: true,
+                                            message: 'Please input your E-mail!',
+                                        },
+                                    ]}
+                                >
+                                    <div className="float-wrap">
+                                        <FloatLabel label="Email" name="signup_email" value={values.signup_email}>
+                                            <Input
+                                                name="signup_email"
+                                                type="email"
+                                                value={values.signup_email}
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                            />
+                                        </FloatLabel>
+                                        {/* {touched.signup_email && errors.signup_email ? (
+                                            <div className="form-err">{errors.signup_email}</div>
+                                        ) : null} */}
+                                    </div>
+                                </Form.Item>
+                                <Form.Item
+                                    name="password"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please input your password!',
+                                        },
+                                    ]}
+                                >
+                                    <div className="float-wrap">
+                                        <FloatLabel
+                                            label="Password"
                                             name="signup_password"
                                             value={values.signup_password}
-                                            type="password"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </FloatLabel>
-                                    {touched.signup_password && errors.signup_password ? (
-                                        <div className="form-err">{errors.signup_password}</div>
-                                    ) : null}
-                                </div>
+                                        >
+                                            <Input
+                                                name="signup_password"
+                                                value={values.signup_password}
+                                                type="password"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                            />
+                                        </FloatLabel>
+                                        {/* {touched.signup_password && errors.signup_password ? (
+                                            <div className="form-err">{errors.signup_password}</div>
+                                        ) : null} */}
+                                    </div>
+                                </Form.Item>
+
                                 {response.register.hasOwnProperty('response') ? (
                                     response.register.response.message ? (
                                         <div className="form-err">{response.register.response.message}</div>
@@ -145,7 +179,7 @@ export class Signup extends Component {
                                         Create Account
                                     </Button>
                                 </Form.Item>
-                            </form>
+                            </Form>
                         )}
                     </Formik>
                     <div className="g-link">
