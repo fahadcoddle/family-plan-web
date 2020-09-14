@@ -120,6 +120,11 @@ export class Signup extends Component {
                                             {touched.signup_email && errors.signup_email ? (
                                                 <div className="form-err">{errors.signup_email}</div>
                                             ) : null}
+                                            {response.register.hasOwnProperty('response') ? (
+                                                response.register.response.message ? (
+                                                    <div className="form-err">{response.register.response.message}</div>
+                                                ) : null
+                                            ) : null}
                                         </div>
                                     </Form.Item>
                                     <Form.Item name="password">
@@ -142,11 +147,6 @@ export class Signup extends Component {
                                             ) : null}
                                         </div>
                                     </Form.Item>
-                                    {response.register.hasOwnProperty('response') ? (
-                                        response.register.response.message ? (
-                                            <div className="form-err">{response.register.response.message}</div>
-                                        ) : null
-                                    ) : null}
 
                                     <Form.Item {...tailLayout}>
                                         <div className="tnc">

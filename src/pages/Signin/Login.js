@@ -101,6 +101,11 @@ export class Login extends Component {
                                             {touched.email && errors.email ? (
                                                 <div className="form-err">{errors.email}</div>
                                             ) : null}
+                                            {response.login.hasOwnProperty('response') ? (
+                                                response.login.response.message ? (
+                                                    <div className="form-err">{response.login.response.message}</div>
+                                                ) : null
+                                            ) : null}
                                         </div>
                                     </Form.Item>
 
@@ -120,12 +125,6 @@ export class Login extends Component {
                                             ) : null}
                                         </div>
                                     </Form.Item>
-
-                                    {response.login.hasOwnProperty('response') ? (
-                                        response.login.response.message ? (
-                                            <div className="form-err">{response.login.response.message}</div>
-                                        ) : null
-                                    ) : null}
 
                                     <Form.Item {...tailLayout}>
                                         <div className="fgt-pwd">
