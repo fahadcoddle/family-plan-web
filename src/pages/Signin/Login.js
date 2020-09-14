@@ -91,52 +91,59 @@ export class Login extends Component {
 
                     <Formik initialValues={initialValues} validate={this.validate} onSubmit={this.onSubmit}>
                         {({ touched, values, handleChange, handleSubmit, handleBlur, errors, isSubmitting }) => (
-                            <form onSubmit={handleSubmit}>
-                                <div className="float-wrap">
-                                    <FloatLabel label="Email" name="email" value={values.email}>
-                                        <Input
-                                            name="email"
-                                            value={values.email}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </FloatLabel>
-                                    {touched.email && errors.email ? (
-                                        <div className="form-err">{errors.email}</div>
-                                    ) : null}
-                                </div>
-                                <div className="float-wrap">
-                                    <FloatLabel label="Password" name="password" value={values.password}>
-                                        <Input
-                                            name="password"
-                                            value={values.password}
-                                            type="password"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                        />
-                                    </FloatLabel>
-                                    {touched.password && errors.password ? (
-                                        <div className="form-err">{errors.password}</div>
-                                    ) : null}
-                                </div>
-                                {response.login.hasOwnProperty('response') ? (
-                                    response.login.response.message ? (
-                                        <div className="form-err">{response.login.response.message}</div>
-                                    ) : null
-                                ) : null}
+                            <Form className="form-item">
+                                <form onSubmit={handleSubmit}>
+                                    <Form.Item name="email">
+                                        <div className={'float-wrap ' + (errors.email ? 'err-msg' : '')}>
+                                            <FloatLabel label="Email" name="email" value={values.email}>
+                                                <Input
+                                                    name="email"
+                                                    value={values.email}
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                />
+                                            </FloatLabel>
+                                            {touched.email && errors.email ? (
+                                                <div className="form-err">{errors.email}</div>
+                                            ) : null}
+                                            {response.login.hasOwnProperty('response') ? (
+                                                response.login.response.message ? (
+                                                    <div className="form-err">{response.login.response.message}</div>
+                                                ) : null
+                                            ) : null}
+                                        </div>
+                                    </Form.Item>
 
-                                <Form.Item {...tailLayout}>
-                                    <div className="fgt-pwd">
-                                        <a href="/#">
-                                            <span>Forgot your Password?</span>
-                                        </a>
-                                    </div>
+                                    <Form.Item name="password">
+                                        <div className={'float-wrap ' + (errors.password ? 'err-msg' : '')}>
+                                            <FloatLabel label="Password" name="password" value={values.password}>
+                                                <Input
+                                                    name="password"
+                                                    value={values.password}
+                                                    type="password"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                />
+                                            </FloatLabel>
+                                            {touched.password && errors.password ? (
+                                                <div className="form-err">{errors.password}</div>
+                                            ) : null}
+                                        </div>
+                                    </Form.Item>
 
-                                    <Button type="primary" htmlType="submit" className="btn-sign-in">
-                                        Sign In
-                                    </Button>
-                                </Form.Item>
-                            </form>
+                                    <Form.Item {...tailLayout}>
+                                        <div className="fgt-pwd">
+                                            <a href="/#">
+                                                <span>Forgot your Password?</span>
+                                            </a>
+                                        </div>
+
+                                        <Button type="primary" htmlType="submit" className="btn-sign-in">
+                                            Sign In
+                                        </Button>
+                                    </Form.Item>
+                                </form>
+                            </Form>
                         )}
                     </Formik>
                     <div className="g-link">
