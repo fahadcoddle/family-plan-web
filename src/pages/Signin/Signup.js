@@ -8,6 +8,7 @@ import FloatLabel from 'Components/FloatLabel/FloatLabel';
 
 import { connect } from 'react-redux';
 
+import { getMeUserAction } from 'actions/userActions';
 import { registerUserAction } from 'actions/authenticationActions';
 import { setCookie, checkCookie } from 'utils/cookies';
 import { Formik } from 'formik';
@@ -32,6 +33,8 @@ const initialValues = {
 export class Signup extends Component {
     constructor(props) {
         super(props);
+        this.validate = this.validate.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     validate = (values) => {
@@ -75,6 +78,10 @@ export class Signup extends Component {
             console.log('isSuccess', isSuccess);
             if (isSuccess) {
                 setCookie('token', response.register.response.token, 1);
+
+                setTimeout(() => {
+                    this.props.dispatch(getMeUserAction({token: response.register.response.token}));
+                }, 500);
             }
         }
 
@@ -88,7 +95,6 @@ export class Signup extends Component {
 
                     <Formik initialValues={initialValues} validate={this.validate} onSubmit={this.onSubmit}>
                         {({ touched, values, handleChange, handleSubmit, handleBlur, errors, isSubmitting }) => (
-                            <Form>
                                 <form onSubmit={handleSubmit}>
                                     <Form.Item name="name">
                                         <div className={'float-wrap ' + (errors.name ? 'err-msg' : '')}>
@@ -160,7 +166,6 @@ export class Signup extends Component {
                                         </Button>
                                     </Form.Item>
                                 </form>
-                            </Form>
                         )}
                     </Formik>
                     <div className="g-link">
