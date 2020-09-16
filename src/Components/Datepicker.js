@@ -12,26 +12,22 @@ import {
     lastDayOfMonth,
     startOfMonth,
     subDays,
-    isAfter,
-    differenceInCalendarDays
+    // isAfter,
+    differenceInCalendarDays,
 } from 'date-fns';
 
 let currentCount = 0;
 
 export default function DatePicker({ endDate, selectDate, getSelectedDay, color, labelFormat, onScrolled }) {
     const [selectedDate, setSelectedDate] = useState(subDays(new Date(), 3));
-    // const firstSection = { marginLeft: '40px' };
+
     const startDate = subDays(new Date(), 90);
-    const currentDate = new Date();
+    // const currentDate = new Date();
     const lastDate = addDays(startDate, endDate || 365);
     const primaryColor = color || 'rgb(54, 105, 238)';
     const selectedStyle = {
         fontWeight: 'bold',
-        // width: '45px',
-        // height: '45px',
-        // border: '1px solid red',
     };
-    
 
     const labelColor = { color: primaryColor };
 
@@ -46,7 +42,8 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
         return isSameDay(day, selectedDate);
     };
 
-    const isNumber = value => typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity
+    const isNumber = (value) =>
+        typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity;
 
     function renderDays() {
         const dayFormat = 'E';
@@ -66,15 +63,15 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
             for (let j = start; j < end; j++) {
                 const day = addDays(month, j);
                 let selected = getId(day);
-                const difference = differenceInCalendarDays(day,new Date());
+                const difference = differenceInCalendarDays(day, new Date());
                 let centerClass = 'dateDayItem';
-                
-                if(isNumber(difference)){
-                    if(difference % 7 == 0){
+
+                if (isNumber(difference)) {
+                    if (difference % 7 == 0) {
                         count++;
-                        centerClass='dateDayItem center-'+count;
-                        if(isSameDay(day, new Date()) && currentCount == 0){
-                          currentCount = count;
+                        centerClass = 'dateDayItem center-' + count;
+                        if (isSameDay(day, new Date()) && currentCount == 0) {
+                            currentCount = count;
                         }
                     }
                 }
@@ -160,16 +157,15 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
         e.scrollLeft += width - 5;*/
         setTimeout(() => {
             currentCount++;
-            let view = document.getElementsByClassName('dateDayItem center-'+currentCount);
+            let view = document.getElementsByClassName('dateDayItem center-' + currentCount);
             if (view && view[0]) {
                 view[0].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 //const nextWeek = addDays(startDate, currentCount*7);
-                if(onScrolled){
-                  onScrolled(view[0].getAttribute('data-date'))
+                if (onScrolled) {
+                    onScrolled(view[0].getAttribute('data-date'));
                 }
             }
         }, 20);
-        
     };
 
     const prevWeek = () => {
@@ -179,11 +175,11 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
 
         setTimeout(() => {
             currentCount--;
-            let view = document.getElementsByClassName('dateDayItem center-'+currentCount);
+            let view = document.getElementsByClassName('dateDayItem center-' + currentCount);
             if (view && view[0]) {
                 view[0].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-                if(onScrolled){
-                  onScrolled(view[0].getAttribute('data-date'))
+                if (onScrolled) {
+                    onScrolled(view[0].getAttribute('data-date'));
                 }
             }
         }, 20);

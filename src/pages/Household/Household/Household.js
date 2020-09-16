@@ -1,20 +1,10 @@
 import React, { Component, useState } from 'react';
 import 'pages/Household/Household/Household.scss';
-import { Card, Avatar, Row, Col, Form, Input, Select, Button } from 'antd';
+import { Card, Avatar, Row, Col, Input, Select, Button } from 'antd';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
 import user from 'Assets/avatar.jpg';
 import { Formik } from 'formik';
 
-const layout = {
-    wrapperCol: {
-        span: 24,
-    },
-};
-const tailLayout = {
-    wrapperCol: {
-        span: 24,
-    },
-};
 const { Option } = Select;
 function handleChange(value) {
     console.log(`selected ${value}`);
@@ -296,7 +286,7 @@ class Household extends Component {
                                     </Col>
                                 </Row>
                                 <div className="bottom-btn">
-                                    <Button type="primary" className="btn btn-save">
+                                    <Button type="primary" htmlType="submit" className="btn btn-save">
                                         Save
                                     </Button>
                                 </div>

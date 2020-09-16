@@ -71,8 +71,9 @@
             width: 100%;
         }
         .fgt-pwd {
-            margin-bottom: 30px;
             text-align: center;
+            margin-bottom: 25px;
+            margin-top: 5px;
             span {
                 font-size: 12px;
                 color: #fff;
@@ -83,8 +84,9 @@
             }
         }
         .tnc {
-            margin-bottom: 30px;
             text-align: center;
+            margin-bottom: 25px;
+            margin-top: 5px;
             span {
                 font-size: 10px;
                 color: #fff;
@@ -233,12 +235,6 @@
         }
     }
 }
-.ant-form-item-with-help {
-}
-// .sign-in-wrap {
-//     max-height: 100vh;
-//     overflow: hidden;
-// }
 .ant-form-item-control::focus ~ .ant-form-item-label,
 .ant-form-item-control::valid ~ .ant-form-item-label {
     font-size: 75%;
@@ -246,10 +242,6 @@
     opacity: 1;
 }
 .ant-form-item-has-error {
-    // font-weight: 600;
-    // text-align: left;
-    // border-color: #fff !important;
-    // color: #a82121;
     .ant-input {
         border-color: #fff !important;
     }
@@ -257,10 +249,7 @@
 .ant-form-item-has-error .ant-input-affix-wrapper {
     border-color: #fff !important;
 }
-.ant-form-item-has-error .ant-form-item-explain {
-    // font-size: 12px;
-    // color: #a82121;
-}
+
 .example {
     margin: 12px;
 }
@@ -277,10 +266,10 @@
     .float-label {
         .ant-input {
             height: 40px;
+            font-size: 10px;
         }
         .label {
             top: 12px !important;
-            font-size: 12px;
             color: $text-color;
         }
     }
@@ -300,7 +289,8 @@
     }
 }
 .msg-box {
-    top: -25px !important;
+    top: auto;
+    bottom: 85px !important;
     background: #fedad7;
     color: #fb4437;
     width: 100%;
@@ -309,11 +299,6 @@
     border-radius: 5px;
 }
 .ant-form-item-has-error {
-    .ant-form-item-explain {
-        // color: #fb4437;
-        // position: absolute;
-        // top: 40px;
-    }
     .ant-input {
         box-shadow: 0px 3px 6px #fb443729 !important;
         border: 1px solid #fb4437 !important;

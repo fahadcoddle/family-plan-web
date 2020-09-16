@@ -2,7 +2,6 @@ import React, { Component, useEffect } from 'react';
 import 'pages/Signin/Signin.scss';
 import { Form, Input, Button } from 'antd';
 import img from 'Assets/google.png';
-import logo from 'Assets/fp-logo.png';
 import { Link, Redirect } from 'react-router-dom';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
 
