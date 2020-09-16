@@ -67,6 +67,7 @@
         flex: 1;
         max-height: calc(100% - 110px);
         .ant-tabs-tab {
+            width: 50%;
             margin: 0 !important;
             padding: 10px 50px !important;
             background: #fff !important;

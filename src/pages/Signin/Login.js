@@ -75,7 +75,7 @@ export class Login extends Component {
                 setCookie('token', response.login.response.token, 1);
 
                 setTimeout(() => {
-                    this.props.dispatch(getMeUserAction({token: response.login.response.token}));
+                    this.props.dispatch(getMeUserAction({ token: response.login.response.token }));
                 }, 500);
             }
         }
