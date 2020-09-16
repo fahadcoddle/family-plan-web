@@ -32,6 +32,8 @@ const initialValues = {
 export class Login extends Component {
     constructor(props) {
         super(props);
+        this.validate = this.validate.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     componentDidMount() {}
@@ -91,7 +93,6 @@ export class Login extends Component {
 
                     <Formik initialValues={initialValues} validate={this.validate} onSubmit={this.onSubmit}>
                         {({ touched, values, handleChange, handleSubmit, handleBlur, errors, isSubmitting }) => (
-                            <Form className="form-item">
                                 <form onSubmit={handleSubmit}>
                                     <Form.Item name="email">
                                         <div className={'float-wrap ' + (errors.email ? 'err-msg' : '')}>
@@ -143,7 +144,6 @@ export class Login extends Component {
                                         </Button>
                                     </Form.Item>
                                 </form>
-                            </Form>
                         )}
                     </Formik>
                     <div className="g-link">
