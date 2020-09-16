@@ -1,8 +1,5 @@
 import { makeRequest } from './authenticationService';
 
-const API_BASE_URL = 'http://localhost:9000';
-
-
 export const getMe = (request) => {
 
     let access_token = request.token.token;
