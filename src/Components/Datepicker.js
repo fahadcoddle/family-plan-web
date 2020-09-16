@@ -18,7 +18,7 @@ import {
 
 let currentCount = 0;
 
-export default function DatePicker({ endDate, selectDate, getSelectedDay, color, labelFormat, onScrolled }) {
+export default function DatePicker({ endDate, selectDate, getSelectedDay, color, dates, eventDates, labelFormat, onScrolled }) {
     const [selectedDate, setSelectedDate] = useState(subDays(new Date(), 3));
     // const firstSection = { marginLeft: '40px' };
     const startDate = subDays(new Date(), 90);
@@ -46,6 +46,20 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
         return isSameDay(day, selectedDate);
     };
 
+    const formatDate = (date) => {
+        var d = new Date(date);
+        var month = '' + (d.getMonth() + 1);
+        var day = '' + d.getDate();
+        var year = d.getFullYear();
+    
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+    
+        return [year, month, day].join('-');
+    }
+
     const isNumber = value => typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity
 
     function renderDays() {
@@ -64,11 +78,21 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                     ? Number(format(lastDate, 'd'))
                     : Number(format(lastDayOfMonth(month), 'd'));
             for (let j = start; j < end; j++) {
+                
                 const day = addDays(month, j);
                 let selected = getId(day);
                 const difference = differenceInCalendarDays(day,new Date());
                 let centerClass = 'dateDayItem';
-                
+                let obj;
+                if(dates){
+                    obj = dates[formatDate(day)];
+                } 
+
+                let ed;
+                if(eventDates){
+                    ed = eventDates[formatDate(day)];
+                }
+
                 if(isNumber(difference)){
                     if(difference % 7 == 0){
                         count++;
@@ -78,6 +102,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                         }
                     }
                 }
+                
                 days.push(
                     <div
                         id={selected ? 'selected' : ''}
@@ -91,19 +116,14 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                             <span>{format(day, dateFormat)}</span>
                         </div>
                         <div className="dayLabel">{format(day, dayFormat)}</div>
+                        
                         <div className="notify">
-                            <span className="data blue"></span>
-                            <span className="data orange"></span>
-                            <span className="data green"></span>
-                            <span className="data violet"></span>
-                            <span className="data blue"></span>
-                            <span className="data orange"></span>
-                            <span className="data green"></span>
-                            <span className="data violet"></span>
-                            <span className="data orange"></span>
+                           { obj && obj.dots.map(color => <span style={{background: color}}></span>)}
                         </div>
                     </div>,
                 );
+                
+                        
             }
             months.push(
                 <div className="monthContainer" key={month} data-month={month}>
