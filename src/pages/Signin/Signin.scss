@@ -157,6 +157,9 @@
                 color: #000;
             }
         }
+        form {
+            position: relative;
+        }
     }
     &-head {
         background: rgb(240, 200, 91);
@@ -295,6 +298,15 @@
         box-shadow: 0px 3px 6px #fb443729;
         border: 1px solid #fb4437;
     }
+}
+.msg-box {
+    top: -25px !important;
+    background: #fedad7;
+    color: #fb4437;
+    width: 100%;
+    text-align: left;
+    padding: 4px 10px;
+    border-radius: 5px;
 }
 .ant-form-item-has-error {
     .ant-form-item-explain {
