@@ -1,15 +1,62 @@
-import React from 'react';
+import React, {Component} from 'react';
 import 'pages/Landing/Calender/Calender.scss';
 import { Card, Button } from 'antd';
 import Icon, { CalendarOutlined } from '@ant-design/icons';
 import DatePicker from 'Components/Datepicker';
 import ScrollArea from 'react-scrollbar';
+import { getDots, getEventDots } from 'services/calendarService';
+import { checkCookie } from 'utils/cookies';
 
-const Calender = () => {
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+
+class Calender extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            dates: {},
+            eventDates: {},
+            month:0,
+            year: 0,
+        }
+        this.getCalendarDots = this.getCalendarDots.bind(this);
+        this.getCalendarEventDots = this.getCalendarEventDots.bind(this);
+    }
+
+    componentDidMount(){
+        this.getCalendarDots();
+        this.getCalendarEventDots();
+    }
+
+    getCalendarDots(){
+        getDots()
+        .then(resp => {
+            if(resp && resp.data){
+                this.setState({dates: resp.data}); 
+            }
+        });
+    }
+    
+
+    getCalendarEventDots(){
+        getEventDots()
+        .then(resp => {
+            if(resp && resp.data){
+                this.setState({eventDates: resp.data}); 
+            }
+        });
+    }
+    
+    render(){
+      
+    const {dates, eventDates, month, year } = this.state;
+    const current_date = new Date();
     return (
         <Card bordered={false} className="calender-card">
             <div className="card-head">
-                <span>July 2020</span>
+            <span>{(month == 0 && year == 0) ? monthNames[current_date.getMonth()] : monthNames[month]}{' '}{(month == 0 && year == 0) ? current_date.getFullYear() : year}</span>
                 <div className="btn-wrap">
                     <Button className="fp-button-primary" type="primary" icon={<CalendarOutlined />}>
                         <span>Go to Calender</span>
@@ -20,11 +67,13 @@ const Calender = () => {
                 labelFormat={'MMMM'}
                 color={'#374e8c'}
                 selectDate={new Date()}
+                dates={dates}
+                eventDates={eventDates}
                 getSelectedDay={(val) => {
                     console.log('val', val);
                 }}
                 onScrolled={(val) => {
-                    console.log('val', val);
+                    this.setState({month: new Date(val).getMonth(), year: new Date(val).getFullYear()})
                 }}
             />
             <div className="card-body-wrap">
@@ -188,6 +237,7 @@ const Calender = () => {
             </div>
         </Card>
     );
+    }
 };
 
 export default Calender;

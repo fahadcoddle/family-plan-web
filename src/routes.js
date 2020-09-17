@@ -33,25 +33,25 @@ const ROUTES_OPTIONS = [
         path: ROUTES.LANDING_PAGE,
         component: Signin,
         exact: true,
-        private: false,
+        private: true,
     },
     {
         path: ROUTES.HOME,
         component: LandingPage,
         exact: false,
-        private: false,
+        private: true,
     },
     {
         path: ROUTES.HOUSEHOLD,
         component: Household,
         exact: false,
-        private: false,
+        private: true,
     },
     {
         path: ROUTES.PAYMENT,
         component: Payment,
         exact: false,
-        private: false,
+        private: true,
     },
 ];
 

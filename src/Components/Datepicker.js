@@ -18,7 +18,7 @@ import {
 
 let currentCount = 0;
 
-export default function DatePicker({ endDate, selectDate, getSelectedDay, color, labelFormat, onScrolled }) {
+export default function DatePicker({ endDate, selectDate, getSelectedDay, color, dates, eventDates, labelFormat, onScrolled }) {
     const [selectedDate, setSelectedDate] = useState(subDays(new Date(), 3));
 
     const startDate = subDays(new Date(), 90);
@@ -41,9 +41,28 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     const getId = (day) => {
         return isSameDay(day, selectedDate);
     };
+<<<<<<< HEAD
 
     const isNumber = (value) =>
         typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity;
+=======
+    
+    const formatDate = (date) => {
+        var d = new Date(date);
+        var month = '' + (d.getMonth() + 1);
+        var day = '' + d.getDate();
+        var year = d.getFullYear();
+    
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+    
+        return [year, month, day].join('-');
+    }
+    
+    const isNumber = value => typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity
+>>>>>>> 8ca69d9bf204dcf6dbe0d3e3483a555c5d098fd7
 
     function renderDays() {
         const dayFormat = 'E';
@@ -65,9 +84,18 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                 let selected = getId(day);
                 const difference = differenceInCalendarDays(day, new Date());
                 let centerClass = 'dateDayItem';
+                let custodyDates;
+                if(dates){
+                    custodyDates = dates[formatDate(day)];
+                } 
 
-                if (isNumber(difference)) {
-                    if (difference % 7 == 0) {
+                let ed;
+                if(eventDates){
+                    ed = eventDates[formatDate(day)];
+                }
+
+                if(isNumber(difference)){
+                    if(difference % 7 == 0){
                         count++;
                         centerClass = 'dateDayItem center-' + count;
                         if (isSameDay(day, new Date()) && currentCount == 0) {
@@ -89,15 +117,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                         </div>
                         <div className="dayLabel">{format(day, dayFormat)}</div>
                         <div className="notify">
-                            <span className="data blue"></span>
-                            <span className="data orange"></span>
-                            <span className="data green"></span>
-                            <span className="data violet"></span>
-                            <span className="data blue"></span>
-                            <span className="data orange"></span>
-                            <span className="data green"></span>
-                            <span className="data violet"></span>
-                            <span className="data orange"></span>
+                            { custodyDates && custodyDates.dots.map(color => <span style={{background: color}}></span>)}
                         </div>
                     </div>,
                 );
