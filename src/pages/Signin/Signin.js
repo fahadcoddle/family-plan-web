@@ -28,8 +28,10 @@ class Signin extends Component {
                 </div>
 
                 <div className="inner-signup">
-                    <Login response={response} dispatch={this.props.dispatch} />
-                    <Signup response={response} dispatch={this.props.dispatch} />
+                    <div className="main">
+                        <Login response={response} dispatch={this.props.dispatch} />
+                        <Signup response={response} dispatch={this.props.dispatch} />
+                    </div>
                 </div>
             </div>
         );

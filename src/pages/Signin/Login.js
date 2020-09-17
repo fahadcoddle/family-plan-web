@@ -89,15 +89,14 @@ export class Login extends Component {
             <div className="content-wrap">
                 <div className="content-card">
                     <h1>Sign In</h1>
-
+                    {response.login.hasOwnProperty('response') ? (
+                        response.login.response.message ? (
+                            <div className="form-err msg-box">{response.login.response.message}</div>
+                        ) : null
+                    ) : null}
                     <Formik initialValues={initialValues} validate={this.validate} onSubmit={this.onSubmit}>
                         {({ touched, values, handleChange, handleSubmit, handleBlur, errors, isSubmitting }) => (
                             <form onSubmit={handleSubmit}>
-                                {response.login.hasOwnProperty('response') ? (
-                                    response.login.response.message ? (
-                                        <div className="form-err msg-box">{response.login.response.message}</div>
-                                    ) : null
-                                ) : null}
                                 <Form.Item name="email">
                                     <div className={'float-wrap ' + (errors.email ? 'err-msg' : '')}>
                                         <FloatLabel label="Email" name="email" value={values.email}>
