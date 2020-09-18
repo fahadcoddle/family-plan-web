@@ -1,5 +1,3 @@
-import { checkCookie } from 'utils/cookies';
-
 const API_BASE_URL = 'http://localhost:9000';
 
 export const registerUserService = (request) => {
@@ -78,10 +76,8 @@ export const makeRequest = (method, url, body, withoutAuthorization) => {
         'Content-Type': 'application/json',
         Version: '6.0',
     };
-    let access_token = '';
-    if(checkCookie() !== null){
-        access_token = checkCookie();
-    }
+    const access_token = '';
+
     if (access_token && !withoutAuthorization) {
         headers.authorization = 'Bearer ' + access_token;
     }

@@ -61,13 +61,44 @@
             padding: 30px 40px !important;
         }
     }
-    .ant-form {
-        .ant-input {
-            min-height: 40px;
-            padding: 12px;
-            border-radius: 5px;
-            color: $text-color;
-            border-color: $text-sec-color;
+    .ant-select {
+        &:hover,
+        &:active {
+            border-color: #999999;
+        }
+    }
+    .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+        border-color: #999999;
+    }
+
+    .ant-input {
+        min-height: 40px;
+        padding: 12px;
+        border-radius: 5px;
+        color: $text-color;
+        border-color: $text-sec-color;
+        font-size: 10px;
+        @media (min-width: 1440px) {
+            font-size: 12px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 14px;
+        }
+    }
+    .float-label {
+        margin-bottom: 12px;
+        .ant-input,
+        .ant-select-selector {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: none !important;
+                border-color: #999999;
+            }
+        }
+        .label {
+            top: 13px;
+            left: 12px;
             font-size: 10px;
             @media (min-width: 1440px) {
                 font-size: 12px;
@@ -76,46 +107,24 @@
                 font-size: 14px;
             }
         }
-        .float-label {
-            margin-bottom: 12px;
-            .ant-input,
-            .ant-select-selector {
-                &:hover,
-                &:focus,
-                &:active {
-                    box-shadow: none !important;
-                    border-color: #999999;
-                }
-            }
-            .label {
-                top: 13px;
-                left: 12px;
-                font-size: 10px;
-                @media (min-width: 1440px) {
-                    font-size: 12px;
-                }
-                @media (min-width: 1920px) {
-                    font-size: 14px;
-                }
-            }
-            @media (min-width: 1920px) {
-                margin-bottom: 20px;
-            }
-        }
-        .ant-input + .label-float,
-        .ant-input + .label-float {
-            font-size: 8px;
-            transform: translate3d(0, -80%, 0);
-            opacity: 1;
-            color: $text-sec-color;
-            @media (min-width: 1440px) {
-                font-size: 10px;
-            }
-            @media (min-width: 1920px) {
-                font-size: 12px;
-            }
+        @media (min-width: 1920px) {
+            margin-bottom: 20px;
         }
     }
+    .ant-input + .label-float,
+    .ant-input + .label-float {
+        font-size: 8px;
+        transform: translate3d(0, -80%, 0);
+        opacity: 1;
+        color: $text-sec-color;
+        @media (min-width: 1440px) {
+            font-size: 10px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 12px;
+        }
+    }
+
     .ant-select-selector {
         min-height: 40px;
         padding: 4px 12px;
@@ -175,6 +184,20 @@
                     font-size: 16px;
                 }
             }
+        }
+    }
+    .form-err {
+        color: $danger-color;
+        position: absolute;
+        left: 0;
+        top: 39px;
+        z-index: 2;
+        font-size: 8px;
+    }
+    .err-msg {
+        .ant-input {
+            box-shadow: 0px 3px 6px #fb443729;
+            border: 1px solid #fb4437 !important;
         }
     }
 }
