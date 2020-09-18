@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'pages/Landing/Landing.scss';
 import { Row, Col } from 'antd';
 import Calender from 'pages/Landing/Calender/Calender';
 import ToDoList from 'pages/Landing/ToDoList/ToDoList';
 import RecentRequest from 'pages/Landing/RecentRequest/RecentRequest';
 import RecentTransactions from 'pages/Landing/RecentTransactions/RecentTransactions';
-const Landing = () => {
-    return (
+
+
+class Landing extends Component {
+    constructor(props){
+        super(props);
+        
+    }
+
+    componentDidMount() {}
+
+    render(){
+
+    return (  
         <Row className="row-container" gutter={'10'}>
             <Col xs={24} lg={10} className="calender-wrap">
                 <Calender />
@@ -19,7 +30,11 @@ const Landing = () => {
                 <RecentTransactions />
             </Col>
         </Row>
+        
     );
+    }
 };
 
+
 export default Landing;
+

@@ -4,13 +4,16 @@ import { Card, Button } from 'antd';
 import Icon, { CalendarOutlined } from '@ant-design/icons';
 import DatePicker from 'Components/Datepicker';
 import ScrollArea from 'react-scrollbar';
-import { getDots, getEventDots } from 'services/calendarService';
-import { checkCookie } from 'utils/cookies';
+import { getDots, getEventDots, getSchedule } from 'services/calendarService';
+import { addLoading, removeLoading } from 'actions/loaderActions';
+import {connect} from 'react-redux';
+import Loader from 'Components/Loader/Loader';
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
+const days = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
 
 class Calender extends Component {
     constructor(props){
@@ -20,14 +23,39 @@ class Calender extends Component {
             eventDates: {},
             month:0,
             year: 0,
+            events: [],
+            arr: [],
+            startDate: new Date(),
         }
         this.getCalendarDots = this.getCalendarDots.bind(this);
         this.getCalendarEventDots = this.getCalendarEventDots.bind(this);
+        this.getEvents = this.getEvents.bind(this);
+        this.formatDate = this.formatDate.bind(this);
+        this.getDateArray = this.getDateArray.bind(this);
     }
 
     componentDidMount(){
+        const {startDate} = this.state;
+        let endDate = new Date(startDate.getTime()+(6*24*60*60*1000));
+        let ar = this.getDateArray(startDate, endDate);
+        this.setState({arr: ar});
         this.getCalendarDots();
         this.getCalendarEventDots();
+        this.getEvents();
+    }
+    
+    formatDate = (date) => {
+        var d = new Date(date);
+        var month = '' + (d.getMonth() + 1);
+        var day = '' + d.getDate();
+        var year = d.getFullYear();
+    
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+    
+        return [year, month, day].join('-');
     }
 
     getCalendarDots(){
@@ -49,11 +77,48 @@ class Calender extends Component {
         });
     }
     
+    getEvents(){
+        this.props.dispatch(addLoading());
+        setTimeout(() => {
+            const {startDate} = this.state;
+            let start_date = startDate;
+            let end_date = new Date(start_date.getTime()+(6*24*60*60*1000));
+            let ar = this.getDateArray(start_date,end_date);
+            this.setState({arr: ar});
+            start_date = this.formatDate(start_date);
+            end_date = this.formatDate(end_date);
+            const params = {type: 'event', start_date, end_date};
+            getSchedule(params)
+            .then(resp => {
+                console.log('resp', resp);
+                if(resp){
+                    this.setState({events: resp});
+                    this.props.dispatch(removeLoading());
+                }else{
+                    this.props.dispatch(removeLoading());
+                }
+            })
+        },1000);
+        
+    }
+    
+    getDateArray = function(start, end) {
+        var arr = new Array();
+        var dt = new Date(start);
+        while (dt <= end) {
+            arr.push(new Date(dt));
+            dt.setDate(dt.getDate() + 1);
+        }
+        return arr;
+    }
+    
     render(){
-      
-    const {dates, eventDates, month, year } = this.state;
+    const {dates, startDate, arr, events, eventDates, month, year } = this.state;
+    let endDate = new Date(startDate.getTime()+(6*24*60*60*1000));
     const current_date = new Date();
     return (
+       <div>
+        <Loader></Loader>
         <Card bordered={false} className="calender-card">
             <div className="card-head">
             <span>{(month == 0 && year == 0) ? monthNames[current_date.getMonth()] : monthNames[month]}{' '}{(month == 0 && year == 0) ? current_date.getFullYear() : year}</span>
@@ -66,11 +131,13 @@ class Calender extends Component {
             <DatePicker
                 labelFormat={'MMMM'}
                 color={'#374e8c'}
-                selectDate={new Date()}
+                selectDate={startDate}
                 dates={dates}
                 eventDates={eventDates}
                 getSelectedDay={(val) => {
                     console.log('val', val);
+                    this.setState({startDate: val});
+                    this.getEvents();
                 }}
                 onScrolled={(val) => {
                     this.setState({month: new Date(val).getMonth(), year: new Date(val).getFullYear()})
@@ -91,153 +158,51 @@ class Calender extends Component {
                         <span>S</span>
                     </div>
                 </div>
+                
                 <ScrollArea speed={0.8} className="list-wrapper" contentClassName="content" horizontal={false}>
                     <div className="list">
-                        <div className="list-item selected">
+                      {arr && arr.map((date,i) => (
+                        <div className="list-item selected">  
                             <div className="list-day">
-                                <span>19</span>
-                                <span>TUE</span>
+                                <span>{date.getDate()}</span>
+                                <span>{days[date.getDay()]}</span>
                             </div>
-                            <div className="list-details">
-                                <div className="list-wrap">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info blue"></span>
+                            {events && events.map((event,i) => (
+                                    
+                                <div className="list-details">
+                                    {this.formatDate(date) == this.formatDate(new Date(event.start_date)) && event.Members && event.Members[0]  ? (
+                                    <div className="list-wrap">
+                                        <div className="list-timer">
+                                        <span>{event.start_time}</span>
+                                          
+                                            <div className="stat">
+                                            {event.Members && event.Members[0] && (    
+                                               <span  style={{background: event.Members[0].color}} className="list-info"></span>
+                                            )}
+                                            </div>
+                                        </div>
+                                        <div className="list-activity">
+                                            <span>{event.title}</span>
                                         </div>
                                     </div>
-                                    <div className="list-activity">
-                                        <span>Dance Lessons</span>
-                                        <span>128 Main St</span>
-                                    </div>
+                                    ): null}
                                 </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info dark-blue"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>School</span>
-                                        <span>Bothwell Middle School</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info orange"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Swimming Class</span>
-                                        <span>128 Main St</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="list-item ">
-                            <div className="list-day">
-                                <span>20</span>
-                                <span>WED</span>
-                            </div>
-                            <div className="list-details">
-                                <div className="list-wrap">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>School</span>
-                                        <span>Bothwell Middle School</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info orange"></span>
-                                            <span className="list-info dark-blue"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Play game</span>
-                                        <span>433 Washington St</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info violet"></span>
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dance Lessons</span>
-                                        <span>128 Main St</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="list-item ">
-                            <div className="list-day">
-                                <span>21</span>
-                                <span>THU</span>
-                            </div>
-                            <div className="list-details">
-                                <div className="list-wrap">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dance Lessons</span>
-                                        <span>128 Main St</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info orange"></span>
-                                            <span className="list-info green"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>School</span>
-                                        <span>Bothwell Middle School</span>
-                                    </div>
-                                </div>
-                                <div className="list-inner">
-                                    <div className="list-timer">
-                                        <span>7:10am</span>
-                                        <div className="stat">
-                                            <span className="list-info violet"></span>
-                                            <span className="list-info blue"></span>
-                                        </div>
-                                    </div>
-                                    <div className="list-activity">
-                                        <span>Dentist</span>
-                                        <span>433 Washington St</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                            ))} 
+                           </div>
+                      ))} 
+
                     </div>
-                </ScrollArea>
+                       
+                    </ScrollArea>    
             </div>
+          
         </Card>
+      </div>  
     );
     }
 };
 
-export default Calender;
+const mapStateToProps = ({ serviceReducer }) => ({serviceReducer});
+
+export default connect(mapStateToProps)(Calender);
