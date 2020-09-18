@@ -146,13 +146,14 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin: 0px 15px 10px 10px;
+        // margin: 0px 15px 10px 10px;
         width: 50px;
         span {
             &:first-of-type {
                 margin-bottom: 5px;
                 color: $text-color;
                 font-size: 13px;
+                margin-top: 2px;
             }
         }
         .stat {
@@ -171,6 +172,10 @@
             }
         }
     }
+    &-main {
+        display: flex;
+        margin-bottom: 5px;
+    }
     &-activity {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -179,6 +184,7 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        margin-left: 10px;
         span {
             font-size: 13px;
             color: $text-color;
@@ -327,4 +333,7 @@
             }
         }
     }
+}
+.loader-wrap {
+    height: 100%;
 }
