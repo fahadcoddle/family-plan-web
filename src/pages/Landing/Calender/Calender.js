@@ -120,9 +120,10 @@ class Calender extends Component {
         const { dates, startDate, arr, events, eventDates, month, year } = this.state;
         let endDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000);
         const current_date = new Date();
+        const { serviceReducer } = this.props;
         return (
             <div className="loader-wrap">
-                <Loader></Loader>
+                {serviceReducer.loadings ? <Loader></Loader> : null}
                 <Card bordered={false} className="calender-card">
                     <div className="card-head">
                         <span>
