@@ -41,11 +41,6 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     const getId = (day) => {
         return isSameDay(day, selectedDate);
     };
-<<<<<<< HEAD
-
-    const isNumber = (value) =>
-        typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity;
-=======
     
     const formatDate = (date) => {
         var d = new Date(date);
@@ -62,7 +57,6 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
     }
     
     const isNumber = value => typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity
->>>>>>> 8ca69d9bf204dcf6dbe0d3e3483a555c5d098fd7
 
     function renderDays() {
         const dayFormat = 'E';
