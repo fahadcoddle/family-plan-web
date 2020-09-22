@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'Components/Loader/Loader.scss';
 import { connect } from 'react-redux';
-import image from 'Assets/785.gif';
+import image from 'Assets/loader.gif';
 
 class Loader extends Component {
     constructor(props) {

@@ -6,4 +6,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .loader {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.1);
+        left: 0;
+        border-radius: 10px;
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    }
 }
