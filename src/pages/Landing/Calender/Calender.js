@@ -5,6 +5,8 @@ import Icon, { CalendarOutlined } from '@ant-design/icons';
 import DatePicker from 'Components/Datepicker';
 import ScrollArea from 'react-scrollbar';
 import { getDots, getEventDots, getSchedule } from 'services/calendarService';
+import { getCoParents } from 'services/coparentsService';
+import { getChildrenUserAction, getCoParentsUserAction } from 'actions/userActions';
 import { addLoading, removeLoading } from 'actions/loaderActions';
 import { connect } from 'react-redux';
 import Loader from 'Components/Loader/Loader';
@@ -43,6 +45,8 @@ class Calender extends Component {
         this.getEvents = this.getEvents.bind(this);
         this.formatDate = this.formatDate.bind(this);
         this.getDateArray = this.getDateArray.bind(this);
+        this.getUserCoParents = this.getUserCoParents.bind(this);
+        this.getAllChildren = this.getAllChildren.bind(this);
     }
 
     componentDidMount() {
@@ -53,6 +57,8 @@ class Calender extends Component {
         this.getCalendarDots();
         this.getCalendarEventDots();
         this.getEvents();
+        this.getUserCoParents();
+        this.getAllChildren();
     }
 
     formatDate = (date) => {
@@ -116,6 +122,14 @@ class Calender extends Component {
         return arr;
     };
 
+    getUserCoParents(){
+        this.props.dispatch(getCoParentsUserAction());
+    }
+
+    getAllChildren(){
+        this.props.dispatch(getChildrenUserAction());
+    }
+    
     render() {
         const { dates, startDate, arr, events, eventDates, month, year } = this.state;
         let endDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000);
