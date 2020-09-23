@@ -13,8 +13,8 @@ class Loader extends Component {
     render() {
         const { serviceReducer } = this.props;
         return (
-            <div class="loader-container">
-                <div class="loader">{serviceReducer.loadings ? <img src={image} /> : null}</div>
+            <div className="loader-container">
+                <div className="loader">{serviceReducer.loadings ? <img src={image} /> : null}</div>
             </div>
         );
     }

@@ -7,6 +7,16 @@ export const getMeUserAction = (token) => {
     };
 };
 
+export const getChildrenUserAction = () => {
+    return {
+        type: types.GET_CHILDREN,
+    }
+};
 
 
+export const getCoParentsUserAction = () => {
+    return {
+        type: types.GET_COPARENTS,
+    }
+};
 
