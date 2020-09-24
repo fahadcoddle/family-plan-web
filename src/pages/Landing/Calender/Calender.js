@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import 'pages/Landing/Calender/Calender.scss';
 import { Card, Button } from 'antd';
-import Icon, { CalendarOutlined } from '@ant-design/icons';
+import { CalendarOutlined } from '@ant-design/icons';
 import DatePicker from 'Components/Datepicker';
 import ScrollArea from 'react-scrollbar';
 import { getDots, getEventDots, getSchedule } from 'services/calendarService';
-import { getCoParents } from 'services/coparentsService';
 import { getChildrenUserAction, getCoParentsUserAction } from 'actions/userActions';
 import { addLoading, removeLoading } from 'actions/loaderActions';
 import { connect } from 'react-redux';
@@ -29,6 +28,7 @@ const monthNames = [
 const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
 class Calender extends Component {
+    _isMounted = false;
     constructor(props) {
         super(props);
         this.state = {
@@ -50,6 +50,7 @@ class Calender extends Component {
     }
 
     componentDidMount() {
+        this._isMounted = true;
         const { startDate } = this.state;
         let endDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000);
         let ar = this.getDateArray(startDate, endDate);
@@ -59,6 +60,10 @@ class Calender extends Component {
         this.getEvents();
         this.getUserCoParents();
         this.getAllChildren();
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     formatDate = (date) => {
@@ -96,7 +101,6 @@ class Calender extends Component {
             let start_date = startDate;
             let end_date = new Date(start_date.getTime() + 6 * 24 * 60 * 60 * 1000);
             let ar = this.getDateArray(start_date, end_date);
-
             this.setState({ arr: ar });
             start_date = this.formatDate(start_date);
             end_date = this.formatDate(end_date);
@@ -113,7 +117,7 @@ class Calender extends Component {
     }
 
     getDateArray = function (start, end) {
-        var arr = new Array();
+        var arr = [];
         var dt = new Date(start);
         while (dt <= end) {
             arr.push(new Date(dt));
@@ -132,7 +136,6 @@ class Calender extends Component {
     
     render() {
         const { dates, startDate, arr, events, eventDates, month, year } = this.state;
-        let endDate = new Date(startDate.getTime() + 6 * 24 * 60 * 60 * 1000);
         const current_date = new Date();
         const { serviceReducer } = this.props;
         return (
@@ -141,8 +144,8 @@ class Calender extends Component {
                 <Card bordered={false} className="calender-card">
                     <div className="card-head">
                         <span>
-                            {month == 0 && year == 0 ? monthNames[current_date.getMonth()] : monthNames[month]}{' '}
-                            {month == 0 && year == 0 ? current_date.getFullYear() : year}
+                            {month === 0 && year === 0 ? monthNames[current_date.getMonth()] : monthNames[month]}{' '}
+                            {month === 0 && year === 0 ? current_date.getFullYear() : year}
                         </span>
                         <div className="btn-wrap">
                             <Button className="fp-button-primary" type="primary" icon={<CalendarOutlined />}>
@@ -193,7 +196,7 @@ class Calender extends Component {
                                                 {events &&
                                                     events.map((event, index) => (
                                                         <div  className="list-details">
-                                                            {this.formatDate(date) ==
+                                                            {this.formatDate(date) ===
                                                                 this.formatDate(new Date(event.start_date)) &&
                                                             event.Members &&
                                                             event.Members[0] ? (

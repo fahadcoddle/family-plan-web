@@ -1,7 +1,5 @@
-import { Layout, Spin } from 'antd';
+import { Layout } from 'antd';
 import React, { Component } from 'react';
-import Icon from '@ant-design/icons';
-
 import { getMeUserAction, getChildrenUserAction, getCoParentsUserAction } from 'actions/userActions';
 import { checkCookie } from 'utils/cookies';
 import Header from 'Components/Header/Header';

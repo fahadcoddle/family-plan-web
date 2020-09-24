@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import 'pages/Household/Household/Household.scss';
 import { Card, Avatar, Row, Col, Input, Select, Button } from 'antd';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
@@ -6,9 +6,6 @@ import user from 'Assets/avatar.jpg';
 import { Formik } from 'formik';
 
 const { Option } = Select;
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
 
 const initialValues = {
     name: '',

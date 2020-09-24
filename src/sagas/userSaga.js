@@ -54,7 +54,7 @@ export function* getCoParentsSaga(action){
                 coParentsEmails.push(coparent.User.email);
                 coParentIds.push(coparent.User.id);
             } else {
-                coparents.map((cp) => {
+                coparents.forEach((cp) => {
                     if (cp.email === coparent.User.email) {
                         cp.invitationsIds.push(coparent.id);
                     }

@@ -56,7 +56,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
         return [year, month, day].join('-');
     }
     
-    const isNumber = value => typeof value === 'number' && value === value && value !== Infinity && value !== -Infinity
+    const isNumber = value => typeof value === 'number'  && value !== Infinity && value !== -Infinity;
 
     function renderDays() {
         const dayFormat = 'E';
@@ -106,16 +106,16 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                     }
                 } 
 
-                let ed;
-                if(eventDates){
-                    ed = eventDates[formatDate(day)];
-                }
+                // let ed;
+                // if(eventDates){
+                //     ed = eventDates[formatDate(day)];
+                // }
 
                 if(isNumber(difference)){
-                    if(difference % 7 == 0){
+                    if(difference % 7 === 0){
                         count++;
                         centerClass = 'dateDayItem center-' + count;
-                        if (isSameDay(day, new Date()) && currentCount == 0) {
+                        if (isSameDay(day, new Date()) && currentCount === 0) {
                             currentCount = count;
                         }
                     }

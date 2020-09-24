@@ -5,7 +5,7 @@ import logo from 'Assets/logo.svg';
 import settings from 'Assets/settings.svg';
 import help from 'Assets/help.svg';
 import user from 'Assets/user.svg';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
 
 const { Option } = Select;
