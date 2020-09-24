@@ -96,12 +96,12 @@ class Calender extends Component {
             let start_date = startDate;
             let end_date = new Date(start_date.getTime() + 6 * 24 * 60 * 60 * 1000);
             let ar = this.getDateArray(start_date, end_date);
+
             this.setState({ arr: ar });
             start_date = this.formatDate(start_date);
             end_date = this.formatDate(end_date);
             const params = { type: 'event', start_date, end_date };
             getSchedule(params).then((resp) => {
-                console.log('resp', resp);
                 if (resp) {
                     this.setState({ events: resp });
                     this.props.dispatch(removeLoading());
@@ -157,7 +157,6 @@ class Calender extends Component {
                         dates={dates}
                         eventDates={eventDates}
                         getSelectedDay={(val) => {
-                            console.log('val', val);
                             this.setState({ startDate: val });
                             this.getEvents();
                         }}
@@ -185,15 +184,15 @@ class Calender extends Component {
                             <div className="list">
                                 {arr &&
                                     arr.map((date, i) => (
-                                        <div className="list-item selected">
+                                        <div key={i} className="list-item selected">
                                             <div className="list-day">
                                                 <span>{date.getDate()}</span>
                                                 <span>{days[date.getDay()]}</span>
                                             </div>
                                             <div>
                                                 {events &&
-                                                    events.map((event, i) => (
-                                                        <div className="list-details">
+                                                    events.map((event, index) => (
+                                                        <div  className="list-details">
                                                             {this.formatDate(date) ==
                                                                 this.formatDate(new Date(event.start_date)) &&
                                                             event.Members &&

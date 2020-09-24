@@ -8,7 +8,6 @@ import * as types from 'actions';
 export function* getMeSaga(action) {
     try {
         const user = yield call(getMe, action);
-        console.log('user',user);
         yield put({ type: types.GET_USER_SUCCESS, user });
     } catch (error) {
         
@@ -62,7 +61,6 @@ export function* getCoParentsSaga(action){
                 });
             }
         }
-        console.log('coparents', coparents);
         yield put({type: types.GET_COPARENTS_SUCCESS, coparents});
 
     } catch(error) {

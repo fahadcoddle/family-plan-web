@@ -7,7 +7,6 @@ export const getMe = (request) => {
     
     return makeRequest('GET', url, false, true)
         .then((resp) => {
-            console.log('resp', resp);
             return resp;
         })
         .then((json) => {
