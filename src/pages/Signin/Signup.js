@@ -1,9 +1,8 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import 'pages/Signin/Signin.scss';
 import { Form, Input, Button } from 'antd';
 import img from 'Assets/google.png';
-import logo from 'Assets/fp-logo.png';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import FloatLabel from 'Components/FloatLabel/FloatLabel';
 
 import { connect } from 'react-redux';
@@ -13,11 +12,7 @@ import { registerUserAction } from 'actions/authenticationActions';
 import { setCookie, checkCookie } from 'utils/cookies';
 import { Formik } from 'formik';
 
-const layout = {
-    wrapperCol: {
-        span: 24,
-    },
-};
+
 const tailLayout = {
     wrapperCol: {
         span: 24,
@@ -75,7 +70,6 @@ export class Signup extends Component {
         if (response.register.hasOwnProperty('response')) {
             console.log(response);
             isSuccess = response.register.response.token;
-            console.log('isSuccess', isSuccess);
             if (isSuccess) {
                 setCookie('token', response.register.response.token, 1);
 

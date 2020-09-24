@@ -1,5 +1,4 @@
 import * as types from 'actions';
-import { TimePicker } from 'antd';
 
 const INITIAL_STATE = {
     user: null,

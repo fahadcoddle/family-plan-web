@@ -8,10 +8,6 @@ import RecentTransactions from 'pages/Landing/RecentTransactions/RecentTransacti
 
 
 class Landing extends Component {
-    constructor(props){
-        super(props);
-        
-    }
 
     componentDidMount() {}
 

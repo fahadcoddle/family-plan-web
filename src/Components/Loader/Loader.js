@@ -4,17 +4,14 @@ import { connect } from 'react-redux';
 import image from 'Assets/785.gif';
 
 class Loader extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     componentDidMount() {}
 
     render() {
         const { serviceReducer } = this.props;
         return (
             <div className="loader-container">
-                <div className="loader">{serviceReducer.loadings ? <img src={image} /> : null}</div>
+                <div className="loader">{serviceReducer.loadings ? <img src={image} alt='Loader' /> : null}</div>
             </div>
         );
     }

@@ -4,7 +4,6 @@ import { getMeSaga, getChildrenSaga, getCoParentsSaga } from 'sagas/userSaga';
 import { loaderSaga } from 'sagas/loaderSaga';
 
 import * as types from 'actions';
-import { getChildren } from 'services/memberService';
 
 export default function* watchUserAuthentication() {
     yield takeLatest(types.REGISTER_USER, registerSaga);

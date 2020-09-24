@@ -1,5 +1,4 @@
 import { makeRequest } from './authenticationService';
-import { checkCookie } from 'utils/cookies';
 
 export const getDots = () => {
 

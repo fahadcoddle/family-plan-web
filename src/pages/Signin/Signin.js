@@ -6,13 +6,10 @@ import { connect } from 'react-redux';
 
 import { Signup } from './Signup';
 import { Login } from './Login';
-import { Formik } from 'formik';
+
 
 class Signin extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     componentDidMount() {
         document.title = 'FamilyPlan : Signin';
     }
