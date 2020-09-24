@@ -64,6 +64,23 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
         const months = [];
         let days = [];
         let count = 0;
+        let colors = {
+            "#c910e8": "Pink",
+            "#2196f3": "Blue",
+            "#673ab7": "Purple",
+            "#ff0000": "Red",
+            "#4caf50": "Green",
+            "#ffc107": "Orange",
+            "#00bcd4": "Cyan",
+            "#795548": "Brown",
+            "#ffffff": "White",
+            "#999999": "Grey",
+            "#333333": "Charcoal",
+            "#000000": "Black",
+            "gradient1": "Gradient1",
+            "gradient2": "Gradient2",
+        };
+
         for (let i = 0; i <= differenceInMonths(lastDate, startDate); i++) {
             let start, end;
             const month = startOfMonth(addMonths(startDate, i));
@@ -79,8 +96,14 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                 const difference = differenceInCalendarDays(day, new Date());
                 let centerClass = 'dateDayItem';
                 let custodyDates;
+                let custodyDots = [];
                 if(dates){
                     custodyDates = dates[formatDate(day)];
+                    if(custodyDates){
+                        custodyDates.dots.forEach(color => {
+                            custodyDots.push(colors[color]);
+                        });
+                    }
                 } 
 
                 let ed;
@@ -111,7 +134,7 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                         </div>
                         <div className="dayLabel">{format(day, dayFormat)}</div>
                         <div className="notify">
-                            { custodyDates && custodyDates.dots.map(color => <span style={{background: color}}></span>)}
+                            { custodyDots && custodyDots.map((color,i) => <span key={i} className={color}></span>)}
                         </div>
                     </div>,
                 );

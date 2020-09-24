@@ -30,7 +30,6 @@ export const registerUserService = (request) => {
 
     return makeRequest('POST', '/api/users', credentials)
         .then((response) => {
-            console.log('Resp', response);
             return response;
         })
         .then((json) => {
