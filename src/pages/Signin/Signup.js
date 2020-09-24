@@ -68,7 +68,6 @@ export class Signup extends Component {
         let isSuccess = false;
         const { response } = this.props;
         if (response.register.hasOwnProperty('response')) {
-            console.log(response);
             isSuccess = response.register.response.token;
             if (isSuccess) {
                 setCookie('token', response.register.response.token, 1);

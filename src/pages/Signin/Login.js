@@ -65,7 +65,6 @@ export class Login extends Component {
         let isSuccess = false;
         const { response } = this.props;
         if (response.login.hasOwnProperty('response')) {
-            console.log(response);
             isSuccess = response.login.response.token;
             if (isSuccess) {
                 setCookie('token', response.login.response.token, 1);
